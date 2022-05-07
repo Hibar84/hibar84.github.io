@@ -7,12 +7,64 @@
 </head>
 <body>
     <!-- Partie formulaire -->
-    <div class="config-plateau">
-        <p>Test1</p>
+    <div class="formulaire-fromage">
+        <h1 access="false" id="config-title">Configurer votre événement</h1>
+        
+        <div class="form-radio">
+            <label for="event-type" class="form-label">Type d'événement</label>
+            <div class="event-type-selector" id="event-type">
+                <div class="event-type-option">
+                    <input name="event-type" access="false" id="event-type-0" required="required" aria-required="true" value="repas" type="radio">
+                    <label for="event-type-0">Vin et fromages</label>
+                </div>
+                <div class="event-type-option">
+                    <input name="event-type" access="false" id="event-type-1" required="required" aria-required="true" value="apero" type="radio">
+                    <label for="event-type-1">Apéro</label>
+                </div>
+                <div class="event-type-option">
+                    <input name="event-type" access="false" id="event-type-2" required="required" aria-required="true" value="degustation" type="radio">
+                    <label for="event-type-2">Dégustation</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-number">
+            <label for="number-personnes" class="form-label">Nombre de convives</label>
+            <input type="range" class="slider" name="nb-personnes" id="nb-personnes" min="1" max="15" step="1" value="1" required="required" oninput="nbPersonnes.innerText = this.value">
+            <p id="nbPersonnes"></p>
+        </div>
+        
+
+        <div class="form-select">
+            <legend class="form-label">Type de fromages souhaités</legend>
+            
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="soft-ripened-cheese" id="types-fromages-0">
+            <label for="types-fromages-0" class="fromages-type-option-label">Pâtes molles à croûte fleurie</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="pressed-cheese" id="types-fromages-1">
+            <label for="types-fromages-1" class="fromages-type-option-label">Pâtes pressées cuites</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="uncooked-pressed-cheese" id="types-fromages-2">
+            <label for="types-fromages-2" class="fromages-type-option-label">Pâtes pressées non-cuites</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="rind-washed-cheese" id="types-fromages-3">
+            <label for="types-fromages-3" class="fromages-type-option-label">Pâtes molles à croûte lavée</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="blue-cheese" id="types-fromages-4">
+            <label for="types-fromages-4" class="fromages-type-option-label">Pâtes persillées</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="fresh-cheese" id="types-fromages-5">
+            <label for="types-fromages-5" class="fromages-type-option-label">Fromage frais</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="goat-cheese" id="types-fromages-6">
+            <label for="types-fromages-6" class="fromages-type-option-label">Fromage de chèvre</label>
+
+            <input type="checkbox" class="fromages-type-option" name="types-fromages" value="sheep-cheese" id="types-fromages-7">
+            <label for="types-fromages-7" class="fromages-type-option-label">Fromage de brebis</label>
+        </div>
     </div>
     <!-- Partie proposition -->
     <div class="plateau-proposition">
-        <p>Test2</p>
     </div>
 </body>
 </html>
