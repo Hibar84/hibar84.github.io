@@ -6,7 +6,11 @@ body{
 .formulaire-fromage{
     display: flex;
     flex-direction: column;
+}
 
+.plateau-proposition{
+    display: flex;
+    flex-direction: column;
 }
 
 .event-type-selector{
@@ -16,19 +20,15 @@ body{
 
 
 #config-plateau{
-    color:blue
 }
 
 .form-label{
-    font-size: larger;
 }
 
 #config-title{
-    color:blue
 }
 
 #plateau-proposition{
-    color:red
 }
 
 .slider {

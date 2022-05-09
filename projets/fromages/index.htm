@@ -14,15 +14,15 @@
             <label for="event-type" class="form-label">Type d'événement</label>
             <div class="event-type-selector" id="event-type">
                 <div class="event-type-option">
-                    <input name="event-type" access="false" id="event-type-0" required="required" aria-required="true" value="repas" type="radio">
+                    <input name="event-types" access="false" id="event-type-0" required="required" aria-required="true" value="repas" type="radio" onclick="selected_event_type('repas')">
                     <label for="event-type-0">Vin et fromages</label>
                 </div>
                 <div class="event-type-option">
-                    <input name="event-type" access="false" id="event-type-1" required="required" aria-required="true" value="apero" type="radio">
+                    <input name="event-types" access="false" id="event-type-1" required="required" aria-required="true" value="apero" type="radio" onclick="selected_event_type('apero')">
                     <label for="event-type-1">Apéro</label>
                 </div>
                 <div class="event-type-option">
-                    <input name="event-type" access="false" id="event-type-2" required="required" aria-required="true" value="degustation" type="radio">
+                    <input name="event-types" access="false" id="event-type-2" required="required" aria-required="true" value="degustation" type="radio" onclick="selected_event_type('degustation')">
                     <label for="event-type-2">Dégustation</label>
                 </div>
             </div>
@@ -65,6 +65,8 @@
     </div>
     <!-- Partie proposition -->
     <div class="plateau-proposition">
+        <h1>Votre plateau de fromage</h1>
+        <div id="fromages-proposes">Veuillez sélectionner un type d'évenement</div>
     </div>
 </body>
 </html>
