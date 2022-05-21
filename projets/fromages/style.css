@@ -3,14 +3,16 @@ body{
     flex-direction: row;
 }
 
-.formulaire-fromage{
+#formulaire-fromage{
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
-.plateau-proposition{
+#plateau-proposition{
     display: flex;
     flex-direction: column;
+    width: 50%;
 }
 
 .event-type-selector{

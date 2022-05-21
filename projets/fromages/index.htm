@@ -6,7 +6,7 @@
 </head>
 <body>
     <!-- Partie formulaire -->
-    <div class="formulaire-fromage">
+    <div id="formulaire-fromage">
         <h1 access="false" id="config-title">Configurer votre événement</h1>
           
         <div class="form-radio" id="event-types">
@@ -27,8 +27,7 @@
 
         <div class="form-number">
             <label for="number-personnes" class="form-label">Nombre de convives</label>
-            <input type="range" class="slider" name="nb-personnes" id="nb-personnes" min="1" max="15" step="1" value="1" required="required" oninput="nbPersonnes.innerText = this.value">
-            <p id="nbPersonnes"></p>
+            <input type="range" class="slider" name="nb-personnes" id="nb-personnes" min="1" max="15" step="1" value="1" required="required" oninput="cheese_types_quantity(this.value)">
         </div>
         
 
@@ -59,12 +58,17 @@
             <input type="checkbox" class="fromages-type-option" name="cheese-type" value="sheep-cheese" id="cheese-type-7">
             <label for="cheese-type-7" class="fromages-type-option-label">Fromage de brebis</label>
         </div>
+
+        <button id="btn-generation-plateau">Générer un plateau de fromage!</button>
     </div>
     <!-- Partie proposition -->
-    <div class="plateau-proposition">
+    <div id="plateau-proposition">
         <h1>Votre plateau de fromage</h1>
         <h2>Votre événement:</h2>
-        <div id="event-type-selected"></div>
+        <div id="resume"></div>
+            <p>Votre événement est un<span id="event-type-selected"></span></p>
+            <p>Nombre de personnes prévues: <span id="nbPersonnes"></span></p>
+            <p>Quandité de fromage à prévoir au total: <span id="qtyFromage"></span></p>
         <div id="fromages-proposes"></div>
     </div>
 
