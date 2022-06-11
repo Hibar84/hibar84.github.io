@@ -54,37 +54,41 @@ function check_cheese_types_selection(){
 
 
 function generate_cheese_type_box(cheese_type){
-    let box = document.createElement("p");
+    var template = document.querySelector("#cheese-type-bloc");
+    var box = document.importNode(template.content, true);
+
+    var header = box.querySelector('h1.bloc-header');
+    var list = box.querySelector('div.bloc-header');
 
     switch (cheese_type){
         case 'blue-cheese':
-            box.innerText = 'Ici seront des exemples de fromages bleus';
+            header.textContent = "Fromages persillés";
             break
         case 'fresh-cheese':
-            box.innerText = 'Ici seront des exemples de fromages frais';
+            header.textContent = "Fromages frais";
             break
         case 'goat-cheese':
-            box.innerText = 'Ici seront des exemples de fromages de chèvre';
+            header.textContent = "Fromages de chèvre";
             break
 
         case 'pressed-cheese':
-            box.innerText = 'Ici seront des exemples de fromages à pâtes pressées';
+            header.textContent = "Fromages pressés cuits";
             break
 
         case 'rind-washed-cheese':
-            box.innerText = 'Ici seront des exemples de fromages à croûte lavée';
+            header.textContent = "Fromages à croûte lavée";
             break
 
         case 'sheep-cheese':
-            box.innerText = 'Ici seront des exemples de fromages de brebis';
+            header.textContent = "Fromages de brebis";
             break
 
         case 'soft-ripened-cheese':
-            box.innerText = 'Ici seront des exemples de fromages à pâte molle';
+            header.textContent = "Fromages à croûte fleurie";
             break
 
         case 'uncooked-pressed-cheese':
-            box.innerText = 'Ici seront des exemples de fromages à pâte pressée non cuite';
+            header.textContent = "Fromages pressés non cuits";
             break
     }
     return box
@@ -116,3 +120,6 @@ function generatePlateau(){
 
 btnGeneration = document.getElementById('btn-generation-plateau');
 btnGeneration.addEventListener('click', generatePlateau);
+
+var mydata = JSON.parse(blue-cheeses);
+console.log(mydata[0]);
