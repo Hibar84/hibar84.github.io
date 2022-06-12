@@ -5,20 +5,22 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="stylesheet" href="style.css">
 
-    <script type="text/javascript" src="cheeses/blue-cheese.json"></script>
+    <script type="text/javascript" src="cheeses/cheeses.js"></script>
 
 </head>
 <body>
     <!-- Templates : Début -->
     <template id="cheese-type-bloc">
-        <h1 class="bloc-header"></h1>
-        <div class="bloc-cheese-list"></div>
+        <h1 class="box-header"></h1>
+        <div class="box-cheese-list"></div>
     </template>
 
-    <template id="cheese-card">
-        <img class="cheese-image" src="" alt="">
-        <h1 class="cheese-card-header"></h1>
-        <p class="cheese-card-country"></p>
+    <template id="cheese-example">
+        <div class="cheese-card">
+            <img class="cheese-image" src="" alt="">
+            <h2 class="cheese-card-header"></h1>
+            <p class="cheese-card-origin"></p>
+        </div>  
     </template>
     <!-- Templates : Fin -->
 
@@ -56,7 +58,7 @@
             <input type="checkbox" class="fromages-type-option" name="cheese-type" value="soft-ripened-cheese" id="cheese-type-0">
             <label for="cheese-type-0" class="fromages-type-option-label">Pâtes molles à croûte fleurie</label>
 
-            <input type="checkbox" class="fromages-type-option" name="cheese-type" value="pressed-cheese" id="cheese-type-1">
+            <input type="checkbox" class="fromages-type-option" name="cheese-type" value="cooked-pressed-cheese" id="cheese-type-1">
             <label for="cheese-type-1" class="fromages-type-option-label">Pâtes pressées cuites</label>
 
             <input type="checkbox" class="fromages-type-option" name="cheese-type" value="uncooked-pressed-cheese" id="cheese-type-2">
@@ -71,11 +73,11 @@
             <input type="checkbox" class="fromages-type-option" name="cheese-type" value="fresh-cheese" id="cheese-type-5">
             <label for="cheese-type-5" class="fromages-type-option-label">Fromage frais</label>
 
-            <input type="checkbox" class="fromages-type-option" name="cheese-type" value="goat-cheese" id="cheese-type-6">
-            <label for="cheese-type-6" class="fromages-type-option-label">Fromage de chèvre</label>
+            <input type="checkbox" class="fromages-type-option" name="cheese-type" value="mixed-cheese" id="cheese-type-6">
+            <label for="cheese-type-6" class="fromages-type-option-label">Fromage fort</label>
 
-            <input type="checkbox" class="fromages-type-option" name="cheese-type" value="sheep-cheese" id="cheese-type-7">
-            <label for="cheese-type-7" class="fromages-type-option-label">Fromage de brebis</label>
+            <input type="checkbox" class="fromages-type-option" name="cheese-type" value="stretched-curd-cheese" id="cheese-type-7">
+            <label for="cheese-type-7" class="fromages-type-option-label">Fromage à pâte filée</label>
         </div>
 
         <button id="btn-generation-plateau">Générer un plateau de fromage!</button>

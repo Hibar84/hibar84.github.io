@@ -1,0 +1,337 @@
+departement,nom,wiki_fr,wiki_en,image,type_lait,type_fromage
+Haute-Corse,A Filetta,http://fr.wikipedia.org/wiki/A_Filetta_%28marque%29,,,Brebis,stretched-curd-cheese
+Pyrénées-Atlantiques,Abbaye de Belloc,http://fr.wikipedia.org/wiki/Abbaye_de_Belloc_%28fromage%29,http://en.wikipedia.org/wiki/Abbaye_de_Belloc,,Brebis,uncooked-pressed-cheese
+Côte-d'Or,Abbaye de Cîteaux,http://fr.wikipedia.org/wiki/Abbaye_de_C%C3%AEteaux_%28marque%29,,,Vaches,uncooked-pressed-cheese
+Morbihan,Abbaye de la Joie Notre-Dame,http://fr.wikipedia.org/wiki/Abbaye_de_la_Joie_Notre-Dame_%28fromage%29,,,Vache,uncooked-pressed-cheese
+Yonne,Abbaye de la Pierre-qui-Vire,http://fr.wikipedia.org/wiki/Abbaye_de_la_Pierre-qui-Vire_%28fromage%29,,,Vache,rind-washed-cheese
+Savoie,Abbaye de Tamié,http://fr.wikipedia.org/wiki/Abbaye_de_Tami%C3%A9_%28fromage%29,http://en.wikipedia.org/wiki/Abbaye_de_Tami%C3%A9,,Vache,uncooked-pressed-cheese
+Savoie,Abondance,http://fr.wikipedia.org/wiki/Abondance_%28fromage%29,http://en.wikipedia.org/wiki/Abondance_cheese,,Vache,cooked-pressed-cheese
+Côte-d'Or,Affidélice,http://fr.wikipedia.org/wiki/Affid%C3%A9lice,,,Vache,rind-washed-cheese
+Hautes-Alpes,Aiguille d'Orcières,http://fr.wikipedia.org/wiki/Aiguille_d%27Orci%C3%A8res,,,Vache,cooked-pressed-cheese
+Côte-d'Or,Aisy cendré,http://fr.wikipedia.org/wiki/Aisy_cendr%C3%A9,http://en.wikipedia.org/wiki/Aisy_cendr%C3%A9,,Vache,rind-washed-cheese
+Landes,Amou,http://fr.wikipedia.org/wiki/Amou_%28fromage%29,,,Brebis,uncooked-pressed-cheese
+Pyrénées-Atlantiques,Ardi-Gasna,http://fr.wikipedia.org/wiki/Ardi-Gasna,,,Brebis,uncooked-pressed-cheese
+Rhône,Arôme au vin blanc,http://fr.wikipedia.org/wiki/Ar%C3%B4me_au_vin_blanc,,,Vache,soft-ripened-cheese
+Rhône,Arôme de Lyon,http://fr.wikipedia.org/wiki/Ar%C3%B4me_de_Lyon,,,Vache,fresh-cheese
+Indre,Arthon,http://fr.wikipedia.org/wiki/Arthon_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Saône-et-Loire,Autun,http://fr.wikipedia.org/wiki/Autun_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Savoie,Avalin,http://fr.wikipedia.org/wiki/Avalin,,,Vache,cooked-pressed-cheese
+Nord,Baguette paysanne à la moutarde,http://fr.wikipedia.org/wiki/Baguette_paysanne_%C3%A0_la_moutarde,,,Vache,rind-washed-cheese
+Aube,Barberey,http://fr.wikipedia.org/wiki/Barberey_%28fromage%29,,,Vache,soft-ripened-cheese
+Hautes-Pyrénées,Barousse,http://fr.wikipedia.org/wiki/Barousse_%28fromage%29,,,Brebis,uncooked-pressed-cheese
+Savoie,Beaufort,http://fr.wikipedia.org/wiki/Beaufort_%28fromage%29,http://en.wikipedia.org/wiki/Beaufort_cheese,,Vache,cooked-pressed-cheese
+Savoie,Beaumont,http://fr.wikipedia.org/wiki/Beaumont_%28fromage%29,,,Vache,uncooked-pressed-cheese
+Aisne,Belle des champs,http://fr.wikipedia.org/wiki/Belle_des_champs,,,Vache,soft-ripened-cheese
+Allier,Bessay,http://fr.wikipedia.org/wiki/Bessay_%28fromage%29,,,Vache,soft-ripened-cheese
+Ariège,Bethmale,http://fr.wikipedia.org/wiki/Bethmale_%28fromage%29,,,Vache,uncooked-pressed-cheese
+Puy-de-Dôme,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Aveyron,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Haute-Loire,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Corrèze,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Lozère,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Cantal,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Lot,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Haute-Loire,Bleu de Costaros,http://fr.wikipedia.org/wiki/Bleu_de_Costaros,,,Vache,blue-cheese
+Jura,Bleu de Gex,http://fr.wikipedia.org/wiki/Bleu_de_Gex,http://en.wikipedia.org/wiki/Bleu_de_Gex,,Vache,blue-cheese
+Ain,Bleu de Gex,http://fr.wikipedia.org/wiki/Bleu_de_Gex,http://en.wikipedia.org/wiki/Bleu_de_Gex,,Vache,blue-cheese
+Puy-de-Dôme,Bleu de Laqueuille,http://fr.wikipedia.org/wiki/Bleu_de_Laqueuille,,,Vache,blue-cheese
+Isère,Bleu de Lavaldens,http://fr.wikipedia.org/wiki/Bleu_de_Lavaldens,,,Vache,blue-cheese
+Haute-Loire,Bleu de Loudes,http://fr.wikipedia.org/wiki/Bleu_de_Loudes,,,Vache,blue-cheese
+Savoie,Bleu de Sainte-Foy,http://fr.wikipedia.org/wiki/Bleu_de_Sainte-Foy,,,Vache,blue-cheese
+Savoie,Bleu de Termignon,http://fr.wikipedia.org/wiki/Bleu_de_Termignon,,,Vache,blue-cheese
+Cantal,Bleu de Thiézac,http://fr.wikipedia.org/wiki/Bleu_de_Thi%C3%A9zac,,,Vache,blue-cheese
+Lozère,Bleu des Causses,http://fr.wikipedia.org/wiki/Bleu_des_Causses,http://en.wikipedia.org/wiki/Bleu_des_Causses,,Vache,blue-cheese
+Aveyron,Bleu des Causses,http://fr.wikipedia.org/wiki/Bleu_des_Causses,http://en.wikipedia.org/wiki/Bleu_des_Causses,,Vache,blue-cheese
+Hautes-Alpes,Bleu du Dévoluy,http://fr.wikipedia.org/wiki/Bleu_du_D%C3%A9voluy,,,Vache,blue-cheese
+Savoie,Bleu du Mont-Cenis,http://fr.wikipedia.org/wiki/Bleu_du_Mont-Cenis,,,Vache,blue-cheese
+Lot,Bleu du Quercy,http://fr.wikipedia.org/wiki/Bleu_du_Quercy,,,Vache,blue-cheese
+Drôme,Bleu du Vercors-Sassenage,http://fr.wikipedia.org/wiki/Bleu_du_Vercors-Sassenage,http://en.wikipedia.org/wiki/Bleu_du_Vercors-Sassenage,,Vache,blue-cheese
+Isère,Bleu du Vercors-Sassenage,http://fr.wikipedia.org/wiki/Bleu_du_Vercors-Sassenage,http://en.wikipedia.org/wiki/Bleu_du_Vercors-Sassenage,,Vache,blue-cheese
+Mayenne,Bons Mayennais,http://fr.wikipedia.org/wiki/Bons_Mayennais,,,Vache,soft-ripened-cheese
+Seine-Maritime,Bouille,http://fr.wikipedia.org/wiki/Bouille_%28fromage%29,,,Vache,soft-ripened-cheese
+Yonne,Boule des moines,http://fr.wikipedia.org/wiki/Boule_des_moines,,,Vache,fresh-cheese
+Nord,Boulet de Cassel,http://fr.wikipedia.org/wiki/Boulet_de_Cassel,,,Vache,uncooked-pressed-cheese
+Nord,Boulette d'Avesnes,http://fr.wikipedia.org/wiki/Boulette_d%27Avesnes,,,Vache,rind-washed-cheese
+Yonne,Boulette de la Pierre-qui-Vire,http://fr.wikipedia.org/wiki/Boulette_de_la_Pierre-qui-Vire,,,Vache,soft-ripened-cheese
+Saône-et-Loire,Bouton de Culotte,http://fr.wikipedia.org/wiki/Bouton_de_Culotte,,,Chèvre,soft-ripened-cheese
+Ain,Bresse Bleu,http://fr.wikipedia.org/wiki/Bresse_Bleu,http://en.wikipedia.org/wiki/Bleu_de_Bresse,,Vache,blue-cheese
+Savoie,Brézain,http://fr.wikipedia.org/wiki/Br%C3%A9zain,,,Vache,uncooked-pressed-cheese
+Haute-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Seine-et-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Aube,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Yonne,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,,Vache,soft-ripened-cheese
+Seine-et-Marne,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,,Vache,soft-ripened-cheese
+Aube,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,,Vache,soft-ripened-cheese
+Seine-et-Marne,Brie de Montereau,http://fr.wikipedia.org/wiki/Brie_de_Montereau,,,Vache,soft-ripened-cheese
+Seine-et-Marne,Brie de Nangis,http://fr.wikipedia.org/wiki/Brie_de_Nangis,,,Vache,soft-ripened-cheese
+Haute-Corse,Brin d'amour,http://fr.wikipedia.org/wiki/Brin_d%27amour,,,Brebis,rind-washed-cheese
+Nord,Briquette de l'Ecaillon,http://fr.wikipedia.org/wiki/Briquette_de_l%27Ecaillon,,,Chèvre,soft-ripened-cheese
+Lot,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,,Chèvre,soft-ripened-cheese
+Cantal,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,,Chèvre,soft-ripened-cheese
+Aveyron,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,,Chèvre,soft-ripened-cheese
+Charente-Maritime,Caillebotte,http://fr.wikipedia.org/wiki/Caillebotte_%28fromage%29,,,Vache,fresh-cheese
+Cantal,Cantal,http://fr.wikipedia.org/wiki/Cantal_%28fromage%29,http://en.wikipedia.org/wiki/Cantal_cheese,,Vache,uncooked-pressed-cheese
+Réunion,Cap Noir,http://fr.wikipedia.org/wiki/Cap_Noir_%28fromage%29,,,Vache,uncooked-pressed-cheese
+Haute-Marne,Caprice des Dieux,http://fr.wikipedia.org/wiki/Caprice_des_Dieux,,,Vache,soft-ripened-cheese
+Cantal,Carré d'Aurillac,http://fr.wikipedia.org/wiki/Carr%C3%A9_d%27Aurillac,http://en.wikipedia.org/wiki/Carr%C3%A9_d%27Aurillac,,Vache,blue-cheese
+Calvados,Carré de Bonneville,http://fr.wikipedia.org/wiki/Carr%C3%A9_de_Bonneville,,,Vache,rind-washed-cheese
+Nord,Carré du Vinage,http://fr.wikipedia.org/wiki/Carr%C3%A9_du_Vinage,,,Vache,rind-washed-cheese
+Ain,Carré Frais,http://fr.wikipedia.org/wiki/Carr%C3%A9_Frais,,,Vache,fresh-cheese
+Haute-Garonne,Cathare,http://fr.wikipedia.org/wiki/Cathare_%28marque%29,http://en.wikipedia.org/wiki/Cathare,,Chèvre,rind-washed-cheese
+Pas-de-Calais,Ch'ti Crémeux,http://fr.wikipedia.org/wiki/Ch%27ti_Cr%C3%A9meux,,,Vache,soft-ripened-cheese
+Allier,Chambérat,http://fr.wikipedia.org/wiki/Chamb%C3%A9rat_%28fromage%29,,,Vache,rind-washed-cheese
+Loire-Atlantique,Chandamour,http://fr.wikipedia.org/wiki/Chandamour,,,Vache,soft-ripened-cheese
+Aube,Chaource,http://fr.wikipedia.org/wiki/Chaource_%28fromage%29,http://en.wikipedia.org/wiki/Chaource_cheese,,Vache,soft-ripened-cheese
+Allier,Charolais,http://fr.wikipedia.org/wiki/Charolais_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Rhône,Charolais,http://fr.wikipedia.org/wiki/Charolais_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Loire,Charolais,http://fr.wikipedia.org/wiki/Charolais_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Saône-et-Loire,Charolais,http://fr.wikipedia.org/wiki/Charolais_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Dordogne,Chaumes,http://fr.wikipedia.org/wiki/Chaumes,http://en.wikipedia.org/wiki/Chaumes,,Vache,rind-washed-cheese
+Maine-et-Loire,Chaussée aux moines,http://fr.wikipedia.org/wiki/Chauss%C3%A9e_aux_moines,,,Vache,uncooked-pressed-cheese
+Mayenne,Chaussée aux moines,http://fr.wikipedia.org/wiki/Chauss%C3%A9e_aux_moines,,,Vache,uncooked-pressed-cheese
+Charente,Chavroux,http://fr.wikipedia.org/wiki/Chavroux,http://en.wikipedia.org/wiki/Chavroux,,Chèvre,fresh-cheese
+Loiret,Chécy,http://fr.wikipedia.org/wiki/Ch%C3%A9cy_%28fromage%29,,,Vache,soft-ripened-cheese
+Ain,Chevret,http://fr.wikipedia.org/wiki/Chevret,,,Chèvre,soft-ripened-cheese
+Ain,Chevret du Haut-Jura,http://fr.wikipedia.org/wiki/Chevret_du_Haut-Jura,,,Vache,soft-ripened-cheese
+Jura,Chevret du Haut-Jura,http://fr.wikipedia.org/wiki/Chevret_du_Haut-Jura,,,Vache,soft-ripened-cheese
+Ardèche,Chèvreton,http://fr.wikipedia.org/wiki/Ch%C3%A8vreton,,,Chèvre,soft-ripened-cheese
+Puy-de-Dôme,Chèvreton,http://fr.wikipedia.org/wiki/Ch%C3%A8vreton,,,Chèvre,soft-ripened-cheese
+Savoie,Chevrotin,http://fr.wikipedia.org/wiki/Chevrotin,http://en.wikipedia.org/wiki/Chevrotin,,Chèvre,uncooked-pressed-cheese
+Ain,Clon,http://fr.wikipedia.org/wiki/Clon,,,Vache,cooked-pressed-cheese
+Ain,Comté,http://fr.wikipedia.org/wiki/Comt%C3%A9_%28fromage%29,http://en.wikipedia.org/wiki/Comt%C3%A9_cheese,,Vache,cooked-pressed-cheese
+Haute-Corse,Corsica,http://fr.wikipedia.org/wiki/Corsica_%28marque%29,,,Brebis,soft-ripened-cheese
+Seine-et-Marne,Coulommiers,http://fr.wikipedia.org/wiki/Coulommiers_%28fromage%29,http://en.wikipedia.org/wiki/Coulommiers_cheese,,Vache,soft-ripened-cheese
+Indre-et-Loire,Couronne Lochoise,http://fr.wikipedia.org/wiki/Couronne_Lochoise,http://en.wikipedia.org/wiki/Couronne_lochoise,,Chèvre,soft-ripened-cheese
+Sarthe,Cousteron,http://fr.wikipedia.org/wiki/Cousteron,,,Vache,uncooked-pressed-cheese
+Manche,Coutances,http://fr.wikipedia.org/wiki/Coutances_%28marque%29,http://en.wikipedia.org/wiki/Coutances_cheese,,Vache,soft-ripened-cheese
+Pas-de-Calais,Crémet du Cap Blanc Nez,http://fr.wikipedia.org/wiki/Cr%C3%A9met_du_Cap_Blanc_Nez,,,Vache,rind-washed-cheese
+Loiret,Crottin de Chavignol,http://fr.wikipedia.org/wiki/Crottin_de_Chavignol,http://en.wikipedia.org/wiki/Crottin_de_Chavignol,,Chèvre,soft-ripened-cheese
+Cher,Crottin de Chavignol,http://fr.wikipedia.org/wiki/Crottin_de_Chavignol,http://en.wikipedia.org/wiki/Crottin_de_Chavignol,,Chèvre,soft-ripened-cheese
+Nord,Dauphin,http://fr.wikipedia.org/wiki/Dauphin_%28fromage%29,,,Vache,rind-washed-cheese
+Aisne,Dauphin,http://fr.wikipedia.org/wiki/Dauphin_%28fromage%29,,,Vache,rind-washed-cheese
+Réunion,Délice de la Sicalait,http://fr.wikipedia.org/wiki/D%C3%A9lice_de_la_Sicalait,,,Vache,soft-ripened-cheese
+Val-de-Marne,Délice de Saint-Cyr,http://fr.wikipedia.org/wiki/D%C3%A9lice_de_Saint-Cyr,,,Vache,soft-ripened-cheese
+Ain,Emmental de Savoie,http://fr.wikipedia.org/wiki/Emmental_de_Savoie,,,Vache,cooked-pressed-cheese
+Savoie,Emmental de Savoie,http://fr.wikipedia.org/wiki/Emmental_de_Savoie,,,Vache,cooked-pressed-cheese
+Côte-d'Or,Époisses,http://fr.wikipedia.org/wiki/%C3%89poisses_%28fromage%29,http://en.wikipedia.org/wiki/%C3%89poisses_de_Bourgogne,,Vache,rind-washed-cheese
+Yonne,Époisses,http://fr.wikipedia.org/wiki/%C3%89poisses_%28fromage%29,http://en.wikipedia.org/wiki/%C3%89poisses_de_Bourgogne,,Vache,rind-washed-cheese
+Haute-Marne,Époisses,http://fr.wikipedia.org/wiki/%C3%89poisses_%28fromage%29,http://en.wikipedia.org/wiki/%C3%89poisses_de_Bourgogne,,Vache,rind-washed-cheese
+Pyrénées-Atlantiques,Etorki,http://fr.wikipedia.org/wiki/Etorki,http://en.wikipedia.org/wiki/Etorki,,Brebis,uncooked-pressed-cheese
+Cher,Faisselle,http://fr.wikipedia.org/wiki/Faisselle,,,Vache,fresh-cheese
+Seine-et-Marne,Fontainebleau,http://fr.wikipedia.org/wiki/Fontainebleau_%28dessert%29,,,Vache,fresh-cheese
+Pas-de-Calais,Fort de Béthune,http://fr.wikipedia.org/wiki/Fort_de_B%C3%A9thune,,,Vache,mixed-cheese
+Drôme,Foudjou,http://fr.wikipedia.org/wiki/Foudjou,,,Chèvre,mixed-cheese
+Orne,Fourmagée,http://fr.wikipedia.org/wiki/Fourmag%C3%A9e,,,Vache,mixed-cheese
+Puy-de-Dôme,Fourme d'Ambert,http://fr.wikipedia.org/wiki/Fourme_d%27Ambert,http://en.wikipedia.org/wiki/Fourme_d%27Ambert,,Vache,blue-cheese
+Loire,Fourme de Montbrison,http://fr.wikipedia.org/wiki/Fourme_de_Montbrison,http://en.wikipedia.org/wiki/Fourme_de_Montbrison,,Vache,blue-cheese
+Puy-de-Dôme,Fourme de Montbrison,http://fr.wikipedia.org/wiki/Fourme_de_Montbrison,http://en.wikipedia.org/wiki/Fourme_de_Montbrison,,Vache,blue-cheese
+Puy-de-Dôme,Fourme de Rochefort-Montagne,http://fr.wikipedia.org/wiki/Fourme_de_Rochefort-Montagne,,,Vache,uncooked-pressed-cheese
+Loiret,Frinault,http://fr.wikipedia.org/wiki/Frinault,,,Vache,soft-ripened-cheese
+Haute-Loire,Fromage aux artisons,http://fr.wikipedia.org/wiki/Fromage_aux_artisons,,,Vache,soft-ripened-cheese
+Savoie,Fromage aux noix,http://fr.wikipedia.org/wiki/Fromage_aux_noix,,,Vache,mixed-cheese
+Cantal,Fromage de Pays,http://fr.wikipedia.org/wiki/Fromage_de_Pays,,,Vache,blue-cheese
+Réunion,Fromage des Plaines,http://fr.wikipedia.org/wiki/Fromage_des_Plaines,,,Vache,fresh-cheese
+Loire,Fromager d'Affinois,http://fr.wikipedia.org/wiki/Fromager_d%27Affinois,http://en.wikipedia.org/wiki/Fromager_d%27Affinois,,Vache,soft-ripened-cheese
+Aveyron,Gabriel Coulet,http://fr.wikipedia.org/wiki/Gabriel_Coulet_%28marque%29,,,Brebis,blue-cheese
+Puy-de-Dôme,Gaperon,http://fr.wikipedia.org/wiki/Gaperon,http://en.wikipedia.org/wiki/Gaperon,,Vache,soft-ripened-cheese
+Pyrénées-Atlantiques,Gaztanbera,http://fr.wikipedia.org/wiki/Gaztanbera,,,Brebis,fresh-cheese
+Loire-Atlantique,Gourmelin,http://fr.wikipedia.org/wiki/Gourmelin_%28fromage%29,,,Vache,rind-washed-cheese
+Allier,Grand tomachon,http://fr.wikipedia.org/wiki/Grand_tomachon,,,Vache,uncooked-pressed-cheese
+Savoie,Grataron du Beaufortain,http://fr.wikipedia.org/wiki/Grataron_du_Beaufortain,,,Chèvre,rind-washed-cheese
+Seine-et-Marne,Gratte-Paille,http://fr.wikipedia.org/wiki/Gratte-Paille,,,Vache,soft-ripened-cheese
+Territoire de Belfort,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Haute-Saône,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Saône-et-Loire,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Vosges,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Savoie,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Haute-Marne,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Côte-d'Or,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Isère,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Doubs,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Jura,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Ain,Gruyère français,http://fr.wikipedia.org/wiki/Gruy%C3%A8re_fran%C3%A7ais,,,Vache,cooked-pressed-cheese
+Charente-Maritime,Jonchée,http://fr.wikipedia.org/wiki/Jonch%C3%A9e_%28fromage%29,,,Vache,fresh-cheese
+Pyrénées-Atlantiques,Kaïkou,http://fr.wikipedia.org/wiki/Ka%C3%AFkou,,,Brebis,cooked-pressed-cheese
+Sarthe,Kiri,http://fr.wikipedia.org/wiki/Kiri_%28marque%29,,,Vache,mixed-cheese
+Côte-d'Or,L'Ami du Chambertin,http://fr.wikipedia.org/wiki/L%27Ami_du_Chambertin,,,Vache,rind-washed-cheese
+Réunion,La Fournaise,http://fr.wikipedia.org/wiki/La_Fournaise_%28fromage%29,,,Vache,cooked-pressed-cheese
+Réunion,La Petite Raclette,http://fr.wikipedia.org/wiki/La_Petite_Raclette,,,Vache,cooked-pressed-cheese
+Rhône,La Pierre Dorée,http://fr.wikipedia.org/wiki/La_Pierre_Dor%C3%A9e,,,Chèvre,soft-ripened-cheese
+Jura,La Vache qui rit,http://fr.wikipedia.org/wiki/La_Vache_qui_rit,http://en.wikipedia.org/wiki/The_Laughing_Cow,,Vache,fresh-cheese
+Cantal,Laguiole,http://fr.wikipedia.org/wiki/Laguiole_%28fromage%29,http://en.wikipedia.org/wiki/Laguiole_cheese,,Vache,uncooked-pressed-cheese
+Lozère,Laguiole,http://fr.wikipedia.org/wiki/Laguiole_%28fromage%29,http://en.wikipedia.org/wiki/Laguiole_cheese,,Vache,uncooked-pressed-cheese
+Aveyron,Laguiole,http://fr.wikipedia.org/wiki/Laguiole_%28fromage%29,http://en.wikipedia.org/wiki/Laguiole_cheese,,Vache,uncooked-pressed-cheese
+Haute-Marne,Langres,http://fr.wikipedia.org/wiki/Langres_%28fromage%29,http://en.wikipedia.org/wiki/Langres_cheese,,Vache,rind-washed-cheese
+Nord,Larron d'Ors,http://fr.wikipedia.org/wiki/Larron_d%27Ors,,,Vache,rind-washed-cheese
+Pyrénées-Atlantiques,Le Bleu des Basques,http://fr.wikipedia.org/wiki/Le_Bleu_des_Basques,,,Brebis,blue-cheese
+Pyrénées-Atlantiques,Le Brebiou,http://fr.wikipedia.org/wiki/Le_Brebiou,,,Brebis,soft-ripened-cheese
+Ardèche,Le Coucouron,http://fr.wikipedia.org/wiki/Le_Coucouron,,,Vache,blue-cheese
+Loire-Atlantique,Le Curé Nantais,http://fr.wikipedia.org/wiki/Le_Cur%C3%A9_Nantais,,,Vache,rind-washed-cheese
+Allier,Le Délice du Chalet,http://fr.wikipedia.org/wiki/Le_D%C3%A9lice_du_Chalet,,,Vache,uncooked-pressed-cheese
+Lozère,Le Fédou,http://fr.wikipedia.org/wiki/Le_F%C3%A9dou,,,Brebis,soft-ripened-cheese
+Seine-Maritime,Le Graval,http://fr.wikipedia.org/wiki/Le_Graval,,,Vache,soft-ripened-cheese
+Puy-de-Dôme,Le Lavort,http://fr.wikipedia.org/wiki/Le_Lavort,,,Brebis,uncooked-pressed-cheese
+Ariège,Le Moulis,http://fr.wikipedia.org/wiki/Le_Moulis,,,Brebis,uncooked-pressed-cheese
+Eure,Le Pavé du Plessis,http://fr.wikipedia.org/wiki/Le_Pav%C3%A9_du_Plessis,,,Vache,rind-washed-cheese
+Loir-et-Cher,Le Petit Trôo,http://fr.wikipedia.org/wiki/Le_Petit_Tr%C3%B4o,,,Vache,soft-ripened-cheese
+Ariège,Le Rogallais,http://fr.wikipedia.org/wiki/Le_Rogallais,,,Vache,uncooked-pressed-cheese
+Nord,Le Rouchi à l'échalote,http://fr.wikipedia.org/wiki/Le_Rouchi_%C3%A0_l%27%C3%A9chalote,,,Vache,rind-washed-cheese
+Orne,Le Rustique,http://fr.wikipedia.org/wiki/Le_Rustique,http://en.wikipedia.org/wiki/Le_Rustique,,Vache,soft-ripened-cheese
+Pas-de-Calais,Le Sire de Créquy,http://fr.wikipedia.org/wiki/Le_Sire_de_Cr%C3%A9quy,,,Vache,rind-washed-cheese
+Côte-d'Or,Le Trou du Cru,http://fr.wikipedia.org/wiki/Le_Trou_du_Cru,http://en.wikipedia.org/wiki/Trou_du_Cru,,Vache,rind-washed-cheese
+Lozère,Lévéjac,http://fr.wikipedia.org/wiki/L%C3%A9v%C3%A9jac_%28marque%29,,,Brebis,uncooked-pressed-cheese
+Aveyron,Lou Pérac,http://fr.wikipedia.org/wiki/Lou_P%C3%A9rac,,,Brebis,soft-ripened-cheese
+Saône-et-Loire,Mâconnais,http://fr.wikipedia.org/wiki/M%C3%A2connais_%28fromage%29,http://en.wikipedia.org/wiki/M%C3%A2connais_cheese,,Chèvre,soft-ripened-cheese
+Rhône,Mâconnais,http://fr.wikipedia.org/wiki/M%C3%A2connais_%28fromage%29,http://en.wikipedia.org/wiki/M%C3%A2connais_cheese,,Chèvre,soft-ripened-cheese
+Nord,Mimolette,http://fr.wikipedia.org/wiki/Mimolette,http://en.wikipedia.org/wiki/Mimolette,,Vache,uncooked-pressed-cheese
+Savoie,Moelleux du Revard,http://fr.wikipedia.org/wiki/Moelleux_du_Revard,,,Vache,rind-washed-cheese
+Réunion,Mont Bébour,http://fr.wikipedia.org/wiki/Mont_B%C3%A9bour,,,Vache,soft-ripened-cheese
+Nord,Mont des Cats,http://fr.wikipedia.org/wiki/Mont_des_Cats_%28marque_de_fromage%29,http://en.wikipedia.org/wiki/Mont_des_Cats_cheese,,Vache,uncooked-pressed-cheese
+Haute-Loire,Montbriac,http://fr.wikipedia.org/wiki/Montbriac,,,Vache,blue-cheese
+Saône-et-Loire,Montrachet,http://fr.wikipedia.org/wiki/Montrachet_%28marque%29,,,Chèvre,soft-ripened-cheese
+Ariège,Montségur,http://fr.wikipedia.org/wiki/Monts%C3%A9gur_%28marque%29,,,Vache,uncooked-pressed-cheese
+Ain,Morbier,http://fr.wikipedia.org/wiki/Morbier_%28fromage%29,http://en.wikipedia.org/wiki/Morbier_cheese,,Vache,uncooked-pressed-cheese
+Jura,Morbier,http://fr.wikipedia.org/wiki/Morbier_%28fromage%29,http://en.wikipedia.org/wiki/Morbier_cheese,,Vache,uncooked-pressed-cheese
+Saône-et-Loire,Morbier,http://fr.wikipedia.org/wiki/Morbier_%28fromage%29,http://en.wikipedia.org/wiki/Morbier_cheese,,Vache,uncooked-pressed-cheese
+Doubs,Morbier,http://fr.wikipedia.org/wiki/Morbier_%28fromage%29,http://en.wikipedia.org/wiki/Morbier_cheese,,Vache,uncooked-pressed-cheese
+Vienne,Mottin charentais,http://fr.wikipedia.org/wiki/Mottin_charentais,http://en.wikipedia.org/wiki/Mottin_charentais,,Vache,soft-ripened-cheese
+Marne,Moulin de Gaye,http://fr.wikipedia.org/wiki/Moulin_de_Gaye,,,Vache,soft-ripened-cheese
+Bas-Rhin,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Meurthe-et-Moselle,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Haute-Saône,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Vosges,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Moselle,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Haut-Rhin,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Territoire de Belfort,Munster,http://fr.wikipedia.org/wiki/Munster_%28fromage%29,http://en.wikipedia.org/wiki/Munster_cheese,,Vache,rind-washed-cheese
+Seine-Maritime,Neufchâtel,http://fr.wikipedia.org/wiki/Neufch%C3%A2tel_%28fromage%29,http://en.wikipedia.org/wiki/Neufch%C3%A2tel_cheese,,Vache,soft-ripened-cheese
+Oise,Neufchâtel,http://fr.wikipedia.org/wiki/Neufch%C3%A2tel_%28fromage%29,http://en.wikipedia.org/wiki/Neufch%C3%A2tel_cheese,,Vache,soft-ripened-cheese
+Réunion,Notre Dame de la Paix,http://fr.wikipedia.org/wiki/Notre_Dame_de_la_Paix,,,Vache,soft-ripened-cheese
+Loiret,Olivet,http://fr.wikipedia.org/wiki/Olivet_%28fromage%29,http://en.wikipedia.org/wiki/Olivet_cendr%C3%A9,,Vache,rind-washed-cheese
+Hautes-Pyrénées,Ossau-iraty,http://fr.wikipedia.org/wiki/Ossau-iraty,http://en.wikipedia.org/wiki/Ossau-Iraty,,Brebis,uncooked-pressed-cheese
+Pyrénées-Atlantiques,Ossau-iraty,http://fr.wikipedia.org/wiki/Ossau-iraty,http://en.wikipedia.org/wiki/Ossau-Iraty,,Brebis,uncooked-pressed-cheese
+Corrèze,Ovalie,http://fr.wikipedia.org/wiki/Ovalie_%28marque%29,,,Brebis,soft-ripened-cheese
+Pyrénées-Atlantiques,P'tit Basque,http://fr.wikipedia.org/wiki/P%27tit_Basque,http://en.wikipedia.org/wiki/P%27tit_Basque,,Brebis,uncooked-pressed-cheese
+Loiret,Pannes cendré,http://fr.wikipedia.org/wiki/Pannes_cendr%C3%A9,,,Vache,soft-ripened-cheese
+Loiret,Patay,http://fr.wikipedia.org/wiki/Patay_%28fromage%29,,,Vache,soft-ripened-cheese
+Pas-de-Calais,Pavé aux Algues de Samer,http://fr.wikipedia.org/wiki/Pav%C3%A9_aux_Algues_de_Samer,,,Vache,rind-washed-cheese
+Corrèze,Pavé corrézien,http://fr.wikipedia.org/wiki/Pav%C3%A9_corr%C3%A9zien,,,Vache,uncooked-pressed-cheese
+Calvados,Pavé d'Auge,http://fr.wikipedia.org/wiki/Pav%C3%A9_d%27Auge,,,Vache,rind-washed-cheese
+Eure,Pavé d'Auge,http://fr.wikipedia.org/wiki/Pav%C3%A9_d%27Auge,,,Vache,rind-washed-cheese
+Orne,Pavé d'Auge,http://fr.wikipedia.org/wiki/Pav%C3%A9_d%27Auge,,,Vache,rind-washed-cheese
+Tarn,Pélardon,http://fr.wikipedia.org/wiki/P%C3%A9lardon,http://en.wikipedia.org/wiki/P%C3%A9lardon,,Chèvre,soft-ripened-cheese
+Hérault,Pélardon,http://fr.wikipedia.org/wiki/P%C3%A9lardon,http://en.wikipedia.org/wiki/P%C3%A9lardon,,Chèvre,soft-ripened-cheese
+Aude,Pélardon,http://fr.wikipedia.org/wiki/P%C3%A9lardon,http://en.wikipedia.org/wiki/P%C3%A9lardon,,Chèvre,soft-ripened-cheese
+Gard,Pélardon,http://fr.wikipedia.org/wiki/P%C3%A9lardon,http://en.wikipedia.org/wiki/P%C3%A9lardon,,Chèvre,soft-ripened-cheese
+Lozère,Pélardon,http://fr.wikipedia.org/wiki/P%C3%A9lardon,http://en.wikipedia.org/wiki/P%C3%A9lardon,,Chèvre,soft-ripened-cheese
+Tarn,Pérail,http://fr.wikipedia.org/wiki/P%C3%A9rail,http://en.wikipedia.org/wiki/Perail,,Brebis,soft-ripened-cheese
+Aveyron,Pérail,http://fr.wikipedia.org/wiki/P%C3%A9rail,http://en.wikipedia.org/wiki/Perail,,Brebis,soft-ripened-cheese
+Jura,Pérassu,http://fr.wikipedia.org/wiki/P%C3%A9rassu,,,Vache,blue-cheese
+Savoie,Persillé de Tignes,http://fr.wikipedia.org/wiki/Persill%C3%A9_de_Tignes,,,Chèvre,blue-cheese
+Savoie,Persillé des Aravis,http://fr.wikipedia.org/wiki/Persill%C3%A9_des_Aravis,,,Chèvre,blue-cheese
+Hautes-Alpes,Persillé du col Bayard,http://fr.wikipedia.org/wiki/Persill%C3%A9_du_col_Bayard,,,Vache,blue-cheese
+Lozère,Persillé du Malzieu,http://fr.wikipedia.org/wiki/Persill%C3%A9_du_Malzieu,,,Brebis,blue-cheese
+Savoie,Persillé du Mont-Cenis,http://fr.wikipedia.org/wiki/Persill%C3%A9_du_Mont-Cenis,,,Chèvre,blue-cheese
+Drôme,Pétafine,http://fr.wikipedia.org/wiki/P%C3%A9tafine,,,Chèvre,mixed-cheese
+Ille-et-Vilaine,Petit Billy,http://fr.wikipedia.org/wiki/Petit_Billy,,,Chèvre,fresh-cheese
+Côte-d'Or,Petit Gaugry,http://fr.wikipedia.org/wiki/Petit_Gaugry,,,Vache,rind-washed-cheese
+Réunion,Petit moka,http://fr.wikipedia.org/wiki/Petit_moka,,,Vache,uncooked-pressed-cheese
+Hautes-Alpes,Pic du Vieux Chaillol,http://fr.wikipedia.org/wiki/Pic_du_Vieux_Chaillol_%28fromage%29,,,Vache,soft-ripened-cheese
+Drôme,Picodon,http://fr.wikipedia.org/wiki/Picodon,http://en.wikipedia.org/wiki/Picodon,,Chèvre,soft-ripened-cheese
+Gard,Picodon,http://fr.wikipedia.org/wiki/Picodon,http://en.wikipedia.org/wiki/Picodon,,Chèvre,soft-ripened-cheese
+Ardèche,Picodon,http://fr.wikipedia.org/wiki/Picodon,http://en.wikipedia.org/wiki/Picodon,,Chèvre,soft-ripened-cheese
+Vaucluse,Picodon,http://fr.wikipedia.org/wiki/Picodon,http://en.wikipedia.org/wiki/Picodon,,Chèvre,soft-ripened-cheese
+Loiret,Pithiviers au foin,http://fr.wikipedia.org/wiki/Pithiviers_au_foin,,,Vache,soft-ripened-cheese
+Réunion,Piton des Neiges,http://fr.wikipedia.org/wiki/Piton_des_Neiges_%28fromage%29,,,Vache,cooked-pressed-cheese
+Réunion,Piton Maïdo,http://fr.wikipedia.org/wiki/Piton_Ma%C3%AFdo_%28fromage%29,,,Vache,uncooked-pressed-cheese
+Seine-Maritime,Pont-l'évêque,http://fr.wikipedia.org/wiki/Pont-l%27%C3%A9v%C3%AAque_%28fromage%29,http://en.wikipedia.org/wiki/Pont-l%27%C3%89v%C3%AAque_cheese,,Vache,rind-washed-cheese
+Eure,Pont-l'évêque,http://fr.wikipedia.org/wiki/Pont-l%27%C3%A9v%C3%AAque_%28fromage%29,http://en.wikipedia.org/wiki/Pont-l%27%C3%89v%C3%AAque_cheese,,Vache,rind-washed-cheese
+Mayenne,Pont-l'évêque,http://fr.wikipedia.org/wiki/Pont-l%27%C3%A9v%C3%AAque_%28fromage%29,http://en.wikipedia.org/wiki/Pont-l%27%C3%89v%C3%AAque_cheese,,Vache,rind-washed-cheese
+Manche,Pont-l'évêque,http://fr.wikipedia.org/wiki/Pont-l%27%C3%A9v%C3%AAque_%28fromage%29,http://en.wikipedia.org/wiki/Pont-l%27%C3%89v%C3%AAque_cheese,,Vache,rind-washed-cheese
+Calvados,Pont-l'évêque,http://fr.wikipedia.org/wiki/Pont-l%27%C3%A9v%C3%AAque_%28fromage%29,http://en.wikipedia.org/wiki/Pont-l%27%C3%89v%C3%AAque_cheese,,Vache,rind-washed-cheese
+Orne,Pont-l'évêque,http://fr.wikipedia.org/wiki/Pont-l%27%C3%A9v%C3%AAque_%28fromage%29,http://en.wikipedia.org/wiki/Pont-l%27%C3%89v%C3%AAque_cheese,,Vache,rind-washed-cheese
+Mayenne,Port-Salut,http://fr.wikipedia.org/wiki/Port-Salut_%28marque%29,http://en.wikipedia.org/wiki/Port_Salut,,Vache,uncooked-pressed-cheese
+Indre,Pouligny-saint-pierre,http://fr.wikipedia.org/wiki/Pouligny-saint-pierre_%28fromage%29,http://en.wikipedia.org/wiki/Pouligny-Saint-Pierre_cheese,,Chèvre,soft-ripened-cheese
+Ain,Pourri bressan,http://fr.wikipedia.org/wiki/Pourri_bressan,,,Vache,mixed-cheese
+Savoie,Raclette,http://fr.wikipedia.org/wiki/Raclette,http://en.wikipedia.org/wiki/Raclette,,Vache,cooked-pressed-cheese
+Ain,Ramequin,http://fr.wikipedia.org/wiki/Ramequin_%28fromage%29,,,Vache,rind-washed-cheese
+Lozère,Rebarbe,http://fr.wikipedia.org/wiki/Rebarbe,,,Brebis,stretched-curd-cheese
+Aveyron,Rebarbe,http://fr.wikipedia.org/wiki/Rebarbe,,,Brebis,mixed-cheese
+Savoie,Reblochon,http://fr.wikipedia.org/wiki/Reblochon,http://en.wikipedia.org/wiki/Reblochon,,Vache,uncooked-pressed-cheese
+Aveyron,Recuite,http://fr.wikipedia.org/wiki/Recuite,,,Brebis,fresh-cheese
+Rhône,Rigotte de Condrieu,http://fr.wikipedia.org/wiki/Rigotte_de_Condrieu,http://en.wikipedia.org/wiki/Rigotte_de_Condrieu,,Chèvre,soft-ripened-cheese
+Loire,Rigotte de Condrieu,http://fr.wikipedia.org/wiki/Rigotte_de_Condrieu,http://en.wikipedia.org/wiki/Rigotte_de_Condrieu,,Chèvre,soft-ripened-cheese
+Loire,Rigotte de Pélussin,http://fr.wikipedia.org/wiki/Rigotte_de_P%C3%A9lussin,,,Chèvre,soft-ripened-cheese
+Lot,Rocamadour,http://fr.wikipedia.org/wiki/Rocamadour_%28fromage%29,http://en.wikipedia.org/wiki/Rocamadour_cheese,,Chèvre,soft-ripened-cheese
+Haute-Loire,Rochebaron,http://fr.wikipedia.org/wiki/Rochebaron,http://en.wikipedia.org/wiki/Rochebaron,,Vache,blue-cheese
+Ardennes,Rocroi,http://fr.wikipedia.org/wiki/Rocroi_%28fromage%29,,,Vache,soft-ripened-cheese
+Ardèche,Rogeret des Cévennes,http://fr.wikipedia.org/wiki/Rogeret_des_C%C3%A9vennes,,,Chèvre,soft-ripened-cheese
+Pas-de-Calais,Rollot,http://fr.wikipedia.org/wiki/Rollot_%28fromage%29,,,Vache,rind-washed-cheese
+Nord,Rollot,http://fr.wikipedia.org/wiki/Rollot_%28fromage%29,,,Vache,rind-washed-cheese
+Somme,Rollot,http://fr.wikipedia.org/wiki/Rollot_%28fromage%29,,,Vache,rind-washed-cheese
+Aveyron,Roquefort,http://fr.wikipedia.org/wiki/Roquefort_%28fromage%29,http://en.wikipedia.org/wiki/Roquefort,,Brebis,blue-cheese
+Puy-de-Dôme,Roue de Ris,http://fr.wikipedia.org/wiki/Roue_de_Ris,,,Brebis,uncooked-pressed-cheese
+Haute-Loire,Saint Agur,http://fr.wikipedia.org/wiki/Saint_Agur,http://en.wikipedia.org/wiki/Saint_Agur_Blue,,Vache,blue-cheese
+Pyrénées-Atlantiques,Saint Albray,http://fr.wikipedia.org/wiki/Saint_Albray,http://en.wikipedia.org/wiki/Saint_Albray,,Vache,soft-ripened-cheese
+Ardèche,Saint-félicien,http://fr.wikipedia.org/wiki/Saint-f%C3%A9licien_%28fromage_de_l%27Ard%C3%A8che%29,,,Vache,soft-ripened-cheese
+Yonne,Saint-florentin,http://fr.wikipedia.org/wiki/Saint-florentin_%28fromage%29,,,Vache,rind-washed-cheese
+Loire-Atlantique,Saint-gildas-des-bois,http://fr.wikipedia.org/wiki/Saint-gildas-des-bois_%28fromage%29,,,Vache,soft-ripened-cheese
+Hautes-Alpes,Saint-laurent,http://fr.wikipedia.org/wiki/Saint-laurent_%28fromage%29,,,Vache,soft-ripened-cheese
+Puy-de-Dôme,Saint-nectaire,http://fr.wikipedia.org/wiki/Saint-nectaire_%28fromage%29,http://en.wikipedia.org/wiki/Saint-Nectaire,,Vache,uncooked-pressed-cheese
+Cantal,Saint-nectaire,http://fr.wikipedia.org/wiki/Saint-nectaire_%28fromage%29,http://en.wikipedia.org/wiki/Saint-Nectaire,,Vache,uncooked-pressed-cheese
+Indre,Sainte-Maure de Touraine,http://fr.wikipedia.org/wiki/Sainte-Maure_de_Touraine_%28fromage%29,http://en.wikipedia.org/wiki/Sainte-Maure_de_Touraine,,Chèvre,soft-ripened-cheese
+Vienne,Sainte-Maure de Touraine,http://fr.wikipedia.org/wiki/Sainte-Maure_de_Touraine_%28fromage%29,http://en.wikipedia.org/wiki/Sainte-Maure_de_Touraine,,Chèvre,soft-ripened-cheese
+Indre-et-Loire,Sainte-Maure de Touraine,http://fr.wikipedia.org/wiki/Sainte-Maure_de_Touraine_%28fromage%29,http://en.wikipedia.org/wiki/Sainte-Maure_de_Touraine,,Chèvre,soft-ripened-cheese
+Loir-et-Cher,Sainte-Maure de Touraine,http://fr.wikipedia.org/wiki/Sainte-Maure_de_Touraine_%28fromage%29,http://en.wikipedia.org/wiki/Sainte-Maure_de_Touraine,,Chèvre,soft-ripened-cheese
+Cantal,Salers,http://fr.wikipedia.org/wiki/Salers_%28fromage%29,http://en.wikipedia.org/wiki/Salers_cheese,,Vache,uncooked-pressed-cheese
+Cher,Santranges-sancerre,http://fr.wikipedia.org/wiki/Santranges-sancerre,,,Chèvre,soft-ripened-cheese
+Loir-et-Cher,Selles-sur-cher,http://fr.wikipedia.org/wiki/Selles-sur-cher_%28fromage%29,http://en.wikipedia.org/wiki/Selles-sur-Cher_cheese,,Chèvre,soft-ripened-cheese
+Aveyron,Société,http://fr.wikipedia.org/wiki/Soci%C3%A9t%C3%A9_%28marque%29,,,Brebis,blue-cheese
+Yonne,Soumaintrain,http://fr.wikipedia.org/wiki/Soumaintrain_%28fromage%29,,,Vache,rind-washed-cheese
+Aube,Soumaintrain,http://fr.wikipedia.org/wiki/Soumaintrain_%28fromage%29,,,Vache,rind-washed-cheese
+Dordogne,St Môret,http://fr.wikipedia.org/wiki/St_M%C3%B4ret,,,Vache,mixed-cheese
+Yonne,Suprême des Ducs,http://fr.wikipedia.org/wiki/Supr%C3%AAme_des_Ducs,,,Vache,soft-ripened-cheese
+Nord,T'chiot biloute,http://fr.wikipedia.org/wiki/T%27chiot_biloute,,,Vache,rind-washed-cheese
+Réunion,Takamaka,http://fr.wikipedia.org/wiki/Takamaka_%28fromage%29,,,Chèvre,fresh-cheese
+Charente,Taupinette,http://fr.wikipedia.org/wiki/Taupinette,,,Chèvre,soft-ripened-cheese
+Savoie,Thollon,http://fr.wikipedia.org/wiki/Thollon,,,Vache,blue-cheese
+Réunion,Ti frais des Hauts,http://fr.wikipedia.org/wiki/Ti_frais_des_Hauts,,,Vache,fresh-cheese
+Savoie,Tignard,http://fr.wikipedia.org/wiki/Tignard,,,"Vache,Chèvre,Brebis",blue-cheese
+Nord,Tome de Cambrai,http://fr.wikipedia.org/wiki/Tome_de_Cambrai,,,Vache,uncooked-pressed-cheese
+Morbihan,Tome de Rhuys,http://fr.wikipedia.org/wiki/Tome_de_Rhuys,,,Vache,uncooked-pressed-cheese
+Savoie,Tome des Bauges,http://fr.wikipedia.org/wiki/Tome_des_Bauges,,,Vache,uncooked-pressed-cheese
+Hautes-Alpes,Tome du Champsaur,http://fr.wikipedia.org/wiki/Tome_du_Champsaur,,,Vache,soft-ripened-cheese
+Cantal,Tome fraîche,http://fr.wikipedia.org/wiki/Tome_fra%C3%AEche,,,Vache,fresh-cheese
+Lozère,Tome fraîche,http://fr.wikipedia.org/wiki/Tome_fra%C3%AEche,,,Vache,fresh-cheese
+Aveyron,Tome fraîche,http://fr.wikipedia.org/wiki/Tome_fra%C3%AEche,,,Vache,fresh-cheese
+Pyrénées-Atlantiques,Tomette de Brebis,http://fr.wikipedia.org/wiki/Tomette_de_Brebis,,,Brebis,uncooked-pressed-cheese
+Oise,Tomme au foin,http://fr.wikipedia.org/wiki/Tomme_au_foin,,,Vache,uncooked-pressed-cheese
+Savoie,Tomme blanche,http://fr.wikipedia.org/wiki/Tomme_blanche,,,Vache,soft-ripened-cheese
+Savoie,Tomme crayeuse,http://fr.wikipedia.org/wiki/Tomme_crayeuse,,,Vache,uncooked-pressed-cheese
+Moselle,Tomme de Gorze,http://fr.wikipedia.org/wiki/Tomme_de_Gorze,,,Vache,cooked-pressed-cheese
+Haute-Loire,Tomme de Montagne,http://fr.wikipedia.org/wiki/Tomme_de_Montagne,,,Vache,uncooked-pressed-cheese
+Savoie,Tomme de Savoie,http://fr.wikipedia.org/wiki/Tomme_de_Savoie,http://en.wikipedia.org/wiki/Tomme_de_Savoie,,Vache,uncooked-pressed-cheese
+Aude,Tomme des Pyrénées,http://fr.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,http://en.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,,Vache,uncooked-pressed-cheese
+Hautes-Pyrénées,Tomme des Pyrénées,http://fr.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,http://en.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,,Vache,uncooked-pressed-cheese
+Haute-Garonne,Tomme des Pyrénées,http://fr.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,http://en.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,,Vache,uncooked-pressed-cheese
+Ariège,Tomme des Pyrénées,http://fr.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,http://en.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,,Vache,uncooked-pressed-cheese
+Pyrénées-Atlantiques,Tomme des Pyrénées,http://fr.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,http://en.wikipedia.org/wiki/Tomme_des_Pyr%C3%A9n%C3%A9es,,Vache,uncooked-pressed-cheese
+Savoie,Tomme forte de Savoie,http://fr.wikipedia.org/wiki/Tomme_forte_de_Savoie,,,Vache,mixed-cheese
+Indre,Tournon-saint-pierre,http://fr.wikipedia.org/wiki/Tournon-saint-pierre_%28fromage%29,,,Chèvre,soft-ripened-cheese
+Moselle,Tourrée de l'Aubier,http://fr.wikipedia.org/wiki/Tourr%C3%A9e_de_l%27Aubier,,,Vache,soft-ripened-cheese
+Ain,Tracle,http://fr.wikipedia.org/wiki/Tracle,,,Vache,mixed-cheese
+Dordogne,Trappe Échourgnac,http://fr.wikipedia.org/wiki/Trappe_%C3%89chourgnac,,,Vache,uncooked-pressed-cheese
+Pas-de-Calais,Trappiste de Belval,http://fr.wikipedia.org/wiki/Trappiste_de_Belval,,,Vache,cooked-pressed-cheese
+Morbihan,Trappiste de Campénéac,http://fr.wikipedia.org/wiki/Trappiste_de_Camp%C3%A9n%C3%A9ac,,,Vache,uncooked-pressed-cheese
+Mayenne,Trappiste de Laval,http://fr.wikipedia.org/wiki/Trappiste_de_Laval,,,Vache,rind-washed-cheese
+Charente-Maritime,Tricorne de Marans,http://fr.wikipedia.org/wiki/Tricorne_de_Marans,,,Brebis,soft-ripened-cheese
+Corrèze,Truffe de Ventadour,http://fr.wikipedia.org/wiki/Truffe_de_Ventadour,,,Chèvre,soft-ripened-cheese
+Savoie,Vacherin des Bauges,http://fr.wikipedia.org/wiki/Vacherin_des_Bauges,,,Vache,rind-washed-cheese
+Loir-et-Cher,Valençay,http://fr.wikipedia.org/wiki/Valen%C3%A7ay_%28fromage%29,http://en.wikipedia.org/wiki/Valen%C3%A7ay_cheese,,Chèvre,soft-ripened-cheese
+Cher,Valençay,http://fr.wikipedia.org/wiki/Valen%C3%A7ay_%28fromage%29,http://en.wikipedia.org/wiki/Valen%C3%A7ay_cheese,,Chèvre,soft-ripened-cheese
+Indre-et-Loire,Valençay,http://fr.wikipedia.org/wiki/Valen%C3%A7ay_%28fromage%29,http://en.wikipedia.org/wiki/Valen%C3%A7ay_cheese,,Chèvre,soft-ripened-cheese
+Indre,Valençay,http://fr.wikipedia.org/wiki/Valen%C3%A7ay_%28fromage%29,http://en.wikipedia.org/wiki/Valen%C3%A7ay_cheese,,Chèvre,soft-ripened-cheese
+Pas-de-Calais,Vieux Boulogne,http://fr.wikipedia.org/wiki/Vieux_Boulogne,http://en.wikipedia.org/wiki/Vieux-Boulogne,,Vaches,rind-washed-cheese
+Mayenne,Vieux pané,http://fr.wikipedia.org/wiki/Vieux_pan%C3%A9,,,Vache,uncooked-pressed-cheese
+Pas-de-Calais,Vieux Samer,http://fr.wikipedia.org/wiki/Vieux_Samer,,,Vache,rind-washed-cheese
+Eure-et-Loir,Voves cendré,http://fr.wikipedia.org/wiki/Voves_cendr%C3%A9,,,Vache,soft-ripened-cheese

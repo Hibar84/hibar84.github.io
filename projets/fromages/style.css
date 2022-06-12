@@ -24,6 +24,16 @@ body{
 #config-plateau{
 }
 
+.box-cheese-list{
+    display: flex;
+    flex-direction: row;
+}
+
+.cheese-card{
+    display: flex;
+    flex-direction: column;
+}
+
 .form-label{
 }
 
