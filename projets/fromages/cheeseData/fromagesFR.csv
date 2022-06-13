@@ -24,13 +24,13 @@ Savoie,Beaumont,http://fr.wikipedia.org/wiki/Beaumont_%28fromage%29,,,Vache,unco
 Aisne,Belle des champs,http://fr.wikipedia.org/wiki/Belle_des_champs,,,Vache,soft-ripened-cheese
 Allier,Bessay,http://fr.wikipedia.org/wiki/Bessay_%28fromage%29,,,Vache,soft-ripened-cheese
 Ariège,Bethmale,http://fr.wikipedia.org/wiki/Bethmale_%28fromage%29,,,Vache,uncooked-pressed-cheese
-Puy-de-Dôme,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
-Aveyron,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
-Haute-Loire,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
-Corrèze,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
-Lozère,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
-Cantal,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
-Lot,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,https://fr.wikipedia.org/wiki/Bleu_d'Auvergne#/media/Fichier:Bleu_d'Auvergne_01.jpg,Vache,blue-cheese
+Puy-de-Dôme,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Aveyron,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Haute-Loire,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Corrèze,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Lozère,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Cantal,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
+Lot,Bleu d'Auvergne,http://fr.wikipedia.org/wiki/Bleu_d%27Auvergne,http://en.wikipedia.org/wiki/Bleu_d%27Auvergne,,Vache,blue-cheese
 Haute-Loire,Bleu de Costaros,http://fr.wikipedia.org/wiki/Bleu_de_Costaros,,,Vache,blue-cheese
 Jura,Bleu de Gex,http://fr.wikipedia.org/wiki/Bleu_de_Gex,http://en.wikipedia.org/wiki/Bleu_de_Gex,,Vache,blue-cheese
 Ain,Bleu de Gex,http://fr.wikipedia.org/wiki/Bleu_de_Gex,http://en.wikipedia.org/wiki/Bleu_de_Gex,,Vache,blue-cheese
@@ -56,20 +56,20 @@ Yonne,Boulette de la Pierre-qui-Vire,http://fr.wikipedia.org/wiki/Boulette_de_la
 Saône-et-Loire,Bouton de Culotte,http://fr.wikipedia.org/wiki/Bouton_de_Culotte,,,Chèvre,soft-ripened-cheese
 Ain,Bresse Bleu,http://fr.wikipedia.org/wiki/Bresse_Bleu,http://en.wikipedia.org/wiki/Bleu_de_Bresse,,Vache,blue-cheese
 Savoie,Brézain,http://fr.wikipedia.org/wiki/Br%C3%A9zain,,,Vache,uncooked-pressed-cheese
-Haute-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,https://fr.wikipedia.org/wiki/Fichier:Brie_01.jpg,Vache,soft-ripened-cheese
-Seine-et-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,https://fr.wikipedia.org/wiki/Fichier:Brie_01.jpg,Vache,soft-ripened-cheese
-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,https://fr.wikipedia.org/wiki/Fichier:Brie_01.jpg,Vache,soft-ripened-cheese
-Aube,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,https://fr.wikipedia.org/wiki/Fichier:Brie_01.jpg,Vache,soft-ripened-cheese
-Yonne,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,https://fr.wikipedia.org/wiki/Brie_de_Melun#/media/Fichier:Wikicheese_-_Brie_de_Melun_-_20150515_-_015.jpg,Vache,soft-ripened-cheese
-Seine-et-Marne,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,https://fr.wikipedia.org/wiki/Brie_de_Melun#/media/Fichier:Wikicheese_-_Brie_de_Melun_-_20150515_-_015.jpg,Vache,soft-ripened-cheese
-Aube,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,https://fr.wikipedia.org/wiki/Brie_de_Melun#/media/Fichier:Wikicheese_-_Brie_de_Melun_-_20150515_-_015.jpg,Vache,soft-ripened-cheese
+Haute-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Seine-et-Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Marne,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Aube,Brie de Meaux,http://fr.wikipedia.org/wiki/Brie_de_Meaux,http://en.wikipedia.org/wiki/Brie_de_Meaux,,Vache,soft-ripened-cheese
+Yonne,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,,Vache,soft-ripened-cheese
+Seine-et-Marne,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,,Vache,soft-ripened-cheese
+Aube,Brie de Melun,http://fr.wikipedia.org/wiki/Brie_de_Melun,,,Vache,soft-ripened-cheese
 Seine-et-Marne,Brie de Montereau,http://fr.wikipedia.org/wiki/Brie_de_Montereau,,,Vache,soft-ripened-cheese
 Seine-et-Marne,Brie de Nangis,http://fr.wikipedia.org/wiki/Brie_de_Nangis,,,Vache,soft-ripened-cheese
 Haute-Corse,Brin d'amour,http://fr.wikipedia.org/wiki/Brin_d%27amour,,,Brebis,rind-washed-cheese
 Nord,Briquette de l'Ecaillon,http://fr.wikipedia.org/wiki/Briquette_de_l%27Ecaillon,,,Chèvre,soft-ripened-cheese
-Lot,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,https://fr.wikipedia.org/wiki/Cab%C3%A9cou#/media/Fichier:Cab%C3%A9cou_de_l'Aveyron.JPG,Chèvre,soft-ripened-cheese
-Cantal,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,https://fr.wikipedia.org/wiki/Cab%C3%A9cou#/media/Fichier:Cab%C3%A9cou_de_l'Aveyron.JPG,Chèvre,soft-ripened-cheese
-Aveyron,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,https://fr.wikipedia.org/wiki/Cab%C3%A9cou#/media/Fichier:Cab%C3%A9cou_de_l'Aveyron.JPG,Chèvre,soft-ripened-cheese
+Lot,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,,Chèvre,soft-ripened-cheese
+Cantal,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,,Chèvre,soft-ripened-cheese
+Aveyron,Cabécou,http://fr.wikipedia.org/wiki/Cab%C3%A9cou,http://en.wikipedia.org/wiki/Cab%C3%A9cou,,Chèvre,soft-ripened-cheese
 Charente-Maritime,Caillebotte,http://fr.wikipedia.org/wiki/Caillebotte_%28fromage%29,,,Vache,fresh-cheese
 Cantal,Cantal,http://fr.wikipedia.org/wiki/Cantal_%28fromage%29,http://en.wikipedia.org/wiki/Cantal_cheese,,Vache,uncooked-pressed-cheese
 Réunion,Cap Noir,http://fr.wikipedia.org/wiki/Cap_Noir_%28fromage%29,,,Vache,uncooked-pressed-cheese
