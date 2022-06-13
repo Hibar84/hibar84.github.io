@@ -61,17 +61,14 @@ function selected_event_type(eventType){
     // défini le type d'événement ainsi que la quantité par personne
     switch (eventType){
         case 'repas':
-            document.getElementById('event-type-selected').innerText = " V&F.";
             eventSelected = 'repas';
             cheeseQtyPP = 200;
             break;
         case 'apero':
-            document.getElementById('event-type-selected').innerText = " apéro.";
             eventSelected = 'apero';
             cheeseQtyPP = 75;
             break;
         case 'degustation':
-            document.getElementById('event-type-selected').innerText = "e dégustation.";
             eventSelected = 'degustation';
             cheeseQtyPP = 125;
             break;
@@ -80,7 +77,6 @@ function selected_event_type(eventType){
 
 function cheese_types_quantity(value){
     el = document.getElementById('nb-personnes');
-    document.getElementById('nbPersonnes').innerText = value;
     nbPersonnes = value;
     // Définit le nombre de variétés de fromages en fonction du nombre de personne
     if (value <4){
@@ -108,8 +104,8 @@ function generate_cheese_type_box(cheese_type){
     var template = document.querySelector("#cheese-type-bloc");
     var box = document.importNode(template.content, true);
     
-    var header = box.querySelector('h1.box-header');
-    var list = box.querySelector('div.box-cheese-list');
+    var header = box.querySelector('h3.fr-h3');
+    var list = box.querySelector('div.fr-grid-row');
 
     switch (cheese_type){
         case 'blue-cheese':
@@ -185,8 +181,8 @@ function generate_cheese_card(cheese_type){
     var template = document.querySelector("#cheese-example");
     var card = document.importNode(template.content, true);
 
-    var name = card.querySelector('h2.cheese-card-header');
-    var origin = card.querySelector('p.cheese-card-origin');
+    var name = card.querySelector('h4.fr-tile__title');
+    var origin = card.querySelector('p.fr-tile__desc');
 
     switch (cheese_type){
         case 'blue-cheese':      
@@ -242,20 +238,26 @@ function generate_cheese_card(cheese_type){
 function generatePlateau(){
     // Calcul de la quantité totale de fromage à prévoir
     let qtyFromageTot = cheeseQtyPP*nbPersonnes;
+    
+    //Réinitialisation du message d'erreur
+    let messageErreur = document.getElementById("message-erreur");
+    messageErreur.classList.add("hidden");
+
     if (isNaN(qtyFromageTot)){
-        alert("Veuillez d'abord choisir un type d'événement!");   
+        messageErreur.classList.remove("hidden");
+        return;   
     } else
         document.getElementById("qtyFromage").innerText = qtyFromageTot +'gr.'; 
-        
-    // Génération des listes de fromages
-    document.getElementById('fromages-proposes').innerHTML='';
-    if (cheeseTypes.length>0){
-        for (var i = 0; i<cheeseTypes.length; i++){
-            let node = generate_cheese_type_box(cheeseTypes[i]);
-            document.getElementById('fromages-proposes').appendChild(node);
-        }
-    } else
-    alert("Veuillez d'abord choisir au moins un type de fromage!");
+        // Génération des listes de fromages
+        document.getElementById('fromages-proposes').innerHTML='';
+        if (cheeseTypes.length>0){
+            for (var i = 0; i<cheeseTypes.length; i++){
+                let node = generate_cheese_type_box(cheeseTypes[i]);
+                document.getElementById('fromages-proposes').appendChild(node);
+            }
+        } else
+            messageErreur.classList.remove("hidden");
+            return;
     
 }
 
