@@ -92,6 +92,7 @@ function check_cheese_types_selection(){
     var cheeses = [];
     for (var i = 0; i < checkboxes.length; i++){
         if (checkboxes[i].checked == true){
+            document.getElementById(checkboxes[i].value).classList.remove('hidden');
             cheeses.push(checkboxes[i].value);
         }
     }
@@ -100,12 +101,15 @@ function check_cheese_types_selection(){
 
 // Fonctions de générations du plateau
 function generate_cheese_type_box(cheese_type){
+    document.getElementById(cheese_type).innerHTML='';
     var template = document.querySelector("#cheese-type-bloc");
     var box = document.importNode(template.content, true);
     
     var header = box.querySelector('h3.fr-h4');
     var list = box.querySelector('div.fr-grid-row');
-
+    var btn = box.querySelector('button.fr-btn');
+    btn.onclick = function() {generate_cheese_type_box(cheese_type)};
+    
     switch (cheese_type){
         case 'blue-cheese':
             header.textContent = "Fromages persillés";
@@ -171,8 +175,7 @@ function generate_cheese_type_box(cheese_type){
             }
             break
     }
-    return box
-
+    document.getElementById(cheese_type).appendChild(box);
 }
 
 function generate_cheese_card(cheese_type){
@@ -248,11 +251,9 @@ function generatePlateau(){
     } else
         document.getElementById("qtyFromage").innerText = qtyFromageTot +'gr.'; 
         // Génération des listes de fromages
-        document.getElementById('fromages-proposes').innerHTML='';
         if (cheeseTypes.length>0){
             for (var i = 0; i<cheeseTypes.length; i++){
-                let node = generate_cheese_type_box(cheeseTypes[i]);
-                document.getElementById('fromages-proposes').appendChild(node);
+                generate_cheese_type_box(cheeseTypes[i]);
             }
         } else
             messageErreur.classList.remove("hidden");
