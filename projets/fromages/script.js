@@ -186,56 +186,52 @@ function generate_cheese_card(cheese_type){
 
     var name = card.querySelector('h4.fr-tile__title');
     var origin = card.querySelector('p.fr-tile__desc');
+    var img = card.querySelector('img.fr-responsive-img');
+    var randomCheese;
 
     switch (cheese_type){
         case 'blue-cheese':      
-            var randomCheese = blue_cheeses[getRandomInt(blue_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card;        
+            randomCheese = blue_cheeses[getRandomInt(blue_cheeses.length)];       
+            break
 
         case 'fresh-cheese':
             var randomCheese = fresh_cheeses[getRandomInt(fresh_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card; 
+            break
 
         case 'mixed-cheese':
             var randomCheese = mixed_cheeses[getRandomInt(mixed_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card; 
+            break 
 
         case 'cooked-pressed-cheese':
             var randomCheese = cooked_pressed_cheeses[getRandomInt(cooked_pressed_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card; 
+            break
 
         case 'rind-washed-cheese':
             var randomCheese = rind_washed_cheeses[getRandomInt(rind_washed_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card;
+            break
 
         case 'stretched-curd-cheese':
             var randomCheese = stretched_curd_cheeses[getRandomInt(stretched_curd_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card;
+            break
 
         case 'soft-ripened-cheese':
             var randomCheese = soft_ripened_cheeses[getRandomInt(soft_ripened_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card;
+            break
 
         case 'uncooked-pressed-cheese':
             var randomCheese = uncooked_pressed_cheeses[getRandomInt(uncooked_pressed_cheeses.length)];
-            name.textContent = randomCheese.nom;
-            origin.textContent = randomCheese.departement;
-            return card;
+            break
     }
+
+    name.textContent = randomCheese.nom;
+    origin.textContent = randomCheese.departement;
+    if (randomCheese.image == ""){
+
+    }   else {
+        img.src = randomCheese.image;
+    }
+    
+    return card; 
 }
 
 function generatePlateau(){
