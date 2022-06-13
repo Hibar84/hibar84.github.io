@@ -76,7 +76,6 @@ function selected_event_type(eventType){
 }
 
 function cheese_types_quantity(value){
-    el = document.getElementById('nb-personnes');
     nbPersonnes = value;
     // Définit le nombre de variétés de fromages en fonction du nombre de personne
     if (value <4){
@@ -104,7 +103,7 @@ function generate_cheese_type_box(cheese_type){
     var template = document.querySelector("#cheese-type-bloc");
     var box = document.importNode(template.content, true);
     
-    var header = box.querySelector('h3.fr-h3');
+    var header = box.querySelector('h3.fr-h4');
     var list = box.querySelector('div.fr-grid-row');
 
     switch (cheese_type){
@@ -133,7 +132,7 @@ function generate_cheese_type_box(cheese_type){
             break
 
         case 'cooked-pressed-cheese':
-            header.textContent = "Fromages pressés cuits";
+            header.textContent = "Fromages à pâte pressée cuite";
             for (var i = 0; i<3; i++){
                 let card = generate_cheese_card('cooked-pressed-cheese');
                 list.appendChild(card);
@@ -165,7 +164,7 @@ function generate_cheese_type_box(cheese_type){
             break
 
         case 'uncooked-pressed-cheese':
-            header.textContent = "Fromages pressés non cuits";
+            header.textContent = "Fromages à pâte pressée non cuite";
             for (var i = 0; i<3; i++){
                 let card = generate_cheese_card('uncooked-pressed-cheese');
                 list.appendChild(card);
@@ -262,5 +261,5 @@ function generatePlateau(){
 }
 
 // Déclenchement de la génération avec l'événement du bouton
-btnGeneration = document.getElementById('btn-generation-plateau');
+btnGeneration = document.getElementById('panel-result');
 btnGeneration.addEventListener('click', generatePlateau);

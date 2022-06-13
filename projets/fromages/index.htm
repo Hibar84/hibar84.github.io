@@ -14,22 +14,22 @@
     <!-- Modifier les chemins relatifs des favicons en fonction de la structure du projet -->
     <!-- Dans le fichier manifest.webmanifest aussi, modifier les chemins vers les images -->
 
+    <style>
+        .hidden{
+            display: none;
+        }
+    </style>
 
 
     <title>Mon plateau de fromage </title>
     <link rel="icon" type="image/png" href="favicon/favicon.png">
-    <link rel="stylesheet" href="style.css">
-
     <script type="text/javascript" src="cheeseData/cheeses.js"></script>
 
 </head>
 
-
-
-
 <body>
     <!-- Bannière : Début -->
-    <header role="banner" class="fr-header">
+    <header role="banner" class="fr-header fr-mb-3w">
         <div class="fr-header__body">
             <div class="fr-container">
                 <div class="fr-header__body-row">
@@ -43,7 +43,7 @@
                             </div>
                         </div>
                         <div class="fr-header__service">
-                            <a href="/" title="Accueil - [À MODIFIER | Nom du site / service]">
+                            <a href="/projets/fromages/index.htm" title="Configurateur de plateau fromages">
                               <p class="fr-header__service-title">Configurateur de plateau fromages</p>
                             </a>
                             <p class="fr-header__service-tagline">et vos rêves sont exaucés!</p>
@@ -57,21 +57,21 @@
 
     <!-- Templates : Début -->
     <template id="cheese-type-bloc">
-        <h3 class="fr-h3"></h1>
+        <h3 class="fr-h4"></h1>
         <div class="fr-container">
             <div class="fr-grid-row"></div>
         </div>
     </template>
 
     <template id="cheese-example">
-        <div class="fr-col">
+        <div class="fr-col fr-mb-3w">
             <div class="cheese-card fr-tile fr-enlarge-link">
                 <div class="fr-tile__body">
-                    <h4 class="fr-tile__title"></h4>
+                    <h4 class="fr-tile__title fr-h5"></h4>
                     <p id="cheese-card-origin" class="fr-tile__desc"></p>
                 </div>
                 <div class="fr-tile__img">
-                    <img class="fr-responsive-img" src="./img/placeholder.1x1.png" alt="Image du fromage">
+                    <img class="fr-responsive-img" src="./img/placeholders/placeholder.1x1.png" alt="Image du fromage">
                     <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
                 </div>
             </div>  
@@ -79,142 +79,182 @@
     </template>
     <!-- Templates : Fin -->
 
-
     <!-- Corps principal : Début -->
-    <main>
-    <!-- Formulaire : Début -->
-    <div id="formulaire-fromage">
-        <h1 access="false" id="config-title" class="fr-h1">Configurer votre événement</h1>
-          
-        <div class="fr-fieldset fr-fieldset--inline" id="event-types">
-            <legend class="fr-fieldset__legend">Type d'événement</legend>
-            <div class="fr-fieldset__content">
-                <div class ="fr-radio-group">
-                    <input  name="event-type" access="false" id="event-type-0" required="required" aria-required="true" value="repas" type="radio" onclick="selected_event_type('repas')">
-                    <label class="fr-label" for="event-type-0">Vin et fromages</label>
-                </div>
-                <div class ="fr-radio-group">
-                    <input name="event-type" access="false" id="event-type-1" required="required" aria-required="true" value="apero" type="radio" onclick="selected_event_type('apero')">
-                    <label class="fr-label" for="event-type-1">Apéro</label>
-                </div>
-                <div class ="fr-radio-group">
-                    <input name="event-type" access="false" id="event-type-2" required="required" aria-required="true" value="degustation" type="radio" onclick="selected_event_type('degustation')">
-                    <label class="fr-label" for="event-type-2">Dégustation</label>
-                </div>
-            </div> 
-        </div>
+    <main role="main" class="fr-mx-15w fr-mb-3w">
+        <div class="fr-tabs">
+        <!-- Onglets -->
+            <ul class="fr-tabs__list" role="tablist" aria-label="[A modifier | nom du système d'onglet]">
+                <li role="presentation">
+                    <button id="panel-config" class="fr-tabs__tab fr-tabs__tab--icon-left fr-icon-settings-5-fill" tabindex="0" role="tab" aria-selected="true" aria-controls="panel-config-div">Configuration</button>
+                </li>
+                <li role="presentation">
+                    <button id="panel-result" class="fr-tabs__tab fr-tabs__tab--icon-left fr-icon-restaurant-fill" tabindex="-1" role="tab" aria-selected="false" aria-controls="panel-result-div">Proposition</button>
+                </li>
+            </ul>
 
-        <div class="fr-input-group">
-            <label for="number-personnes" class="fr-fieldset__legend">Nombre de convives</label>
-            <input class="fr-input" pattern="[0-9]*" inputmode="numeric" type="number" name="nb-personnes" id="nb-personnes" value="0" required="required" oninput="cheese_types_quantity(this.value)">
-        </div>
-        
-        <div class="fr-form-group">
-            <fieldset class="fr-fieldset" id="cheese-types" onchange="check_cheese_types_selection()">
-                <legend class="fr-fieldset__legend">Type de fromages souhaités</legend>
-                
-                <div class="fr-fieldset__content">
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="soft-ripened-cheese" id="cheese-type-0">
-                        <label for="cheese-type-0" class="fr-label">Pâtes molles à croûte fleurie</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
+        <!-- Formulaire : Début -->
+            <div id="panel-config-div" class="fr-tabs__panel fr-tabs__panel--selected" role="tabpanel" aria-labelledby="panel-config" tabindex="0">
+                <div id="formulaire-fromage">
+                    <h1 access="false" id="config-title" class="fr-h2">Configurer votre événement</h1>
+                    
+                    <!-- Formulaire : type d'événement -->
+                    <div class="fr-fieldset fr-fieldset--inline fr-mb-2w" id="event-types">
+                        <legend class="fr-fieldset__legend">Type d'événement</legend>
+                        <div class="fr-fieldset__content">
+                            <div class ="fr-radio-group">
+                                <input  name="event-type" access="false" id="event-type-0" required="required" aria-required="true" value="repas" type="radio" onclick="selected_event_type('repas')">
+                                <label class="fr-label" for="event-type-0">Vin et fromages</label>
+                            </div>
+                            <div class ="fr-radio-group">
+                                <input name="event-type" access="false" id="event-type-1" required="required" aria-required="true" value="apero" type="radio" onclick="selected_event_type('apero')">
+                                <label class="fr-label" for="event-type-1">Apéro</label>
+                            </div>
+                            <div class ="fr-radio-group">
+                                <input name="event-type" access="false" id="event-type-2" required="required" aria-required="true" value="degustation" type="radio" onclick="selected_event_type('degustation')">
+                                <label class="fr-label" for="event-type-2">Dégustation</label>
+                            </div>
+                        </div> 
                     </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="cooked-pressed-cheese" id="cheese-type-1">
-                        <label for="cheese-type-1" class="fr-label">Pâtes pressées cuites</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
+                    <!-- Formulaire : nombre de participant -->
+                    <div class="fr-input-group fr-mb-2w">
+                        <label for="number-personnes" class="fr-fieldset__legend">Nombre de convives</label>
+                        <input class="fr-input" pattern="[0-9]*" inputmode="numeric" type="number" name="nb-personnes" id="nb-personnes" value="0" required="required" oninput="cheese_types_quantity(this.value)">
                     </div>
+                    
+                    <!-- Formulaire : choix des fromages -->
+                    <div class="fr-form-group fr-mb-2w">
+                        <fieldset class="fr-fieldset" id="cheese-types" onchange="check_cheese_types_selection()">
+                            <legend class="fr-fieldset__legend">Type de fromages souhaités
+                                <span class="fr-hint-text">Veuillez sélectionner au moins un type de fromage.</span>
+                            </legend>
+                            
+                            <div class="fr-fieldset__content">
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" class="fromages-type-option" name="cheese-type" value="soft-ripened-cheese" id="cheese-type-0">
+                                    <label for="cheese-type-0" class="fr-label">Pâtes molles à croûte fleurie</label>
+                                </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="uncooked-pressed-cheese" id="cheese-type-2">
-                        <label for="cheese-type-2" class="fr-label">Pâtes pressées non-cuites</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
-                    </div>
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="cooked-pressed-cheese" id="cheese-type-1">
+                                    <label for="cheese-type-1" class="fr-label">Pâtes pressées cuites</label>
+                                </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="rind-washed-cheese" id="cheese-type-3">
-                        <label for="cheese-type-3" class="fr-label">Pâtes molles à croûte lavée</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
-                    </div>
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="uncooked-pressed-cheese" id="cheese-type-2">
+                                    <label for="cheese-type-2" class="fr-label">Pâtes pressées non-cuites</label>
+                                </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="blue-cheese" id="cheese-type-4">
-                        <label for="cheese-type-4" class="fr-label">Pâtes persillées</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
-                    </div>
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="rind-washed-cheese" id="cheese-type-3">
+                                    <label for="cheese-type-3" class="fr-label">Pâtes molles à croûte lavée</label>
+                                </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="fresh-cheese" id="cheese-type-5">
-                        <label for="cheese-type-5" class="fr-label">Fromage frais</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
-                    </div>
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="blue-cheese" id="cheese-type-4">
+                                    <label for="cheese-type-4" class="fr-label">Pâtes persillées</label>
+                                </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="mixed-cheese" id="cheese-type-6">
-                        <label for="cheese-type-6" class="fr-label">Fromage fort</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
-                    </div>
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="fresh-cheese" id="cheese-type-5">
+                                    <label for="cheese-type-5" class="fr-label">Fromages frais</label>
+                                </div>
 
-                    <div class="fr-checkbox-group">
-                        <input type="checkbox" class="fromages-type-option" name="cheese-type" value="stretched-curd-cheese" id="cheese-type-7">
-                        <label for="cheese-type-7" class="fr-label">Fromage à pâte filée</label>
-                        <div class="fr-radio-rich__img">
-                            <img src="./img/placeholder.1x1.png" alt="" />
-                            <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
-                        </div>
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="mixed-cheese" id="cheese-type-6">
+                                    <label for="cheese-type-6" class="fr-label">Fromages fort</label>
+                                </div>
+
+                                <div class="fr-checkbox-group">
+                                    <input type="checkbox" name="cheese-type" value="stretched-curd-cheese" id="cheese-type-7">
+                                    <label for="cheese-type-7" class="fr-label">Fromages à pâte filée</label>
+                                </div>
+                            </div>
+                        </fieldset>
                     </div>
                 </div>
-            </fieldset>
+            </div>
+        <!-- Formulaire : Fin -->
+
+        <!-- Plateau : Début -->
+            <div id="panel-result-div" class="fr-tabs__panel" role="tabpanel" aria-labelledby="panel-result" tabindex="0">
+                <div id="plateau-proposition">
+                    <h1 class="fr-h2">Votre plateau de fromage</h1>
+
+                    <div id="message-erreur" class="fr-alert fr-alert--error fr-mb-3w">
+                        <p class="fr-alert__title">Données manquantes</p>
+                        <p>Il faut spécifier le type d'événement, le nombre de participants ainsi qu'au moins un type de fromages souhaité.</p>
+                    </div>
+
+                    <h2 class="fr-h3">Quantité totale à prévoir</h2>
+                    <div class="fr-highlight">
+                        <p class="fr-text--lg" id="qtyFromage"></p>
+                    </div>
+
+                    <h2 class="fr-h3">Exemples de fromages</h2>
+                    <div id="fromages-proposes"></div>
+                </div>
+            </div>
+        <!-- Plateau : Fin -->
         </div>
-
-        <button id="btn-generation-plateau" class="fr-btn fr-btn--lg">Générer</button>
-
-        <div id="message-erreur" class="fr-alert fr-alert--error hidden">
-            <p class="fr-alert__title">Erreur : données manquantes</p>
-            <p>Il faut spécifier le type d'événement, le nombre de participants ainsi qu'au moins un type de fromages souhaités.</p>
-        </div>
-
-
-    </div>
-    <!-- Formulaire : Fin -->
-
-
-
-    <!-- Plateau : Début -->
-    <div id="plateau-proposition">
-        <h1>Votre plateau de fromage</h1>
-        <h2>Quantité totale à prévoir</h2>
-        <div class="fr-highlight">
-            <p class="fr-text--lg" id="qtyFromage"></p>
-        </div>
-        <h2>Fromages proposés</h2>
-        <div id="fromages-proposes"></div>
-    </div>
-    <!-- Plateau : Fin -->
     </main>
     <!-- Corps principal : Fin -->
+
+    <!-- Pied de page : Début -->
+    <footer class="fr-footer" role="contentinfo" id="footer">
+        <div class="fr-container">
+            <div class="fr-footer__body">
+                <div class="fr-footer__brand fr-enlarge-link">
+                    <a href="/" title="Retour à l’accueil">
+                        <p class="fr-logo" title="république française">
+                            Ministère<br>
+                            du Fromage
+                        </p>
+                    </a>
+                </div>
+                <div class="fr-footer__content">
+                    <ul class="fr-footer__content-list">
+                        <li class="fr-footer__content-item">
+                            <a class="fr-footer__content-link" href="https://legifrance.gouv.fr">legifrance.gouv.fr</a>
+                        </li>
+                        <li class="fr-footer__content-item">
+                            <a class="fr-footer__content-link" href="https://gouvernement.fr">gouvernement.fr</a>
+                        </li>
+                        <li class="fr-footer__content-item">
+                            <a class="fr-footer__content-link" href="https://service-public.fr">service-public.fr</a>
+                        </li>
+                        <li class="fr-footer__content-item">
+                            <a class="fr-footer__content-link" href="https://data.gouv.fr">data.gouv.fr</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fr-footer__bottom">
+                <ul class="fr-footer__bottom-list">
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Plan du site</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Accessibilité: non conforme</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Mentions légales</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Données personnelles</a>
+                    </li>
+                    <li class="fr-footer__bottom-item">
+                        <a class="fr-footer__bottom-link" href="#">Gestion des cookies</a>
+                    </li>
+                </ul>
+                <div class="fr-footer__bottom-copy">
+                    <p>Sauf mention contraire, tous les contenus de ce site sont sous <a href="https://github.com/etalab/licence-ouverte/blob/master/LO.md" target="_blank">licence etalab-2.0</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Pied de page : Fin -->
 
     <!-- Script propre au plateau de fromage -->
     <script type="text/javascript" src="script.js"></script>
