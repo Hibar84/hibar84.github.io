@@ -15,10 +15,9 @@ let mixed_cheeses = [];
 let stretched_curd_cheeses = [];
 
 
-// Fonction de génération d'un entier random inférieur au nombre spécifié
+// Fonction de génération d'un entier random inférieur au nombre spécifié, max qui doit être un entier
 function getRandomInt(max) {
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max +1));
+    return Math.floor(Math.random()*(max));
   }
 
 
@@ -55,6 +54,8 @@ for (var i=0; i<fromages.length; i++){
     }
 
 }
+
+console.log(mixed_cheeses);
 
 // Fonctionsde configuration du plateau
 function selected_event_type(eventType){
@@ -249,7 +250,18 @@ function generatePlateau(){
         messageErreur.classList.remove("hidden");
         return;   
     } else
-        document.getElementById("qtyFromage").innerText = qtyFromageTot +'gr.'; 
+        document.getElementById("qtyFromage").innerText = qtyFromageTot +'gr.';
+        
+        // Réinitialisation des divs
+        document.getElementById("blue-cheese").innerHTML = '';
+        document.getElementById("fresh-cheese").innerHTML = '';
+        document.getElementById("mixed-cheese").innerHTML = '';
+        document.getElementById("stretched-curd-cheese").innerHTML = '';
+        document.getElementById("cooked-pressed-cheese").innerHTML = '';
+        document.getElementById("uncooked-pressed-cheese").innerHTML = '';
+        document.getElementById("rind-washed-cheese").innerHTML = '';
+        document.getElementById("soft-ripened-cheese").innerHTML = '';
+        
         // Génération des listes de fromages
         if (cheeseTypes.length>0){
             for (var i = 0; i<cheeseTypes.length; i++){
