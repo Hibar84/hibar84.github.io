@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="dsfr.min.css">
+    <link rel="stylesheet" href="custom.css">
     <link rel="stylesheet" href="utility/utility.min.css">
 
     <meta name="theme-color" content="#000091"><!-- Défini la couleur de thème du navigateur (Safari/Android) -->
@@ -13,13 +14,6 @@
     <link rel="manifest" href="favicon/manifest.webmanifest" crossorigin="use-credentials">
     <!-- Modifier les chemins relatifs des favicons en fonction de la structure du projet -->
     <!-- Dans le fichier manifest.webmanifest aussi, modifier les chemins vers les images -->
-
-    <style>
-        .hidden{
-            display: none;
-        }
-    </style>
-
 
     <title>Mon plateau de fromage </title>
     <link rel="icon" type="image/png" href="favicon/favicon.png">
@@ -57,10 +51,10 @@
 
     <!-- Templates : Début -->
     <template id="cheese-type-bloc">
-        <h3 class="fr-h4"></h1>
+        <h3 class="fr-h4"></h3>
         <div class="fr-container">
-            <div class="fr-grid-row fr-grid-row--middle">
-                <div class="fr-row-1 fr-p-2w">
+            <div class="fr-grid-row fr-grid-row--gutters fr-grid-row--center">
+                <div class="fr-col-6 fr-col-xl-3 fr-p-2w">
                     <button class="fr-btn fr-btn--icon-right fr-icon-refresh-line" onclick="">Aléatoire</button>
                 </div>
             </div>
@@ -68,7 +62,7 @@
     </template>
 
     <template id="cheese-example">
-        <div class="fr-col fr-mb-3w">
+        <div class="fr-col-6 fr-col-xl-3 fr-mb-3w">
             <div class="cheese-card fr-tile fr-enlarge-link">
                 <div class="fr-tile__body">
                     <h4 class="fr-tile__title fr-h5"></h4>
@@ -84,7 +78,7 @@
     <!-- Templates : Fin -->
 
     <!-- Corps principal : Début -->
-    <main role="main" class="fr-mx-15w fr-mb-3w">
+    <main role="main" class="fr-mb-3w">
         <div class="fr-tabs">
         <!-- Onglets -->
             <ul class="fr-tabs__list" role="tablist" aria-label="[A modifier | nom du système d'onglet]">
@@ -132,46 +126,161 @@
                             <legend class="fr-fieldset__legend">Type de fromages souhaités
                                 <span class="fr-hint-text">Veuillez sélectionner au moins un type de fromage.</span>
                             </legend>
-                            
-                            <div class="fr-fieldset__content">
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" class="fromages-type-option" name="cheese-type" value="soft-ripened-cheese" id="cheese-type-0">
-                                    <label for="cheese-type-0" class="fr-label">Pâtes molles à croûte fleurie</label>
-                                </div>
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="cooked-pressed-cheese" id="cheese-type-1">
-                                    <label for="cheese-type-1" class="fr-label">Pâtes pressées cuites</label>
-                                </div>
+                            <!-- Tuiles horizontales placées dans la grille -->
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="uncooked-pressed-cheese" id="cheese-type-2">
-                                    <label for="cheese-type-2" class="fr-label">Pâtes pressées non-cuites</label>
+                            <div class="fr-container">
+                                <div class="fr-grid-row fr-grid-row--gutters" id="checkbox-list">
                                 </div>
+                            </div> 
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="rind-washed-cheese" id="cheese-type-3">
-                                    <label for="cheese-type-3" class="fr-label">Pâtes molles à croûte lavée</label>
-                                </div>
+                            <div class="fr-container">
+                                <div class="fr-grid-row fr-grid-row--gutters">
+                                    
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="soft-ripened-cheese" id="cheese-type-0">
+                                        <label class="label_cheese_type" for="cheese-type-0">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Pâte molle et croûte fleurie
+                                                    </h4>
+                                                    <p class="fr-text--sm">Camembert, Brie, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://www.laboitedufromager.com/wp-content/uploads/LBDF-Fromage-pate-molle-croute-fleurie.jpg" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="blue-cheese" id="cheese-type-4">
-                                    <label for="cheese-type-4" class="fr-label">Pâtes persillées</label>
-                                </div>
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="cooked-pressed-cheese" id="cheese-type-1">
+                                        <label class="label_cheese_type" for="cheese-type-1">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Pâte pressée cuite
+                                                    </h4>
+                                                    <p class="fr-text--sm">Comté, Cantal, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2015/06/pate-pressee-cuite-comte.png" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="fresh-cheese" id="cheese-type-5">
-                                    <label for="cheese-type-5" class="fr-label">Fromages frais</label>
-                                </div>
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="uncooked-pressed-cheese" id="cheese-type-2">
+                                        <label class="label_cheese_type" for="cheese-type-2">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Pâte pressée non cuite
+                                                    </h4>
+                                                    <p class="fr-text--sm">Morbier, Tomme, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2015/06/pate-pressee-non-cuite-morbier.png" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="mixed-cheese" id="cheese-type-6">
-                                    <label for="cheese-type-6" class="fr-label">Fromages fort</label>
-                                </div>
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="rind-washed-cheese" id="cheese-type-3">
+                                        <label class="label_cheese_type" for="cheese-type-3">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Pâte molle à croûte lavée
+                                                    </h4>
+                                                    <p class="fr-text--sm">Maroilles, Munster, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/84/Livarot_%28fromage%29_09.jpg/1024px-Livarot_%28fromage%29_09.jpg" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
 
-                                <div class="fr-checkbox-group">
-                                    <input type="checkbox" name="cheese-type" value="stretched-curd-cheese" id="cheese-type-7">
-                                    <label for="cheese-type-7" class="fr-label">Fromages à pâte filée</label>
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="blue-cheese" id="cheese-type-4">
+                                        <label class="label_cheese_type" for="cheese-type-4">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Pâte persillée
+                                                    </h4>
+                                                    <p class="fr-text--sm">Bleus, Fourmes, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://www.laboitedufromager.com/wp-content/uploads/2017/04/Fromage-a-pate-persillee.jpg" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+
+                                    </div>
+
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="fresh-cheese" id="cheese-type-5">
+                                        <label class="label_cheese_type" for="cheese-type-5">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Fromages frais
+                                                    </h4>
+                                                    <p class="fr-text--sm">Cancaillote, Feta, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://www.passionpatisserie.fr/wp-content/uploads/2020/10/Fromage-frais-5.jpg" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="mixed-cheese" id="cheese-type-6">
+                                        <label class="label_cheese_type" for="cheese-type-6">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-tile__title">
+                                                        Fromage fort
+                                                    </h4>
+                                                    <p class="fr-text--sm"></p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://androuet.com/images-up/images/fromages/rkFz5_Fort%20de%20Bethune-7618.jpg" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
+
+                                    <div class="fr-col-12 fr-col-sm-6 fr-col-lg-4 fr-col-xl-2">
+                                        <input class="input_cheese_type" type="checkbox" name="cheese-type" value="stretched-curd-cheese" id="cheese-type-8">
+                                        <label class="label_cheese_type" for="cheese-type-8">
+                                            <div class="fr-tile fr-enlarge-link fr-tile--vertical">
+                                                <div class="fr-tile__body">
+                                                    <h4 class="fr-card__img">
+                                                        Pâte filée
+                                                    </h4>
+                                                    <p class="fr-text--sm">Mozarella, ...</p>
+                                                </div>
+                                                <div class="fr-card__img">
+                                                    <img src="https://www.gastronomiac.com/wp/wp-content/uploads/2015/06/pate-dure-filee-mozzarella.png" class="fr-responsive-img" alt="">
+                                                    <!-- L'alternative de l'image (attribut alt) doit à priori rester vide car l'image est illustrative et ne doit pas être restituée aux technologies d’assistance. Vous pouvez toutefois remplir l'alternative si vous estimer qu'elle apporte une information essentielle à la compréhension du contenu non présente dans le texte -->
+                                                </div>
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
                             </div>
                         </fieldset>
@@ -224,7 +333,7 @@
                             Ministère<br>
                             du Fromage
                         </p>
-                    </a>
+                    
                 </div>
                 <div class="fr-footer__content">
                     <ul class="fr-footer__content-list">

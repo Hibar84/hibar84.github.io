@@ -1,7 +1,7 @@
 let eventSelected; // type d'événement
 let cheeseNumber; // Nombre de variétés de fromages
 let cheeseQtyPP; // quantité par personne
-let cheeseTypes = []; // types de variétés de fromages
+let cheeseTypesSelected = []; // types de variétés de fromages
 let nbPersonnes; // nombre de personne prévues
 
 // Instanciation des listes de fromages par type
@@ -14,7 +14,6 @@ let soft_ripened_cheeses = [];
 let mixed_cheeses = [];
 let stretched_curd_cheeses = [];
 
-
 // Fonction de génération d'un entier random inférieur au nombre spécifié, max qui doit être un entier
 function getRandomInt(max) {
     return Math.floor(Math.random()*(max));
@@ -26,7 +25,7 @@ function getRandomInt(max) {
 for (var i=0; i<fromages.length; i++){
     let currentCheese = fromages[i];
 
-    switch (currentCheese.type_fromage){
+    switch (currentCheese.curd){
         case 'blue-cheese':
             blue_cheeses.push(currentCheese);
             break;
@@ -97,7 +96,7 @@ function check_cheese_types_selection(){
             cheeses.push(checkboxes[i].value);
         }
     }
-    cheeseTypes = cheeses;
+    cheeseTypesSelected = cheeses;
 }
 
 // Fonctions de générations du plateau
@@ -223,12 +222,12 @@ function generate_cheese_card(cheese_type){
             break
     }
 
-    name.textContent = randomCheese.nom;
-    origin.textContent = randomCheese.departement;
-    if (randomCheese.image == ""){
+    name.textContent = randomCheese.name;
+    origin.textContent = randomCheese.geo;
+    if (randomCheese.img == ""){
 
     }   else {
-        img.src = randomCheese.image;
+        img.src = randomCheese.img;
     }
     
     return card; 
@@ -259,9 +258,9 @@ function generatePlateau(){
         document.getElementById("soft-ripened-cheese").innerHTML = '';
         
         // Génération des listes de fromages
-        if (cheeseTypes.length>0){
-            for (var i = 0; i<cheeseTypes.length; i++){
-                generate_cheese_type_box(cheeseTypes[i]);
+        if (cheeseTypesSelected.length>0){
+            for (var i = 0; i<cheeseTypesSelected.length; i++){
+                generate_cheese_type_box(cheeseTypesSelected[i]);
             }
         } else
             messageErreur.classList.remove("hidden");
