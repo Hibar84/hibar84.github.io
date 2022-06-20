@@ -47,7 +47,9 @@ for (var i=0; i<fromages.length; i++){
 
 }
 
-// Fonctionsde configuration du plateau
+console.log(stretched_curd_cheeses);
+
+// Fonctions de configuration du plateau
 function selected_event_type(eventType){
     // défini le type d'événement ainsi que la quantité par personne
     switch (eventType){
@@ -102,7 +104,7 @@ function generate_cheese_type_box(cheese_type){
     btn.onclick = function() {generate_cheese_type_box(cheese_type)};
 
     var indexes = [];
-    var numberOfCard = 4;
+    var numberOfCard = 3;
 
     switch (cheese_type){
         case 'blue-cheese':
@@ -227,7 +229,7 @@ function generate_cheese_card(cheese){
     name.textContent = cheese.name;
     origin.textContent = cheese.geo;
     if (cheese.img == ""){
-
+        img.src = "./img/placeholders/placeholder.1x1.png"
     }   else {
         img.src = cheese.img;
     }
