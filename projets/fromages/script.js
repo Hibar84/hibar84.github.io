@@ -100,140 +100,141 @@ function generate_cheese_type_box(cheese_type){
     
     var header = box.querySelector('h3.fr-h4');
     var list = box.querySelector('div.fr-grid-row');
-    var btn = box.querySelector('button.fr-btn');
-    btn.onclick = function() {generate_cheese_type_box(cheese_type)};
+    //var btn = box.querySelector('button.fr-btn');
+    //btn.onclick = function() {generate_cheese_type_box(cheese_type)};
 
-    var indexes = [];
-    var numberOfCard = 3;
+    // Calcul du nombre de fromages proposés par type
+    // S'effectue en fonction du nombre de types sélectionnés : on répartit le nombre total de fromage (calculé à partir du nb de personnes attendues) sur les différents types de fromages.
+    var numberOfCard = Math.floor(cheeseNumber/cheeseTypesSelected.length);
+    
+    // Génération des cartes fromages initiales
+    for (var i=0; i<numberOfCard; i++){
+        let card = generate_cheese_card(cheese_type);
+        list.appendChild(card);     
+    }
 
+    // Construction du titre en fonction du cas
     switch (cheese_type){
         case 'blue-cheese':
-            header.textContent = "Fromages persillés";
-            
+            header.textContent = "Fromages persillés";         
             while(indexes.length < numberOfCard){
                 var r = Math.floor(Math.random() * blue_cheeses.length);
                 if(indexes.indexOf(r) === -1){
                     indexes.push(r);
                 };
             };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(blue_cheeses[index]);
-                list.appendChild(card);
-            });
-
+        
             break
         
         case 'fresh-cheese':
-            header.textContent = "Fromages frais";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * fresh_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(fresh_cheeses[index]);
-                list.appendChild(card);
-            });
+            header.textContent = "Fromages frais";           
             break
 
         case 'mixed-cheese':
-            header.textContent = "Fromages forts";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * mixed_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(mixed_cheeses[index]);
-                list.appendChild(card);
-            });
+            header.textContent = "Fromages forts";           
             break
 
         case 'cooked-pressed-cheese':
             header.textContent = "Fromages à pâte pressée cuite";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * cooked_pressed_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(cooked_pressed_cheeses[index]);
-                list.appendChild(card);
-            });
             break
 
         case 'rind-washed-cheese':
             header.textContent = "Fromages à croûte lavée";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * rind_washed_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(rind_washed_cheeses[index]);
-                list.appendChild(card);
-            });
             break
 
         case 'stretched-curd-cheese':
             header.textContent = "Fromages à pâte filée";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * stretched_curd_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(stretched_curd_cheeses[index]);
-                list.appendChild(card);
-            });
             break
 
         case 'soft-ripened-cheese':
             header.textContent = "Fromages à croûte fleurie";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * soft_ripened_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(soft_ripened_cheeses[index]);
-                list.appendChild(card);
-            });
             break
 
         case 'uncooked-pressed-cheese':
             header.textContent = "Fromages à pâte pressée non cuite";
-            while(indexes.length < numberOfCard){
-                var r = Math.floor(Math.random() * uncooked_pressed_cheeses.length);
-                if(indexes.indexOf(r) === -1) indexes.push(r);
-            };
-            
-            indexes.forEach(function(index){
-                let card = generate_cheese_card(uncooked_pressed_cheeses[index]);
-                list.appendChild(card);
-            });
             break
     }
     document.getElementById(cheese_type).appendChild(box);
 }
 
-function generate_cheese_card(cheese){
+function generate_cheese_card(cheese_type){
     var template = document.querySelector("#cheese-example");
     var card = document.importNode(template.content, true);
 
-    var name = card.querySelector('h4.fr-tile__title');
-    var origin = card.querySelector('p.fr-tile__desc');
+    // Sélection des variables à attribuer
+    var name = card.querySelector('h5.fr-card__title');
+    var origin = card.querySelector('p.fr-card__desc');
     var img = card.querySelector('img.fr-responsive-img');
+    var country = card.querySelector('#cheese-country');
+    var milk = card.querySelector('#cheese-milk');
+    var wiki = card.querySelector('#wiki');
+    var btnChanger = card.querySelector('#btn-changer');
 
-    name.textContent = cheese.name;
-    origin.textContent = cheese.geo;
-    if (cheese.img == ""){
-        img.src = "./img/placeholders/placeholder.1x1.png"
-    }   else {
-        img.src = cheese.img;
+    function select_cheese(cheese_type){
+        console.log("Je suis actionné!")
+        // Sélection d'un fromage au hasard du type sélectionné
+        var cheese;
+        switch (cheese_type){
+            case 'blue-cheese':
+                var r = Math.floor(Math.random() * blue_cheeses.length);
+                cheese = blue_cheeses[r];        
+                break
+            
+            case 'fresh-cheese':
+                var r = Math.floor(Math.random() * fresh_cheeses.length);
+                cheese = fresh_cheeses[r];          
+                break
+
+            case 'mixed-cheese':
+                var r = Math.floor(Math.random() * mixed_cheeses.length);
+                cheese = mixed_cheeses[r];       
+                break
+
+            case 'cooked-pressed-cheese':
+                var r = Math.floor(Math.random() * cooked_pressed_cheeses.length);
+                cheese = cooked_pressed_cheeses[r];  
+                break
+
+            case 'rind-washed-cheese':
+                var r = Math.floor(Math.random() * rind_washed_cheeses.length);
+                cheese = rind_washed_cheeses[r];  
+                break
+
+            case 'stretched-curd-cheese':
+                var r = Math.floor(Math.random() * stretched_curd_cheeses.length);
+                cheese = stretched_curd_cheeses[r]; 
+                break
+
+            case 'soft-ripened-cheese':
+                var r = Math.floor(Math.random() * soft_ripened_cheeses.length);
+                cheese = soft_ripened_cheeses[r]; 
+                break
+
+            case 'uncooked-pressed-cheese':
+                var r = Math.floor(Math.random() * uncooked_pressed_cheeses.length);
+                cheese = uncooked_pressed_cheeses[r]; 
+                break
+        }
+
+        // Attribution des valeurs aux variables de la carte
+        name.textContent = cheese.name;
+        origin.textContent = cheese.geo;
+        country.textContent = cheese.country;
+        milk.textContent = cheese.milk;
+        wiki.href = cheese.url;
+
+        // Si l'url de l'image manque, on met un placeholder
+        if (cheese.img == ""){
+            img.src = "./img/placeholders/placeholder.1x1.png"
+        }   else {
+            img.src = cheese.img;
+        }
+
     }
-    
+
+    select_cheese(cheese_type);
+    btnChanger.onclick = function() {select_cheese(cheese_type)};
+   
     return card; 
 }
 
