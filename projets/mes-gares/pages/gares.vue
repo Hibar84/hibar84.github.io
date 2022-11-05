@@ -43,9 +43,8 @@ const saveData = _debounce(async (status, gareId) => {
     <!-- Statistiques -->
     <div class="px-4 py-2 border-2 rounded mb-3">
       <h1 class="font-bold text-2xl mb-1">Statistiques</h1>
-      <div>
-        <h2>Gares visitées</h2>
-        <p>{{ visitedGares }}/{{ gares.length }}</p>
+      <div class="flex flex-row justify-around">
+        <Stats title="Gares visitées" :numerator="visitedGares" :denominator="gares.length"/>
       </div>
     </div>
 
@@ -62,7 +61,7 @@ const saveData = _debounce(async (status, gareId) => {
             <tr v-for="gare in results" v-bind:key="gare.id">
               <td class="px-2">{{ gare.name }}</td>
               <td class="px-2">
-                <Switch :visited="gare.visited" :id="gare.id" @change-state="(status)=>saveData(status, gare.id)"/>
+                <Checkbox :visited="gare.visited" :id="gare.id" @change-state="(status)=>saveData(status, gare.id)"/>
               </td>
             </tr>
           </tbody>
