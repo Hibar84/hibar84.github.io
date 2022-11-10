@@ -2,6 +2,10 @@
 export default defineNuxtConfig({
   target: 'static',
 
+  router: {
+    base: '/hibar84.github.io/'
+  },
+
   modules: [
     '@nuxtjs/tailwindcss',
     '@nuxtjs/supabase',
