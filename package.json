@@ -11,11 +11,13 @@
   "devDependencies": {
     "@nuxtjs/supabase": "^0.2.2",
     "@nuxtjs/tailwindcss": "^6.1.2",
+    "@tailwindcss/typography": "^0.5.8",
     "nuxt": "3.0.0-rc.12",
     "push-dir": "^0.4.1"
   },
   "dependencies": {
     "chart.js": "^3.9.1",
+    "daisyui": "^2.39.0",
     "lodash": "^4.17.21",
     "nuxt-lodash": "^2.4.0",
     "vue-chartjs": "^4.1.2"

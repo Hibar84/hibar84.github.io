@@ -1,8 +1,8 @@
 <template>
-  <div>
-    <input class="h-checkbox" type="checkbox" :id="id" :checked="status" @click="change">
-    <label class="h-checkbox-label" for="flexCheckDefault">
-      {{ label }}
+  <div class="form-control">
+    <label class="label cursor-pointer">
+      <span class="label-text">{{ label }}</span> 
+      <input class="checkbox" type="checkbox" :id="id" :checked="status" @click="change">
     </label>
   </div>
 </template>

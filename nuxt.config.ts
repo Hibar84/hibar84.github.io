@@ -1,13 +1,9 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  router: {
-    base: '/hibar84.github.io/'
-  },
-
   target: 'static',
-  
+
   modules: [
-    '@nuxtjs/tailwindcss', 
+    '@nuxtjs/tailwindcss',
     '@nuxtjs/supabase',
     'nuxt-lodash'
   ],
@@ -23,4 +19,11 @@ export default defineNuxtConfig({
       ['isDate', 'isLodashDate'], // => _isLodashDate
     ],
   },
+
+  tailwindcss: {
+    configPath: 'tailwind.config',
+    exposeConfig: false,
+    injectPosition: 0,
+    viewer: true,
+  }
 })

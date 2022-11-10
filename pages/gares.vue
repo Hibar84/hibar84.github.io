@@ -23,7 +23,7 @@ const searchGare = _debounce(()=>{
 },500);
 
 // Fonction de modification d'une gare
-const saveData = _debounce(async (status, gareId) => {
+const toggleVisited = _debounce(async (status, gareId) => {
     const { error } = await client.from('gares').update({ visited: status }).eq('id', gareId);
     refresh_count();
   },200);
@@ -33,7 +33,7 @@ const saveData = _debounce(async (status, gareId) => {
   <div class="p-6">
 
     <!-- Header -->
-    <div class="px-4 py-2 border-2 rounded mb-3 flex flex-row justify-between">
+    <div class="px-4 py-2 shadow bg-base-200 rounded mb-3 flex flex-row justify-between">
       <div class="flex flex-row justify-start space-x-4">
         <img class="block h-8" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/1920px-Logo_SNCF_2011.svg.png">
         <h1 class="font-bold text-3xl">Mes gares SNCF</h1>
@@ -41,17 +41,17 @@ const saveData = _debounce(async (status, gareId) => {
     </div>
     
     <!-- Statistiques -->
-    <div class="px-4 py-2 border-2 rounded mb-3">
-      <h1 class="font-bold text-2xl mb-1">Statistiques</h1>
+    <div class="px-4 py-2 shadow bg-base-200 rounded mb-3">
+      <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
       <div class="flex flex-row justify-around">
         <Stats title="Gares visitées" :numerator="visitedGares" :denominator="gares.length"/>
       </div>
     </div>
 
     <!-- Tableau de détail -->
-    <div class="px-4 py-2 border-2 rounded mb-3">
-      <h1 class="font-bold text-2xl mb-1">Détail</h1>
-      <input class="bg-white px-1 py-1 text-sm border-2" type="text" v-model="query" @input="searchGare"/>
+    <div class="px-4 py-2 shadow bg-base-200 rounded mb-3">
+      <h1 class="font-semibold text-2xl mb-1">Détail</h1>
+      <input class="input w-full max-w-xs mb-3" type="text" v-model="query" @input="searchGare"/>
       <div v-if="results.length>0">
         <table>
           <thead>
@@ -61,7 +61,7 @@ const saveData = _debounce(async (status, gareId) => {
             <tr v-for="gare in results" v-bind:key="gare.id">
               <td class="px-2">{{ gare.name }}</td>
               <td class="px-2">
-                <Checkbox :visited="gare.visited" :id="gare.id" @change-state="(status)=>saveData(status, gare.id)"/>
+                <Checkbox :visited="gare.visited" :id="gare.id" @change-state="(status)=>toggleVisited(status, gare.id)"/>
               </td>
             </tr>
           </tbody>
