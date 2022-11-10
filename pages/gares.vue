@@ -1,9 +1,11 @@
 <script setup>
+import { useGares } from "~~/composables/data";
+
 // Initialisation des variables
 const query = ref('');
 const results = ref([]);
 
-import gares from '../src/gares.json'
+const gares = useGares();
 
 function compteGare(listeGares, critere){
   let compteur = 0;
@@ -13,12 +15,12 @@ function compteGare(listeGares, critere){
   return compteur
 }
 
-let visitedGares = compteGare(gares, "vu");
+let visitedGares = compteGare(gares.value, "vu");
 
 // Fonction de recherche des gares
 const searchGare = _debounce(()=>{
   if (query.value !== ''){
-    results.value = gares.filter(gare => gare.nom.toLowerCase().includes(query.value.toLowerCase()))
+    results.value = gares.value.filter(gare => gare.nom.toLowerCase().includes(query.value.toLowerCase()))
   } else results.value = []
 },500);
 </script>
