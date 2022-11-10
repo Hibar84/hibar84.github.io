@@ -6,11 +6,8 @@
     openTab.value = tabNumber
   }
 
-  // Référentiels pour le formulaire
-  const client = useSupabaseClient();
-
-  const { data: typesLait } = await client.from("milk_types").select("name");
-  const { data: typesFromages } = await client.from("curd_types").select("name");
+  const typesLait = useMilkTypes();
+  const typesFromages = useCheeseTypes();
 
   // FORMULAIRE
   const nombreConvives = ref(0);

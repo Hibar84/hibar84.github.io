@@ -4,8 +4,8 @@
   <h2 class="text-xl mb-3">{{ title }}</h2>
   <div v-for="checkbox in checkboxes" :key="checkbox">
     <label class="label cursor-pointer">
-      <span class="label-text mr-3">{{ checkbox.name }}</span> 
-      <input type="checkbox" class="checkbox" :value="checkbox.name" v-model="values" @change="$emit('update:values', values)"/>
+      <span class="label-text mr-3">{{ checkbox.nom }}</span> 
+      <input type="checkbox" class="checkbox" :value="checkbox.nom" v-model="values" @change="$emit('update:values', values)"/>
     </label>
   </div>
 </div>

@@ -1,32 +1,26 @@
 <script setup>
 // Initialisation des variables
-const client = useSupabaseClient();
 const query = ref('');
 const results = ref([]);
 
-// Récupération des gares et du compte de gares visitées
-const { data: gares, refresh: refresh_gares } = await useAsyncData('gares', async () =>{
-  const { data } = await client.from("gares").select("id, name, visited", { count: 'exact', head: false });
-  return data
-  });
+import gares from '../src/gares.json'
 
-const { data: visitedGares, refresh: refresh_count } = await useAsyncData('nbGares', async () =>{
-  const { count } = await client.from("gares").select("*", { count: 'exact', head: true }).eq('visited', 'true');
-  return count;
-});
+function compteGare(listeGares, critere){
+  let compteur = 0;
+  for (const gare of listeGares){
+    if (gare[critere] === true) compteur+=1
+  }
+  return compteur
+}
+
+let visitedGares = compteGare(gares, "vu");
 
 // Fonction de recherche des gares
 const searchGare = _debounce(()=>{
   if (query.value !== ''){
-    results.value = gares.value.filter(gare => gare.name.toLowerCase().includes(query.value.toLowerCase()))
+    results.value = gares.filter(gare => gare.nom.toLowerCase().includes(query.value.toLowerCase()))
   } else results.value = []
 },500);
-
-// Fonction de modification d'une gare
-const toggleVisited = _debounce(async (status, gareId) => {
-    const { error } = await client.from('gares').update({ visited: status }).eq('id', gareId);
-    refresh_count();
-  },200);
 </script>
 
 <template>
@@ -59,9 +53,9 @@ const toggleVisited = _debounce(async (status, gareId) => {
           </thead>
           <tbody>
             <tr v-for="gare in results" v-bind:key="gare.id">
-              <td class="px-2">{{ gare.name }}</td>
+              <td class="px-2">{{ gare.nom }}</td>
               <td class="px-2">
-                <Checkbox :visited="gare.visited" :id="gare.id" @change-state="(status)=>toggleVisited(status, gare.id)"/>
+                <Checkbox :visited="gare.vu" :id="gare.id" :disabled="true"/>
               </td>
             </tr>
           </tbody>

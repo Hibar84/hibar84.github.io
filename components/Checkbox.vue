@@ -2,7 +2,7 @@
   <div class="form-control">
     <label class="label cursor-pointer">
       <span class="label-text">{{ label }}</span> 
-      <input class="checkbox" type="checkbox" :id="id" :checked="status" @click="change">
+      <input class="checkbox" type="checkbox" :id="id" :checked="status" :disabled="disabled" @click="change">
     </label>
   </div>
 </template>
@@ -13,7 +13,8 @@ const emit = defineEmits(['changeState'])
 const props = defineProps({
   visited: Boolean,
   id: Number,
-  label: String
+  label: String,
+  disabled: Boolean
 });
 
 const status = ref(props.visited);
