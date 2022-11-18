@@ -13,22 +13,40 @@
   const selectionFromages = ref([]);
 
   function pickOneCheese(filter){
-    let fromage = fromages.value[_random(fromages.value.length)]
+    // On choisit un premier fromage aléatoirement
+    let randomKey = _random(fromages.value.length);
+    let randomFromage = fromages.value[randomKey];
+    let validator = true;
     
-    while (
-      (!filter.value.milk || filter.value.length === 0 ? true : filter.value.milk.includes(fromage.curd)) &&
-      (!filter.value.curd || filter.value.curd.length === 0 ? true : filter.value.curd.includes(fromage.curd))){
-        fromage = fromages.value[_random(fromages.value.length)]
+    while (validator){
+      // On test la conformité au lait
+      let validateMilk = ((!filter.value.milk || filter.value.milk.length === 0) ? true : filter.value.milk.includes(randomFromage.milk));
+      // On test la conformité au type de fromage
+      let validateCurd = ((!filter.value.curd || filter.value.curd.length === 0) ? true : filter.value.curd.includes(randomFromage.curd));
+
+      // Si les deux tests sont positifs, on sort de la boucle while
+      if (validateMilk && validateCurd){
+        validator = false
+      } else {
+        // Sinon,  on choisit un autre fromage
+        randomKey = _random(fromages.value.length);
+        randomFromage = fromages.value[randomKey];
+      }
     }
-    
-    return fromage
+
+    return randomFromage
   }
 
   function selectionnerFromages(filter, nombreFromages){
+    // On fait une sélection de fromages uniquement si le types de lait ou de fromages a été sélectionné. Sinon on ne choisit pas de fromages, et la quantité par personne est mise à 0.
+
     selectionFromages.value = [];
-    while (selectionFromages.value.length < nombreFromages){
-      selectionFromages.value.push(pickOneCheese(filter))
-    };
+
+    if (modele.value.milk || modele.value.curd){
+      while (selectionFromages.value.length < nombreFromages){
+        selectionFromages.value.push(pickOneCheese(filter))
+      };
+    } else modele.value.quantite = 0;
   };
 
   // TABS
@@ -58,6 +76,7 @@
 
     <div
       v-bind:class="{'hidden': openTab !== 1, 'flex flex-col items-stretch md:flex-row md:justify-around ': openTab === 1}">
+      
       <Slider v-model:value="nombreConvives" title="Nombre de convives" class="p-3 mb-6" />
       <div class="divider md:divider-horizontal" />
       <Radios :radios="typesEvenenements" v-model:values="modele.quantite" title="Types de fromages" class="p-3" />
@@ -81,6 +100,7 @@
       </div>
 
       <!-- Sélection de fromages -->
+      <pre> {{ modele }} </pre>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3 self-center">
         <CheeseCard v-for="fromage in selectionFromages" :key="fromage.id" :cheese="fromage"/>
       </div>
