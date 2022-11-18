@@ -1,6 +1,4 @@
 <script setup>
-import { useGares } from "~~/composables/data";
-
 // Initialisation des variables
 const query = ref('');
 const results = ref([]);

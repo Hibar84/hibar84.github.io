@@ -1,6 +1,6 @@
 <template>
   <div class="form-control">
-    <label class="label cursor-pointer">
+    <label class="label">
       <span class="label-text">{{ label }}</span> 
       <input class="checkbox" type="checkbox" :id="id" :checked="status" :disabled="disabled" @click="change">
     </label>

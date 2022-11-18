@@ -13,6 +13,7 @@
     "@nuxtjs/tailwindcss": "^6.1.2",
     "@tailwindcss/typography": "^0.5.8",
     "nuxt": "^3.0.0-rc.13",
+    "nuxt-icon": "^0.1.7",
     "push-dir": "^0.4.1"
   },
   "dependencies": {
