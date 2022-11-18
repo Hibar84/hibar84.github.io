@@ -1,5 +1,5 @@
 <template>
-<div class="stats shadow">
+<div class="stats shadow min-h-fit">
   <div class="stat">
     <div class="stat-title">{{ title }}</div>
     <div class="stat-value font-medium">{{ numerator }} / {{ denominator }}</div>

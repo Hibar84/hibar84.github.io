@@ -100,7 +100,6 @@
       </div>
 
       <!-- Sélection de fromages -->
-      <pre> {{ modele }} </pre>
       <div class="grid grid-cols-1 md:grid-cols-3 gap-3 self-center">
         <CheeseCard v-for="fromage in selectionFromages" :key="fromage.id" :cheese="fromage"/>
       </div>
