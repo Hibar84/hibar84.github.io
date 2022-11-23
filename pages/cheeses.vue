@@ -65,14 +65,14 @@
 
 
 <template>
-  <div class="p-6 bg-base-200 min-h-screen">
-    <div class="tabs tabs-boxed justify-around mb-6">
+  <div class="p-6">
+    <div class="tabs tabs-boxed bg-base-100 justify-around mb-6">
       <a class="tab px-3 text-xl" v-on:click="toggleTabs(1)"
-        v-bind:class="{'tab': openTab !== 1, 'tab tab-active bg-base-100 rounded-lg': openTab === 1}">
+        v-bind:class="{'tab': openTab !== 1, 'tab tab-active rounded-lg': openTab === 1}">
         Configuration
       </a>
       <a class="tab px-3 text-xl" v-on:click="toggleTabs(2)"
-        v-bind:class="{'tab': openTab !== 2, 'tab tab-active bg-base-100 rounded-lg': openTab === 2}">
+        v-bind:class="{'tab': openTab !== 2, 'tab tab-active rounded-lg': openTab === 2}">
         Proposition
         <Icon name="tabler:refresh"/>
       </a>
@@ -93,7 +93,7 @@
     <div v-bind:class="{'hidden': openTab !== 2, 'flex flex-col': openTab === 2}">
 
       <!-- Quantité -->
-      <div class="stats shadow mb-3">
+      <div class="stats bg-base-200 shadow mb-3">
 
         <div class="stat">
           <div class="stat-title">Quantité de fromages à prévoir</div>

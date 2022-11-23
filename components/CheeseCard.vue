@@ -1,5 +1,5 @@
 <template>
-  <div class="card w-60 bg-base-100 shadow-xl">
+  <div class="card w-60 bg-base-200 shadow-xl">
     <figure v-if="cheese.img !== ''"><img class="bg-cover" :src="cheese.img" :alt="cheese.name" /></figure>
     <div class="card-body">
       <h2 class="card-title">{{ cheese.name }}</h2>

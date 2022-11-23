@@ -27,12 +27,10 @@
       // Liste d'entrées, servant à la fois de label et de valeur pour les checkbox
       type: Array,
       default: []
-    },
-    values: {
-      type: Array,
-      default: []
-    },
+    }
   })
+
+  let values = [];
 
   defineEmits(['update:values']);
 </script>
