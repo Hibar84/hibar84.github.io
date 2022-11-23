@@ -1,4 +1,8 @@
 <script setup>
+  useHead({
+    title: 'Plateau fromages'
+  })
+
   const typesLait = useMilkTypes();
   const typesFromages = useCheeseTypes();
   const typesEvenenements = useEventTypes();

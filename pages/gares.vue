@@ -1,4 +1,8 @@
 <script setup>
+  useHead({
+    title: 'Mes gares'
+  })
+
   // Initialisation des variables
   const query = ref('');
   const results = ref([]);
@@ -23,66 +27,69 @@
   }, 500);
 
 
-  // Fonction de compteur de département
+  // Gestion du graph des départments
+  
   function compteParDepartement() {
+    // Fonction de compteur de département
     let departements = {};
+    let departementsVu= {};
 
     for (const gare of gares.value) {
-      if (gare.vu === true) {
-        if (Object.keys(departements).includes(gare.departement)) {
-          departements[gare.departement] += 1;
+      if (Object.keys(departements).includes(gare.departement)) {
+        if (gare.vu === true) { departementsVu[gare.departement] += 1; } 
+        departements[gare.departement] += 1;
+      } else {
+        if (gare.vu === true) {
+          departementsVu[gare.departement] = 1;
+          departements[gare.departement] = 1;
         } else {
+          departementsVu[gare.departement] = 0;
           departements[gare.departement] = 1;
         }
+        
       }
     };
 
-    return departements
+    return [departements, departementsVu]
   }
 
-  let departements = compteParDepartement();
+  let dataDepartements = compteParDepartement();
+  
   let barChartData = {
-    labels: Object.keys(departements),
-    datasets: [{
-      label: "Visitées",
-      data: Object.values(departements),
-      backgroundColor: "#570DF8",
-      borderRadius: 5,
-      inflateAmount: 'auto'
-    }, ],
+    labels: Object.keys(dataDepartements[0]),
+    datasets: [
+      {
+        label: "Visitées",
+        data: Object.values(dataDepartements[1]),
+        backgroundColor: "#FFFFFF",
+        inflateAmount: 'auto'
+      },
+      {
+        label: "Total",
+        data: Object.values(dataDepartements[0]),
+        backgroundColor: "#3D4451",
+        inflateAmount: 'auto'
+      }
+    ]
   }
   let barChartOptions = {
-      responsive: true,
-      aspectRatio: 2,
-      scales: {
-        yAxes: [{
-          ticks: {
-            beginAtZero: true,
-            callback: function (value) {
-              if (value % 1 === 0) {
-                return value;
-              }
-            }
-          }
-        }]
-      },
-      plugins: {
-        legend: {
-          display: false
-        },
-        scales: {
-          yAxes: [{
-            ticks: {
-              beginAtZero: true,
-              callback: function (value) {
-                if (value % 1 === 0) {
-                  return value;
-                }
-              }
-            }
-          }]
-        }
+    responsive: true,
+    aspectRatio: 2,
+    borderRadius: 2,
+    interaction: {
+        mode: 'index'
+    },
+    scales: {
+      x: {
+        display: false,
+        stacked: 'single'
       }
+    },
+    plugins: {
+      legend: {
+        display: false,
+      }
+    }
   };
 </script>
 
@@ -94,7 +101,7 @@
       <div class="flex flex-row justify-start space-x-4">
         <img class="block h-8"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/1920px-Logo_SNCF_2011.svg.png">
-        <h1 class="font-bold text-3xl">Mes gares SNCF</h1>
+        <h1 class="text-3xl font-semibold">Mes gares SNCF</h1>
       </div>
     </div>
 
