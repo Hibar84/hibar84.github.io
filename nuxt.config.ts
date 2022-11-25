@@ -9,8 +9,13 @@ export default defineNuxtConfig({
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-lodash',
-    'nuxt-icon'
+    'nuxt-icon',
+    '@nuxt/image-edge'
   ],
+
+  build: {
+    transpile: ['chart.js']
+  },
 
   lodash: {
     prefix: '_',
@@ -29,5 +34,9 @@ export default defineNuxtConfig({
     exposeConfig: false,
     injectPosition: 0,
     viewer: true,
+  },
+
+  image: {
+    dir: 'assets/images'
   }
 })

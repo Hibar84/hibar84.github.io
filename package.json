@@ -9,7 +9,7 @@
     "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
   },
   "devDependencies": {
-    "@nuxtjs/supabase": "^0.2.2",
+    "@nuxt/image-edge": "^1.0.0-27821548.ab054e4",
     "@nuxtjs/tailwindcss": "^6.1.2",
     "@tailwindcss/typography": "^0.5.8",
     "nuxt": "^3.0.0",
