@@ -5,7 +5,7 @@
   <!-- Photo -->
   <div class="avatar self-center">
     <div class="w-36 mask mask-squircle">
-      <nuxt-img src="/cv.png" />
+      <img src="../assets/images/cv.png" />
     </div>
   </div>
 
