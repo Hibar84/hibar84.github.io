@@ -108,7 +108,7 @@
     <!-- Statistiques -->
     <div class="px-4 py-2 shadow bg-base-200 rounded mb-3">
       <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
-      <div class="flex flex-col justify-evenly items-center md:flex-row">
+      <div class="p-3 flex flex-wrap justify-evenly items-center ">
         <Stats class="mb-3" title="Gares visitées" :numerator="visitedGares" :denominator="gares.length" />
         <BarChart class="mb-3" :data="barChartData" :options="barChartOptions" title="Départements les plus visités" />
       </div>
