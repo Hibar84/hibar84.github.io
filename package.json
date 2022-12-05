@@ -19,7 +19,7 @@
   },
   "dependencies": {
     "chart.js": "^3.9.1",
-    "daisyui": "^2.39.0",
+    "daisyui": "latest",
     "lodash": "^4.17.21",
     "theme-change": "^2.2.0",
     "vue-chartjs": "^4.1.2"
