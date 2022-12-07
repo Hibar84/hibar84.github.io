@@ -97,7 +97,7 @@
   <div class="p-6">
 
     <!-- Header -->
-    <div class="px-4 py-2 shadow bg-base-200 rounded mb-3 flex flex-row justify-between">
+    <div class="px-4 py-2 shadow-lg bg-base-300 rounded mb-3 flex flex-row justify-between">
       <div class="flex flex-row justify-start space-x-4">
         <img class="block h-8"
           src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/1920px-Logo_SNCF_2011.svg.png">
@@ -106,7 +106,7 @@
     </div>
 
     <!-- Statistiques -->
-    <div class="px-4 py-2 shadow bg-base-200 rounded mb-3">
+    <div class="px-4 py-2 shadow-lg bg-base-300 rounded mb-3">
       <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
       <div class="p-3 flex flex-wrap justify-evenly items-center ">
         <Stats class="mb-3" title="Gares visitées" :numerator="visitedGares" :denominator="gares.length" />
@@ -115,7 +115,7 @@
     </div>
 
     <!-- Tableau de détail -->
-    <div class="px-4 py-2 shadow bg-base-200 rounded mb-3">
+    <div class="px-4 py-2 shadow-lg bg-base-300 rounded mb-3">
       <h1 class="font-semibold text-2xl mb-1">Détail</h1>
       <input class="input w-full max-w-xs mb-3" type="text" v-model="query" @input="searchGare" />
       <div v-if="results.length>0">
