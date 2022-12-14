@@ -1,7 +1,7 @@
 <template>
   <div class="stats shadow min-h-fit">
     <div class="stat">
-      <div class="stat-title">{{ title }}</div>
+      <div class="stat-title opacity-90">{{ title }}</div>
       <Bar :chart-options="options" :chart-data="data"/>
     </div>
   </div>

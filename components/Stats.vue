@@ -1,9 +1,9 @@
 <template>
 <div class="stats shadow min-h-fit">
   <div class="stat">
-    <div class="stat-title">{{ title }}</div>
+    <div class="stat-title opacity-90">{{ title }}</div>
     <div class="stat-value font-medium">{{ numerator }} / {{ denominator }}</div>
-    <div class="stat-desc">({{ratio}}%)</div>
+    <div class="stat-desc opacity-100">({{ratio}}%)</div>
   </div>
 </div>
 </template>

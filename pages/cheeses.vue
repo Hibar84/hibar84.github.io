@@ -67,12 +67,12 @@
 <template>
   <div class="p-6">
     <div class="tabs tabs-boxed bg-base-100 justify-around mb-6">
-      <a class="tab px-3 text-xl rounded-lg" v-on:click="toggleTabs(1)"
-        v-bind:class="{'tab': openTab !== 1, 'tab tab-active': openTab === 1}">
+      <a class="px-3 text-xl" v-on:click="toggleTabs(1)"
+        v-bind:class="{'tab text-neutral': openTab !== 1, 'tab tab-active': openTab === 1}">
         Configuration
       </a>
-      <a class="tab px-3 text-xl" v-on:click="toggleTabs(2)"
-        v-bind:class="{'tab': openTab !== 2, 'tab tab-active': openTab === 2}">
+      <a class="px-3 text-xl" v-on:click="toggleTabs(2)"
+        v-bind:class="{'tab text-neutral': openTab !== 2, 'tab tab-active': openTab === 2}">
         Proposition
         <Icon name="tabler:refresh"/>
       </a>
@@ -96,15 +96,15 @@
       <div class="stats bg-base-300 shadow-lg mb-3">
 
         <div class="stat">
-          <div class="stat-title">Quantité de fromages à prévoir</div>
+          <div class="stat-title opacity-90">Quantité de fromages à prévoir</div>
           <div class="stat-value font-medium">{{ modele.quantite * nombreConvives }}gr.</div>
-          <div class="stat-desc">{{modele.quantite}}gr par personne.</div>
+          <div class="stat-desc opacity-90">{{modele.quantite}}gr par personne.</div>
         </div>
 
       </div>
 
       <!-- Sélection de fromages -->
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-3 self-center">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 self-center">
         <CheeseCard v-for="fromage in selectionFromages" :key="fromage.id" :cheese="fromage"/>
       </div>
 

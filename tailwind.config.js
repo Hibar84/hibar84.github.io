@@ -8,15 +8,15 @@ module.exports = {
     themes: [
       {
         mylight:{
-          "primary": "#5C7F67",
-          "secondary": "#ECF4E7",
-          "accent": "#FAE5E5",
-          "neutral": "#5D5656",
+          "primary": "#78716c",
+          "secondary": "#E9E7E7",
+          "accent": "#fde68a",
+          "neutral": "#44403c",
           "base-100": "#E9E7E7",
-          "info": "#3ABFF8",
-          "success": "#36D399",
-          "warning": "#FBBD23",
-          "error": "#F87272",
+          "info": "#3b82f6",
+          "success": "#16a34a",
+          "warning": "#eab308",
+          "error": "#dc2626",
 
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
@@ -31,15 +31,15 @@ module.exports = {
 
         },
         mydark:{
-          "primary": "#3ABFF8",
-          "secondary": "#828DF8",
-          "accent": "#10b981",
-          "neutral": "#1D283A",
-          "base-100": "#0F1729",
-          "info": "#0CA6E9",
-          "success": "#2BD4BD",
-          "warning": "#F4C152",
-          "error": "#e11d48",
+          "primary": "#111827",
+          "secondary": "#374151",
+          "accent": "#d1d5db",
+          "neutral": "#f3f4f6",
+          "base-100": "#374151",
+          "info": "#3b82f6",
+          "success": "#16a34a",
+          "warning": "#eab308",
+          "error": "#dc2626",
 
           "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
           "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
@@ -52,7 +52,7 @@ module.exports = {
           "--tab-border": "1px", // border width of tabs
           "--tab-radius": "0.5rem", // border radius of tabs
         }
-      },"garden", "night"],
+      }],
     base: true,
     utils: true,
     logs: true,

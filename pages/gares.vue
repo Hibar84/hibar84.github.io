@@ -61,13 +61,13 @@
       {
         label: "Visitées",
         data: Object.values(dataDepartements[1]),
-        backgroundColor: "#FFFFFF",
+        backgroundColor: "#292524",
         inflateAmount: 'auto'
       },
       {
         label: "Total",
         data: Object.values(dataDepartements[0]),
-        backgroundColor: "#3D4451",
+        backgroundColor: "#a8a29e",
         inflateAmount: 'auto'
       }
     ]

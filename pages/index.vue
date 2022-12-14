@@ -15,34 +15,10 @@
       </div>
     </div>
 
-    <div class="flex flex-wrap justify-around text-left">
-
-      <NuxtLink to="/gares">
-        <div class="card w-96 h-48 image-full shadow-lg">
-          <figure><img class="object-cover h-48 w-96" src="../assets/images/gare.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Mes gares SNCF</h2>
-          </div>
-        </div>
-      </NuxtLink>
-
-      <NuxtLink to="/cheeses">
-        <div class="card w-96 h-48 image-full shadow-lg">
-          <figure><img class="object-cover h-48 w-96" src="../assets/images/plateau.jpg" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">Configurateur de plateau fromages</h2>
-          </div>
-        </div>
-      </NuxtLink>
-
-      <NuxtLink to="/cv">
-        <div class="card w-96 h-48 image-full shadow-lg">
-          <figure><img class="object-cover h-48 w-96" src="../assets/images/cv.png" alt="Shoes" /></figure>
-          <div class="card-body">
-            <h2 class="card-title">À propos de moi</h2>
-          </div>
-        </div>
-      </NuxtLink>
+    <div class="p-6 flex flex-wrap gap-4 justify-center text-left">
+      <SiteLinkCard title="Mes gares SNCF" img="/gare.jpg" link="/gares"/>
+      <SiteLinkCard title="Configurateur de plateau fromages" img="/plateau.jpg" link="/cheeses"/>
+      <SiteLinkCard title="À propos de moi" img="/cv.png" link="/cv"/>
     </div>
 
 
