@@ -1,6 +1,6 @@
 <template>
-  <div class="card min-h-fit image-full">
-    <figure v-if="cheese.img !== ''"><img class="object-cover h-48 w-96" :src="cheese.img" :alt="cheese.name" /></figure>
+  <div class="card w-80 h-48 image-full shadow-lg">
+    <figure v-if="cheese.img !== ''"><nuxt-img width="320" :src="cheese.img" :alt="cheese.name" /></figure>
     <div class="card-body">
       <h2 class="card-title">{{ cheese.name }}</h2>
       <div v-if="cheese.milk.length !==0" class="badge">{{ cheese.milk }}</div>

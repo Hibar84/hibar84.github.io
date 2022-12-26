@@ -104,7 +104,7 @@
       </div>
 
       <!-- Sélection de fromages -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 self-center">
+      <div class="flex flex-wrap justify-center gap-4">
         <CheeseCard v-for="fromage in selectionFromages" :key="fromage.id" :cheese="fromage"/>
       </div>
 

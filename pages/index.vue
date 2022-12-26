@@ -16,9 +16,9 @@
     </div>
 
     <div class="p-6 flex flex-wrap gap-4 justify-center text-left">
-      <SiteLinkCard title="Mes gares SNCF" img="/gare.jpg" link="/gares"/>
-      <SiteLinkCard title="Configurateur de plateau fromages" img="/plateau.jpg" link="/cheeses"/>
-      <SiteLinkCard title="Boîte à idées" img="/box.jpg" link="/ideabox"/>
+      <SiteLinkCard title="Mes gares SNCF" img="https://images.unsplash.com/photo-1646561421969-afc1de718af8" link="/gares"/>
+      <SiteLinkCard title="Configurateur de plateau fromages" img="https://images.unsplash.com/photo-1631379578550-7038263db699" link="/cheeses"/>
+      <SiteLinkCard title="Boîte à idées" img="https://images.unsplash.com/photo-1607166452427-7e4477079cb9" link="/ideabox"/>
     </div>
 
 

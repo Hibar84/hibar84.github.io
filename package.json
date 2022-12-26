@@ -23,6 +23,7 @@
     "chart.js": "^3.9.1",
     "daisyui": "latest",
     "lodash": "^4.17.21",
+    "openai": "^3.1.0",
     "theme-change": "^2.2.0",
     "vue-chartjs": "^4.1.2"
   }
