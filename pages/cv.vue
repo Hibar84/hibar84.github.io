@@ -5,7 +5,7 @@
   <!-- Photo -->
   <div class="avatar self-center mb-3">
     <div class="w-36 mask mask-squircle">
-      <img src="../assets/images/cv.png" />
+      <img src="/cv.png" />
     </div>
   </div>
 

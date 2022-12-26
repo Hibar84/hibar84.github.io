@@ -26,6 +26,11 @@
                   Mon plateau de fromages
                 </NuxtLink>
               </li>
+              <li>
+                <NuxtLink to="/ideabox">
+                  Boîte à idées
+                </NuxtLink>
+              </li>
             </ul>
           </li>
         </ul>

@@ -18,7 +18,7 @@
     <div class="p-6 flex flex-wrap gap-4 justify-center text-left">
       <SiteLinkCard title="Mes gares SNCF" img="/gare.jpg" link="/gares"/>
       <SiteLinkCard title="Configurateur de plateau fromages" img="/plateau.jpg" link="/cheeses"/>
-      <SiteLinkCard title="À propos de moi" img="/cv.png" link="/cv"/>
+      <SiteLinkCard title="Boîte à idées" img="/box.jpg" link="/ideabox"/>
     </div>
 
 

@@ -34,9 +34,5 @@ export default defineNuxtConfig({
     exposeConfig: false,
     injectPosition: 0,
     viewer: true,
-  },
-
-  image: {
-    dir: 'assets/images'
   }
 })
