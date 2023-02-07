@@ -1,7 +1,12 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-  target: 'static',
-  
+
+  runtimeConfig: {
+    // The private keys which are only available within server-side
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
+  },
+
+
   router: {
     base: '/hibar84.github.io/'
   },

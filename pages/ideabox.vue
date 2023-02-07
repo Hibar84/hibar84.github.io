@@ -1,6 +1,6 @@
 <template>
-  <div class="hero hero-content flex flex-col gap-24">
-    <h1 class="text-3xl font-bold text-center">NONOLULU <br><span class="text-xl">La boîte à idées</span></h1>
+  <div class="hero flex flex-col gap-24 align-middle">
+    <h1 class="text-3xl font-bold text-center">La boîte à idées</h1>
 
     <!-- Nombre d'idées en stock -->
     <div class="text-center">
@@ -13,7 +13,7 @@
       <label for="randomIdea" class="btn" @click="pickRandomIdea">Choix aléatoire</label>
       <label for="addIdea" class="btn">Ajouter une idée</label>
     </div>
-    
+
     <!-- Modal : ajouter une idée -->
     <input type="checkbox" id="addIdea" class="modal-toggle" />
     <div class="modal modal-bottom sm:modal-middle">
@@ -45,6 +45,7 @@
         <p class="py-4"><a class="link" :href="selectedIdea.url" target="_blank">{{ selectedIdea.url }}</a></p>
       </div>
     </div>
+    
   </div>
 </template>
 

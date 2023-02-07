@@ -5,6 +5,7 @@
       <!-- 1er personnage -->
       <div class="p-2 bg-base-300 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Personnage A</h1>
+        <!-- Nom -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -18,7 +19,7 @@
             <Icon name="tabler:arrows-random" size="20"/>
           </div>
         </div>
-
+        <!-- Emploi -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -37,6 +38,7 @@
       <!-- 2e personnage -->
       <div class="p-2 bg-base-300 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Personnage B</h1>
+        <!-- Nom -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -50,7 +52,7 @@
             <Icon name="tabler:arrows-random" size="20"/>
           </div>
         </div>
-
+        <!-- Emploi -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -69,6 +71,7 @@
       <!-- Histoire -->
       <div class="p-2 bg-base-300 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Histoire</h1>
+        <!-- Ville -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -82,7 +85,7 @@
             <Icon name="tabler:arrows-random" size="20"/>
           </div>
         </div>
-
+        <!-- Lieu de rencontre -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -96,7 +99,18 @@
             <Icon name="tabler:arrows-random" size="20"/>
           </div>
         </div>
-
+        <!-- Histoire d'ap-2 flex gap-2 items-endmour -->
+        <div class="p-2 flex gap-2 items-baseline">
+          <label class="label cursor-pointer">
+            <span class="label-text">
+              <Icon v-if="scenario.love" name="mdi:cards-heart" size="20"/>
+              <Icon v-else name="mdi:heart-off" size="20"/>
+              Histoire d'amour
+            </span>
+            <input type="checkbox" v-model="scenario.love" :checked="scenario.love" class="checkbox" hidden/>
+          </label>
+        </div>
+        <!-- Rebondissement -->
         <div class="p-2 flex gap-2 items-end">
           <div>
             <label class="label">
@@ -114,9 +128,9 @@
     </div>
 
     <div class="p-4 flex flex-col bg-base-300 rounded items-center self-center">
-      <button class="btn max-w-fit mb-3" @click="setPrompt()">Générer</button>
+      <button class="btn max-w-fit mb-3" @click="getScenario()">Générer</button>
       <article class="prose">
-        <p class="text-justify"></p>
+        <p class="text-justify">{{ result }}</p>
       </article>
     </div>
     
@@ -124,14 +138,9 @@
 </template>
 
 <script setup>
-// import { Configuration, OpenAIApi } from "openai";
-
-// const configuration = new Configuration({
-//   apiKey: process.env.OPENAI_API_KEY,
-// });
-// const openai = new OpenAIApi(configuration);
-
 const scenario = ref({});
+
+const result = ref();
 
 const options=ref(
   {
@@ -153,19 +162,22 @@ function setRandom(liste, property){
 };
 
 function setPrompt(){
-  const prompt = `Propose moi un scénario de film de Noël, avec les caractéristiques suivantes: Personnage A : ${scenario.value.actorA}-${scenario.value.jobA}, Personnage B : ${scenario.value.actorB}-${scenario.value.jobB}, Ville : ${scenario.value.city}, Lieu de rencontre des personnages: ${scenario.value.meeting},Evenement: ${scenario.value.event}. C'est une histoire d'amour.`;
-  console.log(prompt);
-  return prompt
+  const prompt = ref(`Formule un scénario de film de Noël, avec les caractéristiques suivantes: Personnage A = ${scenario.value.actorA}-${scenario.value.jobA}, Personnage B = ${scenario.value.actorB}-${scenario.value.jobB}, Ville = ${scenario.value.city}, Lieu de rencontre des personnages = ${scenario.value.meeting}, Evenement = ${scenario.value.event}.`);
+  if (scenario.value.love === true){
+    prompt.value += " C'est une histoire d'amour.";
+  }
+  return prompt.value;
 };
 
-// async function getScenario(){
-//   const prompt = setPrompt();
-//   result = await openai.createCompletion({
-//     model: "text-davinci-003",
-//     prompt: prompt,
-//     temperature: 0.6,
-//     max_tokens: 500,
-//   });
-// };
+const getScenario = async () => {
+  console.log("Envoi de la requête à l'API");
+  const response = await $fetch("/api/completion", {
+    method: "post",
+    body: { prompt: setPrompt() },
+  });
+  const proposition = response.choices[0].text.replace("\n",'');
+  console.log(response);
+  result.value = proposition;
+};
 
 </script>
