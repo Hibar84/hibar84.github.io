@@ -1,9 +1,17 @@
 <template>
-  <div class="flex flex-col">
-    <div class="p-2 flex justify-evenly">
+  <div class="p-6 flex flex-col justify-evenly place-content-evenly">
+
+    <div class="alert alert-warning shadow-lg">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
+        <span>Attention: fonctionnalité en cours d'élaboration.</span>
+      </div>
+    </div>
+
+    <div class="p-4 flex flex-wrap justify-evenly">
       
       <!-- 1er personnage -->
-      <div class="p-2 bg-base-300 rounded flex flex-col">
+      <div class="p-2 mb-3 bg-base-300 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Personnage A</h1>
         <!-- Nom -->
         <div class="p-2 flex gap-2 items-end">
@@ -36,7 +44,7 @@
       </div>
 
       <!-- 2e personnage -->
-      <div class="p-2 bg-base-300 rounded flex flex-col">
+      <div class="p-2 mb-3 bg-base-300 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Personnage B</h1>
         <!-- Nom -->
         <div class="p-2 flex gap-2 items-end">
@@ -69,7 +77,7 @@
       </div>
       
       <!-- Histoire -->
-      <div class="p-2 bg-base-300 rounded flex flex-col">
+      <div class="p-2 mb-3 bg-base-300 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Histoire</h1>
         <!-- Ville -->
         <div class="p-2 flex gap-2 items-end">
@@ -171,13 +179,14 @@ function setPrompt(){
 
 const getScenario = async () => {
   console.log("Envoi de la requête à l'API");
-  const response = await $fetch("/api/completion", {
-    method: "post",
-    body: { prompt: setPrompt() },
-  });
-  const proposition = response.choices[0].text.replace("\n",'');
-  console.log(response);
-  result.value = proposition;
+  console.log(setPrompt());
+  // const response = await $fetch("/api/completion", {
+  //   method: "post",
+  //   body: { prompt: setPrompt() },
+  // });
+  // const proposition = response.choices[0].text.replace("\n",'');
+  // console.log(response);
+  result.value = "La commande a envoyer est: " + setPrompt();
 };
 
 </script>

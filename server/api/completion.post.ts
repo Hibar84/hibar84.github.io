@@ -13,13 +13,13 @@ export default defineEventHandler(async (event) => {
     const openaiClient = new OpenAIApi(configuration);
 
     // Make the call to the moderation endpoint
-    const res = await openaiClient.createCompletion({
-      model: "text-davinci-003",
-      prompt: body.prompt,
-      temperature: 0.6,
-      max_tokens: 1500,
-    });
+    // const res = await openaiClient.createCompletion({
+    //   model: "text-davinci-003",
+    //   prompt: body.prompt,
+    //   temperature: 0.6,
+    //   max_tokens: 1500,
+    // });
 
     // return the result
-    return res.data;
+    // return res.data;
 });

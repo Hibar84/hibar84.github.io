@@ -6,16 +6,12 @@ export default defineNuxtConfig({
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
   },
 
-
-  router: {
-    base: '/hibar84.github.io/'
-  },
-
   modules: [
     '@nuxtjs/tailwindcss',
     'nuxt-lodash',
     'nuxt-icon',
-    '@nuxt/image-edge'
+    '@nuxt/image-edge',
+    '@nuxtjs/supabase'
   ],
 
   build: {

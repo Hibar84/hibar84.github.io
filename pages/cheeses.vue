@@ -3,6 +3,7 @@
     title: 'Plateau fromages'
   })
 
+  const supabase = useSupabaseClient();
   const typesLait = useMilkTypes();
   const typesFromages = useCheeseTypes();
   const typesEvenenements = useEventTypes();
@@ -13,13 +14,15 @@
   const nombreConvives = ref(0);
 
   // FROMAGES
-  const fromages = useFromages();
+  let { data: fromages, error } = await supabase
+    .from('fromages')
+    .select('*');
   const selectionFromages = ref([]);
 
   function pickOneCheese(filter){
     // On choisit un premier fromage aléatoirement
-    let randomKey = _random(fromages.value.length);
-    let randomFromage = fromages.value[randomKey];
+    let randomKey = _random(fromages.length);
+    let randomFromage = fromages[randomKey];
     let validator = true;
     
     while (validator){
@@ -33,8 +36,8 @@
         validator = false
       } else {
         // Sinon,  on choisit un autre fromage
-        randomKey = _random(fromages.value.length);
-        randomFromage = fromages.value[randomKey];
+        randomKey = _random(fromages.length);
+        randomFromage = fromages[randomKey];
       }
     }
 
@@ -45,10 +48,15 @@
     // On fait une sélection de fromages uniquement si le types de lait ou de fromages a été sélectionné. Sinon on ne choisit pas de fromages, et la quantité par personne est mise à 0.
 
     selectionFromages.value = [];
+    let selectionIds = [];
 
     if (modele.value.milk || modele.value.curd){
       while (selectionFromages.value.length < nombreFromages){
-        selectionFromages.value.push(pickOneCheese(filter))
+        let newFromage = pickOneCheese(filter);
+        if (!(selectionIds.includes(newFromage.id))){
+          selectionFromages.value.push(newFromage);
+          selectionIds.push(newFromage.id);
+        }
       };
     } else modele.value.quantite = 0;
   };

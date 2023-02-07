@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "@nuxt/image-edge": "^1.0.0-27821548.ab054e4",
+    "@nuxtjs/supabase": "^0.3.0",
     "@nuxtjs/tailwindcss": "^6.1.2",
     "@tailwindcss/typography": "^0.5.8",
     "nuxt": "^3.1.2",

@@ -1,9 +1,3 @@
-import gares from '../src/gares.json'
-import fromages from '../src/fromages.json'
-
-export const useGares = () => useState < Array < Object >> ('gares', () => gares);
-export const useFromages = () => useState < Array < Object >> ('fromages', () => fromages);
-
 export const useMilkTypes = () => useState < Array < Object >> ('milktypes', () => [{
     'label': 'Vache',
     'value': 'Vache'

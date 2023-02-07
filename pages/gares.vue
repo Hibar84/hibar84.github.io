@@ -4,10 +4,13 @@
   })
 
   // Initialisation des variables
+  const supabase = useSupabaseClient();
   const query = ref('');
   const results = ref([]);
 
-  const gares = useGares();
+  let { data: gares, error } = await supabase
+    .from('gares')
+    .select('*');
 
   function compteGare(listeGares, critere) {
     let compteur = 0;
@@ -17,12 +20,12 @@
     return compteur
   }
 
-  let visitedGares = compteGare(gares.value, "vu");
+  let visitedGares = compteGare(gares, "vu");
 
   // Fonction de recherche des gares
   const searchGare = _debounce(() => {
     if (query.value !== '') {
-      results.value = gares.value.filter(gare => gare.nom.toLowerCase().includes(query.value.toLowerCase()))
+      results.value = gares.filter(gare => gare.nom.toLowerCase().includes(query.value.toLowerCase()))
     } else results.value = []
   }, 500);
 
@@ -34,7 +37,7 @@
     let departements = {};
     let departementsVu= {};
 
-    for (const gare of gares.value) {
+    for (const gare of gares) {
       if (Object.keys(departements).includes(gare.departement)) {
         if (gare.vu === true) { departementsVu[gare.departement] += 1; } 
         departements[gare.departement] += 1;
