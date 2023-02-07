@@ -178,8 +178,6 @@ function setPrompt(){
 };
 
 const getScenario = async () => {
-  console.log("Envoi de la requête à l'API");
-  console.log(setPrompt());
   // const response = await $fetch("/api/completion", {
   //   method: "post",
   //   body: { prompt: setPrompt() },

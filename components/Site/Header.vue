@@ -31,6 +31,11 @@
                   Boîte à idées
                 </NuxtLink>
               </li>
+              <li>
+                <NuxtLink to="/christmas_movie">
+                  Films de Noël
+                </NuxtLink>
+              </li>
             </ul>
           </li>
         </ul>

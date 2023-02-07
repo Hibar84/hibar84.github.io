@@ -1,3 +1,37 @@
+<script setup>
+  useHead({
+    title: 'Boîte à idées'
+  });
+
+  const supabase = useSupabaseClient();
+
+  const { data: ideas, refresh } = await useAsyncData('ideas', async () => {
+    const { data } = await supabase
+      .from('ideas')
+      .select('*');
+    return data
+  });
+
+  const selectedIdea = ref({});
+
+  const newIdea = ref({});
+
+  async function addIdea(idea){
+    const { data, error } = await supabase
+      .from('ideas')
+      .insert(idea)
+    if (error) {
+      console.log(error)
+    }
+    refresh();
+  }
+
+  function pickRandomIdea(){
+    selectedIdea.value = _sample(ideas.value);
+  }
+</script>
+
+
 <template>
   <div class="hero flex flex-col gap-24 align-middle">
     <h1 class="text-3xl font-bold text-center">La boîte à idées</h1>
@@ -10,7 +44,7 @@
     
     <!-- Boutons -->
     <div class="btn-group">
-      <label for="randomIdea" class="btn" @click="pickRandomIdea">Choix aléatoire</label>
+      <label for="randomIdea" class="btn" @click="pickRandomIdea()">Choix aléatoire</label>
       <label for="addIdea" class="btn">Ajouter une idée</label>
     </div>
 
@@ -30,7 +64,7 @@
         <input name="tags" type="url" placeholder="Lien" v-model="newIdea.url" class="mb-3 input w-full max-w-xs bg-base-300">
         
         <div class="modal-action">
-          <label for="addIdea" class="btn" @click="ideas.push(newIdea)">Ajouter</label>
+          <label for="addIdea" class="btn" @click="addIdea(newIdea)">Ajouter</label>
         </div>
       </div>
     </div>
@@ -48,37 +82,3 @@
     
   </div>
 </template>
-
-<script setup>
-const ideas = ref(
-  [
-    {
-      id:1,
-      title:"Première idée",
-      desc:"",
-      url:""
-    },
-    {
-      id:2,
-      title:"2e idée",
-      desc:"",
-      url:""
-    },
-    {
-      id:3,
-      title:"3e idée",
-      desc:"",
-      url:""
-    }
-  ]
-);
-
-const selectedIdea = ref({});
-
-const newIdea = ref({});
-
-function pickRandomIdea(){
-  let rank = Math.floor(Math.random()*ideas.value.length);
-  selectedIdea.value = ideas.value[rank];
-}
-</script>
