@@ -36,6 +36,11 @@
                   Films de Noël
                 </NuxtLink>
               </li>
+              <li>
+                <NuxtLink to="/recettes">
+                  Mes recettes
+                </NuxtLink>
+              </li>
             </ul>
           </li>
         </ul>
