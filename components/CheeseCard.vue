@@ -1,5 +1,5 @@
 <template>
-  <div class="card w-80 h-48 image-full shadow-lg">
+  <div class="card w-80 h-48 image-full">
     <figure v-if="cheese.img !== ''"><nuxt-img width="320" :src="cheese.img" :alt="cheese.name" /></figure>
     <div class="card-body">
       <h2 class="card-title">{{ cheese.name }}</h2>

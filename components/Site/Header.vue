@@ -32,7 +32,7 @@
                 </NuxtLink>
               </li>
               <li>
-                <NuxtLink to="/christmas_movie">
+                <NuxtLink to="/christmas">
                   Films de Noël
                 </NuxtLink>
               </li>

@@ -101,7 +101,7 @@
     <div v-bind:class="{'hidden': openTab !== 2, 'flex flex-col': openTab === 2}">
 
       <!-- Quantité -->
-      <div class="stats bg-base-300 shadow-lg mb-3">
+      <div class="stats bg-base-300 mb-3">
 
         <div class="stat">
           <div class="stat-title opacity-90">Quantité de fromages à prévoir</div>
