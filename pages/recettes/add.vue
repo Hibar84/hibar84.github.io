@@ -2,21 +2,34 @@
   const supabase = useSupabaseClient();
   
   const loading = ref(false);
+  const instructions_bloc = ref('');
 
   const nouvelleRecette = ref(
     {
       title:"",
       desc:"",
       ingredients:[],
-      instructions:[],
+      instructions: [],
       nb_personnes:2,
       categorie:"Catégorie"
     }
   );
 
   const creerRecette = async () => {
-    alert("Ca fonctionne!");
-  }
+    nouvelleRecette.value.instructions = instructions_bloc.value.split("\n");
+    try {
+      loading.value = true
+      const { data, error } = await supabase
+        .from('recettes')
+        .insert([nouvelleRecette.value])
+      if (error) throw error
+      alert('Recette crée!');
+    } catch (error) {
+      alert(error.error_description || error.message)
+    } finally {
+      loading.value = false
+    }
+  };
 
 
 </script>
@@ -47,7 +60,7 @@
       
       <input type="range" min="0" max="20" class="range range-xs w-full max-w-md mb-3" v-model="nouvelleRecette.nb_personnes" />
 
-      <textarea placeholder="Instructions" class="textarea textarea-bordered textarea-lg text-base w-full max-w-md mb-3" v-model="nouvelleRecette.instructions"/>
+      <textarea placeholder="Instructions" class="textarea textarea-bordered textarea-lg text-base w-full max-w-md mb-3" v-model="instructions_bloc"/>
       
       <input
         class="btn"

@@ -10,7 +10,8 @@
       <div class="hero-content text-center">
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">Bienvue!</h1>
-          <p class="py-6">J'utilise ce site pour expérimenter, apprendre et créer des petits projets perso.</p>
+          <p class="py-6">J'utilise ce site pour expérimenter, apprendre et créer des petits projets.</p>
+          <p class="text-sm italic">Réalisé avec Nuxt 3 et DaisyUI</p>
         </div>
       </div>
     </div>
@@ -22,7 +23,6 @@
       <SiteLinkCard title="Générateur de films de Noël" img="https://images.unsplash.com/photo-1482517967863-00e15c9b44be?&w=600&q=100" link="/christmas"/>
       <SiteLinkCard title="Mes recettes" img="https://images.unsplash.com/photo-1556909172-6ab63f18fd12?&w=600&q=100" link="/recettes"/>
     </div>
-
 
   </div>
 
