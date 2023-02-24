@@ -36,7 +36,7 @@
       </select> -->
     </div>
 
-    <div>
+    <div class="p-6 flex flex-wrap gap-4 justify-center text-left">
       <div v-for="recette in results" :key="recette" class="card card-compact w-64 bg-base-200">
         <div class="card-body">
           <h2 class="card-title">
