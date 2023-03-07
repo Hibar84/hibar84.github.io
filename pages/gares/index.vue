@@ -97,28 +97,26 @@
 </script>
 
 <template>
-  <div class="p-6">
+  <div class="flex flex-col p-6 items-center">
 
     <!-- Header -->
-    <div class="px-4 py-2 bg-base-300 rounded mb-3 flex flex-row justify-between">
-      <div class="flex flex-row justify-start space-x-4">
-        <img class="block h-8"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/1920px-Logo_SNCF_2011.svg.png">
-        <h1 class="text-3xl font-semibold">Mes gares SNCF</h1>
-      </div>
+    <div class="flex flex-row p-4 bg-base-300 rounded mb-3 gap-4 justify-center w-full">
+      <img class="block h-8"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/1920px-Logo_SNCF_2011.svg.png">
+      <h1 class="text-3xl font-semibold">Mes gares SNCF</h1>
     </div>
 
     <!-- Statistiques -->
-    <div class="px-4 py-2 bg-base-300 rounded mb-3">
+    <div class="p-4 bg-base-300 rounded mb-3 w-full">
       <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
-      <div class="p-3 flex flex-wrap justify-evenly items-center ">
+      <div class="p-3 flex flex-wrap justify-evenly items-center gap-4">
         <Stats class="mb-3" title="Gares visitées" :numerator="visitedGares" :denominator="gares.length" />
         <BarChart class="mb-3" :data="barChartData" :options="barChartOptions" title="Départements les plus visités" />
       </div>
     </div>
 
     <!-- Tableau de détail -->
-    <div class="px-4 py-2 bg-base-300 rounded mb-3">
+    <div class="p-4 bg-base-300 rounded mb-3 w-full">
       <h1 class="font-semibold text-2xl mb-2">Détail</h1>
       <input 
         class="input w-full max-w-xs mb-3" 

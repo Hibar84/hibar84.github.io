@@ -11,7 +11,7 @@
         <div class="max-w-md">
           <h1 class="text-5xl font-bold">Bienvue!</h1>
           <p class="py-6">J'utilise ce site pour expérimenter, apprendre et créer des petits projets.</p>
-          <p class="text-sm italic">Réalisé avec Nuxt 3 et DaisyUI</p>
+          <p class="text-sm italic">Réalisé avec Nuxt 3, Supabase et DaisyUI</p>
         </div>
       </div>
     </div>
