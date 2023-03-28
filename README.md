@@ -1,42 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Bienvenue sur le repo de mon site personnel
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
+J'utilise ce site pour expérimenter, apprendre et créer des petits projets.
 
-## Setup
+https://app.tolula.fr
 
-Make sure to install the dependencies:
+## Stack technique
 
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.
+- Vue / Nuxt 3
+- Supabase
+- Tailwind CSS / DaisyUI
+- Vercel

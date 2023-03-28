@@ -76,11 +76,11 @@
   <div class="p-6">
     <div class="tabs tabs-boxed bg-base-100 justify-around mb-6">
       <a class="px-3 text-xl" v-on:click="toggleTabs(1)"
-        v-bind:class="{'tab text-neutral': openTab !== 1, 'tab tab-active': openTab === 1}">
+        v-bind:class="{'tab': openTab !== 1, 'tab tab-active': openTab === 1}">
         Configuration
       </a>
       <a class="px-3 text-xl" v-on:click="toggleTabs(2)"
-        v-bind:class="{'tab text-neutral': openTab !== 2, 'tab tab-active': openTab === 2}">
+        v-bind:class="{'tab': openTab !== 2, 'tab tab-active': openTab === 2}">
         Proposition
         <Icon name="tabler:refresh"/>
       </a>
