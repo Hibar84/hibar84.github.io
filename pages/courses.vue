@@ -1,6 +1,5 @@
 <script setup>
-import { list } from 'postcss';
-
+  import { list } from 'postcss';
 
   const recipes = ref();
   const query = ref({
@@ -25,12 +24,14 @@ import { list } from 'postcss';
   };
 
   const addRecipe = (recipe) => {
-    const ingredients = []
-    for ( item in recipe.value.ingredients ){
-      let ingredient = {}
-      ingredients.push()
-    }
-    console.log(ingredients);
+    liste_course.value.push(recipe.ingredients)
+    
+    // const ingredients = []
+    // for ( item in recipe.value.ingredients ){
+    //   let ingredient = {}
+    //   ingredients.push()
+    // }
+    // console.log(ingredients);
     // liste_course.value = liste_course.value.concat(recipe.ingredients);
   };
 
@@ -49,13 +50,13 @@ import { list } from 'postcss';
     </div>
         
     <div class="flex flex-col gap-3">
-      <div class="alert alert-info shadow-lg">
-        <div>
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="stroke-current flex-shrink-0 w-6 h-6"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
-          <span>Ne pas inclure d'accents ou de caractères spéciaux.</span>
-        </div>
+      <div class="form-control w-full">
+        <input type="text" placeholder="Recette" class="input input-bordered" v-model="query.title"/>
+        <label class="label">
+          <span class="label-text-alt">Ne pas inclure d'accents ou de caractères spéciaux.</span>
+        </label>
       </div>
-      <input type="text" placeholder="Recette" class="input input-bordered w-full" v-model="query.title"/>
+      
       <button class="btn" @click="getRecipes">Chercher</button>
     </div>
 

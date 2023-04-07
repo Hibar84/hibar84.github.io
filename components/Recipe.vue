@@ -1,6 +1,6 @@
 <template>
   <div class="flex flex-row gap-3 items-baseline">
-    <button class="btn btn-circle btn-sm" @click="select()">
+    <button class="btn btn-circle btn-sm" @click="$emit('select')">
       <Icon name="material-symbols:add" size="20"/>
     </button>
     <div tabindex="0" class="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box">
@@ -27,16 +27,18 @@
   </div>
 </template>
 
-<script setup>
-  const emit = defineEmits(['select'])
+<script setup lang="ts">
+  const emit = defineEmits<{
+    (e:'select'): void
+  }>();
 
-  const props = defineProps({
-    recipe:{
-      type: Object
-    }
-  })
-
-  function select() {
-    emit('select');
+  interface Recipe {
+    name: string;
+    images: Array<string>;
+    people: number;
+    totalTime: number;
+    ingredients: Array<string>
   }
+
+  const props = defineProps<{ recipe: Recipe}>();
 </script>

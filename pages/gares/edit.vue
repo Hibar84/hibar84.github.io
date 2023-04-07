@@ -1,9 +1,21 @@
-<script setup>
+<script setup lang="js">
   useHead({
     title: 'Mes gares'
   })
 
+  interface Gare {
+    id: string;
+    nom: string;
+    commune: string;
+    departement: string;
+    X: number;
+    Y: number;
+    coordonnees: string;
+    vu: boolean;
+  }
+  
   // Initialisation des variables
+  
   const supabase = useSupabaseClient();
   const loading = ref(false);
   const query = ref('');

@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
   useHead({
     title: 'Plateau fromages'
   })
@@ -8,28 +8,46 @@
   const typesFromages = useCheeseTypes();
   const typesEvenenements = useEventTypes();
 
+  interface ModeleFromage {
+    quantite?: Number;
+    milk?: Array<string>;
+    curd?: Array<string>;
+  };
+
+  interface Fromage {
+    id: string;
+    name: string;
+    wiki: string;
+    img: string;
+    regions: string;
+    milk: string;
+    curd: string;
+    aoc: boolean;
+    aoc_year: string;
+    status: string;
+  };
 
   // FORMULAIRE
-  const modele = ref({})
-  const nombreConvives = ref(0);
+  const modele = ref<ModeleFromage>({});
+  const nombreConvives = ref<number>(0);
 
   // FROMAGES
   let { data: fromages, error } = await supabase
     .from('fromages')
     .select('*');
-  const selectionFromages = ref([]);
+  const selectionFromages = ref<Array<Fromage>>([]);
 
-  function pickOneCheese(filter){
+  function pickOneCheese(filter: ModeleFromage): Fromage {
     // On choisit un premier fromage aléatoirement
     let randomKey = _random(fromages.length);
-    let randomFromage = fromages[randomKey];
+    let randomFromage: Fromage = fromages[randomKey];
     let validator = true;
     
     while (validator){
       // On test la conformité au lait
-      let validateMilk = ((!filter.value.milk || filter.value.milk.length === 0) ? true : filter.value.milk.includes(randomFromage.milk));
+      let validateMilk = ((!filter.milk || filter.milk.length === 0) ? true : filter.milk.includes(randomFromage.milk));
       // On test la conformité au type de fromage
-      let validateCurd = ((!filter.value.curd || filter.value.curd.length === 0) ? true : filter.value.curd.includes(randomFromage.curd));
+      let validateCurd = ((!filter.curd || filter.curd.length === 0) ? true : filter.curd.includes(randomFromage.curd));
 
       // Si les deux tests sont positifs, on sort de la boucle while
       if (validateMilk && validateCurd){
@@ -44,13 +62,13 @@
     return randomFromage
   }
 
-  function selectionnerFromages(filter, nombreFromages){
+  function selectionnerFromages(filter: ModeleFromage, nombreFromages: number): void {
     // On fait une sélection de fromages uniquement si le types de lait ou de fromages a été sélectionné. Sinon on ne choisit pas de fromages, et la quantité par personne est mise à 0.
 
     selectionFromages.value = [];
-    let selectionIds = [];
+    let selectionIds: Array<string> = [];
 
-    if (modele.value.milk || modele.value.curd){
+    if (filter.milk || filter.curd){
       while (selectionFromages.value.length < nombreFromages){
         let newFromage = pickOneCheese(filter);
         if (!(selectionIds.includes(newFromage.id))){
@@ -58,48 +76,30 @@
           selectionIds.push(newFromage.id);
         }
       };
-    } else modele.value.quantite = 0;
+    } else filter.quantite = 0;
   };
 
-  // TABS
-  const openTab = ref(1);
-
-  function toggleTabs(tabNumber) {
-    openTab.value = tabNumber
-    // On recalcule la sélection de fromages uniquement lorsque on va sur le 2e onglet
-    if (tabNumber === 2) selectionnerFromages(modele, 6)
-  }
 </script>
 
 
 <template>
-  <div class="p-6">
-    <div class="tabs tabs-boxed bg-base-100 justify-around mb-6">
-      <a class="px-3 text-xl" v-on:click="toggleTabs(1)"
-        v-bind:class="{'tab': openTab !== 1, 'tab tab-active': openTab === 1}">
-        Configuration
-      </a>
-      <a class="px-3 text-xl" v-on:click="toggleTabs(2)"
-        v-bind:class="{'tab': openTab !== 2, 'tab tab-active': openTab === 2}">
-        Proposition
-        <Icon name="tabler:refresh"/>
-      </a>
-    </div>
+  <div class="p-6 flex flex-col gap-6 md:flex-row">
 
-    <div
-      v-bind:class="{'hidden': openTab !== 1, 'flex flex-col items-stretch md:flex-row md:justify-around ': openTab === 1}">
-      
+    <div class="flex flex-col-reverse items-stretch md:flex-col md:min-w-fit"> 
+      <button @click="selectionnerFromages(modele, 6)" class="btn btn-primary gap-2">
+        <Icon name="tabler:refresh"/>
+        Rafraîchir 
+      </button>
       <Slider v-model:value="nombreConvives" title="Nombre de convives" class="p-3 mb-6" />
       <div class="divider md:divider-horizontal" />
-      <Radios :radios="typesEvenenements" v-model:values="modele.quantite" title="Types de fromages" class="p-3" />
+      <Radios :radios="typesEvenenements" v-model:value="modele.quantite" title="Types de fromages" class="p-3" />
       <div class="divider md:divider-horizontal" />
       <Multiselect :checkboxes="typesLait" v-model:values="modele.milk" title="Types de lait" class="p-3" />
       <div class="divider md:divider-horizontal" />
       <Multiselect :checkboxes="typesFromages" v-model:values="modele.curd" title="Types de fromages" class="p-3" />
     </div>
 
-    <div v-bind:class="{'hidden': openTab !== 2, 'flex flex-col': openTab === 2}">
-
+    <div class="flex flex-col">
       <!-- Quantité -->
       <div class="stats bg-base-300 mb-3">
 
@@ -115,9 +115,8 @@
       <div class="flex flex-wrap justify-center gap-4">
         <CheeseCard v-for="fromage in selectionFromages" :key="fromage.id" :cheese="fromage"/>
       </div>
-
-
     </div>
+  
   </div>
 
 </template>

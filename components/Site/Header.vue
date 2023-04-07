@@ -72,7 +72,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { onMounted } from 'vue'
 import { themeChange } from 'theme-change'
 

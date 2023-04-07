@@ -35,5 +35,9 @@ export default defineNuxtConfig({
     exposeConfig: false,
     injectPosition: 0,
     viewer: true,
+  },
+  typescript:{
+    typeCheck: true,
+    strict: true
   }
 })

@@ -7,15 +7,17 @@
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const emit = defineEmits(['changeState'])
 
-const props = defineProps({
-  visited: Boolean,
-  id: Number,
-  label: String,
+interface Props {
+  visited: boolean;
+  id: number;
+  label: string;
   disabled: Boolean
-});
+}
+
+const props = defineProps<Props>();
 
 const status = ref(props.visited);
 

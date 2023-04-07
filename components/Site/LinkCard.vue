@@ -9,19 +9,13 @@
   </NuxtLink>
 </template>
 
-<script setup>
-const props = defineProps({
-  link:{
-    type: String,
-    required: true
-  },
-  img:{
-    type: String,
-    required: false
-  },
-  title:{
-    type: String,
-    required: true
-  }
-})
+<script setup lang="ts">
+  interface Props {
+    link: string;
+    img: string;
+    title: string
+  };
+
+
+  const props = defineProps<Props>();
 </script>

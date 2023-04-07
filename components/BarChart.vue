@@ -7,10 +7,8 @@
   </div>
 </template>
 
-<script setup>
-  import {
-    Bar
-  } from 'vue-chartjs'
+<script setup lang="ts">
+  import { Bar } from 'vue-chartjs'
   import {
     Chart as ChartJS,
     Title,
@@ -23,18 +21,16 @@
 
   ChartJS.register(Title, Tooltip, Legend, BarElement, CategoryScale, LinearScale)
 
-  const props = defineProps({
-    data: {
-      type: Object,
-      default: () => {}
-    },
-    options: {
-      type: Object,
-      default: () => {}
-    },
-    title: {
-      type: String,
-      default: ''
-    }
-  })
+  interface Props {
+    data: { 
+      labels: Array<string>; 
+      datasets: Array<{
+        data:Array<number>
+      }>
+    };
+    options: {};
+    title?: string
+  }
+  
+  const props = defineProps<Props>();
 </script>

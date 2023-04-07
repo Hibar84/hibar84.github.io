@@ -8,15 +8,17 @@
 </div>
 </template>
 
-<script setup>
-import { computed } from 'vue'
-const props = defineProps({
-  title: String,
-  numerator: Number,
-  denominator: Number
-});
+<script setup lang="ts">
 
-const ratio = computed(()=>{
-  return (props.numerator / props.denominator).toFixed(3);
-});
+  interface Props {
+    title: string;
+    numerator: number;
+    denominator: number;
+  }
+
+  const props = defineProps<Props>();
+
+  const ratio = computed<string>(() => {
+    return (props.numerator / props.denominator).toFixed(3);
+  });
 </script>
