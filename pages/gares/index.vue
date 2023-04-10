@@ -1,20 +1,10 @@
 <script setup lang="ts">
   import { Database } from '~/lib/supabase_types'
+  type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
 
   useHead({
     title: 'Mes gares'
   })
-
-  interface Gare {
-    id: string;
-    nom: string;
-    commune: string;
-    departement: string;
-    X: number;
-    Y: number;
-    coordonnees: string;
-    vu: boolean;
-  }
 
 
   // Initialisation des variables
@@ -26,7 +16,11 @@
     .from('gares')
     .select('*');
 
-  function compteGare(listeGares, critere: string) {
+  type Gares = typeof gares;
+  type Gare = ArrayElement<Gares> | null;
+
+
+  function compteGare(listeGares: , critere: string) {
     let compteur = 0;
     for (const gare of listeGares) {
       if (gare[critere] === true) compteur += 1

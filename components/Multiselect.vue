@@ -2,7 +2,7 @@
 
   <div>
     <h2 class="text-xl mb-3">{{ title }}</h2>
-    <div v-for="checkbox in checkboxes" :key="checkbox">
+    <div v-for="checkbox in checkboxes" :key="checkbox.label">
       <label class="label cursor-pointer">
         <span class="label-text mr-3">{{ checkbox.label }}</span>
         <input type="checkbox" class="checkbox" :value="checkbox.value" v-model="choices" @change="$emit('update:values', choices)" :disabled="checkbox.disabled" />
@@ -38,7 +38,3 @@
   }>();
 
 </script>
-
-<style>
-
-</style>

@@ -2,7 +2,7 @@
 
   <div>
     <h2 class="text-xl mb-3">{{ title }}</h2>
-    <label v-for="radio in radios" :key="radio" class="label cursor-pointer">
+    <label v-for="radio in radios" :key="radio.label" class="label cursor-pointer">
       <span class="label-text">{{ radio.label }}</span> 
       <input type="radio" :value="radio.value" :name="title" class="radio" @change="$emit('update:value', choice)" v-model="choice"/>
     </label>
