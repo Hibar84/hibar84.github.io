@@ -19,14 +19,17 @@
 
   type FromageList = typeof fromages;
   type Fromage = ArrayElement<FromageList>;
+  type Modele = Partial<Fromage> & {
+    quantite: number
+  };
 
   const selectionFromages = ref<FromageList>([]);
 
   // FORMULAIRE
-  const modele = ref<Fromage & {quantite: number}>();
+  const modele = ref<Modele>({quantite: 0 });
   const nombreConvives = ref<number>(0);
 
-  function pickOneCheese(filter: Fromage): Fromage {
+  function pickOneCheese(filter: Modele): Fromage {
     // On choisit un premier fromage aléatoirement
     let randomKey = _random(fromages.length);
     let randomFromage: Fromage = fromages[randomKey];
@@ -51,7 +54,7 @@
     return randomFromage
   }
 
-  function selectionnerFromages(filter: Fromage, nombreFromages: number): void {
+  function selectionnerFromages(filter: Modele, nombreFromages: number): void {
     // On fait une sélection de fromages uniquement si le types de lait ou de fromages a été sélectionné. Sinon on ne choisit pas de fromages, et la quantité par personne est mise à 0.
 
     selectionFromages.value = [];
@@ -77,7 +80,7 @@
         <Icon name="tabler:refresh"/>
         Rafraîchir 
       </button>
-      <Slider v-model:value="nombreConvives" title="Nombre de convives" class="p-3 mb-6" />
+      <Slider v-model:value="nombreConvives" title="Nombre de convives" class="p-3" />
       <div class="divider md:divider-horizontal" />
       <Radios :radios="typesEvenenements" v-model:value="modele.quantite" title="Types de fromages" class="p-3" />
       <div class="divider md:divider-horizontal" />
