@@ -11,15 +11,15 @@
 const emit = defineEmits(['changeState'])
 
 interface Props {
-  visited: boolean;
-  id: number;
-  label: string;
-  disabled: Boolean
+  checked?: boolean;
+  id?: string;
+  label?: string;
+  disabled?: boolean
 }
 
 const props = defineProps<Props>();
 
-const status = ref(props.visited);
+const status = ref(props.checked);
 
 function change() {
   status.value = !(status.value);

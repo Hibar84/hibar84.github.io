@@ -1,4 +1,6 @@
 <script setup lang="ts">
+  import { Database } from '~/lib/supabase_types'
+  
   useHead({
     title: 'Mes gares'
   })
@@ -13,13 +15,15 @@
     coordonnees: string;
     vu: boolean;
   }
+
   
   // Initialisation des variables
   
-  const supabase = useSupabaseClient();
-  const loading = ref(false);
+  const supabase = useSupabaseClient<Database>();
   const query = ref('');
   const results = ref([]);
+
+
 
   let { data: gares, error } = await supabase
     .from('gares')
@@ -27,20 +31,18 @@
 
   // Fonction de recherche des gares
   const searchGare = _debounce(() => {
-    if (query.value !== '') {
-      results.value = gares.filter(gare => gare.nom.toLowerCase().includes(query.value.toLowerCase()))
+    if (query.value !== '' || gares !== null) {
+      results.value = gares.filter( (gare) => gare.nom.toLowerCase().includes(query.value.toLowerCase()) )
     } else results.value = []
   }, 500);
 
-  const toggleGare = async (gare, state) => {
+  const toggleGare = async (gare: Gare, state: boolean) => {
     try {
       const { error } = await supabase
         .from('gares')
-        .update({ vu: state })
+        .update({vu: state})
         .eq('id', gare.id);
     } finally {
-      console.log(gare.id, state)
-      console.log(error);
     }
   };
 
@@ -74,7 +76,7 @@
             <tr v-for="gare in results" v-bind:key="gare.id">
               <td class="px-2">{{ gare.nom }}</td>
               <td class="px-2">
-                <Checkbox :visited="gare.vu" :id="gare.id" @change-state="(state) => toggleGare(gare, state)"/>
+                <Checkbox :checked="gare.vu" :id="gare.id" @change-state="(state) => toggleGare(gare, state)"/>
               </td>
             </tr>
           </tbody>

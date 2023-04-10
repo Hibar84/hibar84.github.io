@@ -1,10 +1,24 @@
-<script setup>
+<script setup lang="ts">
+  import { Database } from '~/lib/supabase_types'
+
   useHead({
     title: 'Mes gares'
   })
 
+  interface Gare {
+    id: string;
+    nom: string;
+    commune: string;
+    departement: string;
+    X: number;
+    Y: number;
+    coordonnees: string;
+    vu: boolean;
+  }
+
+
   // Initialisation des variables
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
   const query = ref('');
   const results = ref([]);
 
@@ -12,7 +26,7 @@
     .from('gares')
     .select('*');
 
-  function compteGare(listeGares, critere) {
+  function compteGare(listeGares, critere: string) {
     let compteur = 0;
     for (const gare of listeGares) {
       if (gare[critere] === true) compteur += 1
@@ -111,7 +125,7 @@
       <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
       <div class="p-3 flex flex-wrap justify-evenly items-center gap-4">
         <Stats class="mb-3" title="Gares visitées" :numerator="visitedGares" :denominator="gares.length" />
-        <BarChart class="mb-3" :data="barChartData" :options="barChartOptions" title="Départements les plus visités" />
+        <!-- <BarChart class="mb-3" :data="barChartData" :options="barChartOptions" title="Départements les plus visités" /> -->
       </div>
     </div>
 
@@ -133,7 +147,7 @@
             <tr v-for="gare in results" v-bind:key="gare.id">
               <td class="px-2">{{ gare.nom }}</td>
               <td class="px-2">
-                <Checkbox :visited="gare.vu" :id="gare.id" :disabled="true" />
+                <Checkbox :checked="gare.vu" :id="gare.id" :disabled="true" />
               </td>
             </tr>
           </tbody>
