@@ -4,17 +4,19 @@
     title?: string;
     min?: number;
     max?: number;
-    step?: number
+    step?: number;
+    value?: number;
   }
 
   const props = withDefaults(defineProps<Props>(),{
     title: "Titre par défaut",
     min: 0,
     max: 20,
-    step: 1
+    step: 1,
+    value: 0
   });
 
-  const cursor = ref(0);
+  const cursor = ref(props.value);
 
   const emit = defineEmits<{
       (e:'update:value', value: number): void

@@ -20,6 +20,7 @@
   interface Props {
     title: string;
     radios: Array<Radio>;
+    value?: any
   }
 
   const props = withDefaults(defineProps<Props>(), {

@@ -1,43 +1,32 @@
 <script setup lang="ts">
+  import { Database } from '~/lib/supabase_types'
+
   useHead({
     title: 'Plateau fromages'
   })
 
-  const supabase = useSupabaseClient();
+  type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
+  const supabase = useSupabaseClient<Database>();
   const typesLait = useMilkTypes();
   const typesFromages = useCheeseTypes();
   const typesEvenenements = useEventTypes();
 
-  interface ModeleFromage {
-    quantite?: Number;
-    milk?: Array<string>;
-    curd?: Array<string>;
-  };
-
-  interface Fromage {
-    id: string;
-    name: string;
-    wiki: string;
-    img: string;
-    regions: string;
-    milk: string;
-    curd: string;
-    aoc: boolean;
-    aoc_year: string;
-    status: string;
-  };
-
-  // FORMULAIRE
-  const modele = ref<ModeleFromage>({});
-  const nombreConvives = ref<number>(0);
 
   // FROMAGES
   let { data: fromages, error } = await supabase
     .from('fromages')
     .select('*');
-  const selectionFromages = ref<Array<Fromage>>([]);
 
-  function pickOneCheese(filter: ModeleFromage): Fromage {
+  type FromageList = typeof fromages;
+  type Fromage = ArrayElement<FromageList>;
+
+  const selectionFromages = ref<FromageList>([]);
+
+  // FORMULAIRE
+  const modele = ref<Fromage & {quantite: number}>();
+  const nombreConvives = ref<number>(0);
+
+  function pickOneCheese(filter: Fromage): Fromage {
     // On choisit un premier fromage aléatoirement
     let randomKey = _random(fromages.length);
     let randomFromage: Fromage = fromages[randomKey];
@@ -62,21 +51,19 @@
     return randomFromage
   }
 
-  function selectionnerFromages(filter: ModeleFromage, nombreFromages: number): void {
+  function selectionnerFromages(filter: Fromage, nombreFromages: number): void {
     // On fait une sélection de fromages uniquement si le types de lait ou de fromages a été sélectionné. Sinon on ne choisit pas de fromages, et la quantité par personne est mise à 0.
 
     selectionFromages.value = [];
-    let selectionIds: Array<string> = [];
+    let selectionIds: Array<number> = [];
 
-    if (filter.milk || filter.curd){
-      while (selectionFromages.value.length < nombreFromages){
-        let newFromage = pickOneCheese(filter);
-        if (!(selectionIds.includes(newFromage.id))){
-          selectionFromages.value.push(newFromage);
-          selectionIds.push(newFromage.id);
-        }
-      };
-    } else filter.quantite = 0;
+    while (selectionFromages.value.length < nombreFromages){
+      let newFromage = pickOneCheese(filter);
+      if (!(selectionIds.includes(newFromage.id))){
+        selectionFromages.value.push(newFromage);
+        selectionIds.push(newFromage.id);
+      }
+    };
   };
 
 </script>

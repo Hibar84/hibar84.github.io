@@ -1,4 +1,4 @@
-export const useMilkTypes = () => useState < Array < Object >> ('milktypes', () => [{
+export const useMilkTypes = () => useState < Array < any >> ('milktypes', () => [{
     'label': 'Vache',
     'value': 'Vache'
   },
@@ -16,7 +16,7 @@ export const useMilkTypes = () => useState < Array < Object >> ('milktypes', () 
   }
 ]);
 
-export const useCheeseTypes = () => useState < Array < Object >> ('cheesetypes', () => [{
+export const useCheeseTypes = () => useState < Array < any >> ('cheesetypes', () => [{
     'label': 'Pâte molle croûte naturelle',
     'value': 'Pâte molle croûte naturelle',
     'disabled': true
@@ -52,7 +52,7 @@ export const useCheeseTypes = () => useState < Array < Object >> ('cheesetypes',
   }
 ]);
 
-export const useEventTypes = () => useState < Array < Object >> ('eventtypes', () =>[
+export const useEventTypes = () => useState < Array < any >> ('eventtypes', () =>[
   {
     "label": "Dîner",
     "value": 250,

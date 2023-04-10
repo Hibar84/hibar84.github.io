@@ -23,6 +23,7 @@
   interface Props {
     title: string;
     checkboxes: Array<Checkbox>;
+    values?: any
   }
   
   const props = withDefaults(defineProps<Props>(),{
