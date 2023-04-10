@@ -17,10 +17,10 @@
     .select('*');
 
   type Gares = typeof gares;
-  type Gare = ArrayElement<Gares> | null;
+  type Gare = ArrayElement<Gares>;
 
 
-  function compteGare(listeGares: , critere: string) {
+  function compteGare(listeGares: Gares, critere: string) {
     let compteur = 0;
     for (const gare of listeGares) {
       if (gare[critere] === true) compteur += 1
