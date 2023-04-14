@@ -1,14 +1,16 @@
-<script setup>
+<script setup lang="ts">
+  import { Database, ArrayElement } from '~/lib/supabase_types'
+
   useHead({
       title: 'Boîte à idées'
   });
 
-  const key_box = ref('');
+  const id_box = ref<string>('');
 
-  let url = "https://app.tolula.fr" + key_box
+  let url = "https://app.tolula.fr" + id_box
 
-  const setRandomBox = () => {
-    key_box.value = Math.random().toString(36).slice(2);
+  const setRandomBox = ():void => {
+    id_box.value = Math.random().toString(36).slice(2);
     // navigateTo('/ideabox/'+key_box.value);
   }
 
@@ -20,14 +22,14 @@
     <h2 class="text-xl text-center mb-6">Créer et partager des boîtes à idées pour tous vos besoins!</h2>
 
     <div class="flex flex-row gap-3 mb-3">
-      <input type="text" placeholder="Code de la boîte à idées" class="input input-bordered w-full max-w-xs" v-model="key_box"/>
-      <button v-if="key_box === ''" class="btn" @click="setRandomBox">Générer un nom aléatoire</button>
-      <NuxtLink v-else :to="'/ideabox/'+key_box">
+      <input type="text" placeholder="Code de la boîte à idées" class="input input-bordered w-full max-w-xs" v-model="id_box"/>
+      <button v-if="id_box === ''" class="btn" @click="setRandomBox">Générer un nom aléatoire</button>
+      <NuxtLink v-else :to="'/ideabox/'+id_box">
         <button class="btn">Rejoindre ou créer</button>
       </NuxtLink>
     </div>
 
-    <h2 v-if="key_box !== ''" class="text-md text-center mb-6">Également disponible avec le lien suivant : <a :href="url" class="link"> app.tolula.fr/ideabox/{{ key_box }}</a></h2>
+    <h2 v-if="id_box !== ''" class="text-md text-center mb-6">Également disponible avec le lien suivant : <a :href="url" class="link"> app.tolula.fr/ideabox/{{ id_box }}</a></h2>
   </div>
 
 </template>

@@ -1,27 +1,48 @@
-<script setup>
+<script setup lang="ts">
+import { Database } from '~/lib/supabase_types'
+  
   useHead({
     title: 'Boîte à idées'
   });
 
   const route = useRoute();
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Database>();
 
-  const { data: ideas, refresh } = await useAsyncData('ideas', async () => {
-    const { data } = await supabase
+  const { data: ideasCount, refresh } = await useAsyncData('ideas', async () => {
+    const { count } = await supabase
       .from('ideas')
-      .select('*')
+      .select('*', { count: 'exact', head: true })
       .eq('key_box', route.params.id);
-    return data
+    return count
   });
 
-  const selectedIdea = ref({});
+  interface Idea {
+    title: string;
+    key_box: string | string[];
+    done: boolean;
+    desc?: string;
+    url?: string;
+  };
 
-  const newIdea = ref({
-    key_box: route.params.id
+  const id = route.params.id
+  
+  const selectedIdea = ref<Idea>({
+    title: "",
+    desc:"",
+    url:"",
+    done: false,
+    key_box: id
   });
+
+  const newIdea = ref<Idea>({ 
+    title: "",
+    done: false,
+    key_box: id
+  });
+
 
   async function addIdea(idea){
-    const { data, error } = await supabase
+    const { error } = await supabase
       .from('ideas')
       .insert(idea)
     if (error) {
@@ -30,11 +51,19 @@
     refresh();
   }
 
-  let url = "https://app.tolula.fr" + route.fullPath
+  let url: string = "https://app.tolula.fr" + route.fullPath
 
-  function pickRandomIdea(){
-    selectedIdea.value = _sample(ideas.value);
-  }
+  async function pickRandomIdea(){
+    selectedIdea.value = {title:"", desc:"", url:"", done: false, key_box: id}
+    
+    const { data, error } = await supabase.rpc('get_random_idea', { input_key : id });
+    
+    if (error) console.error(error)
+    else {
+      if (data.length === 0) selectedIdea.value = {title:"", desc:"Boîte vide", url:"", done: false, key_box: id}
+      else selectedIdea.value = data[0]
+    }
+  };
 </script>
 
 
@@ -42,6 +71,7 @@
   <NuxtLink class="p-4" to="/ideabox">
     <Icon name="material-symbols:arrow-back" size="30"/>
   </NuxtLink>
+
   <div class="flex flex-col items-center">
     <h1 class="text-3xl font-bold text-center mb-3">La boîte à idées</h1>
     
@@ -50,7 +80,7 @@
     
     <!-- Nombre d'idées en stock -->
     <div class="text-center mb-6">
-      <p class="text-6xl">{{ ideas.length }}<Icon name="carbon:idea" size="30"/></p>
+      <p class="text-6xl">{{ ideasCount }}<Icon name="carbon:idea" size="30"/></p>
     </div>
     
     <!-- Boutons -->

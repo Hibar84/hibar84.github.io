@@ -1,11 +1,10 @@
 <script setup lang="ts">
-  import { Database } from '~/lib/supabase_types'
+  import { Database, ArrayElement } from '~/lib/supabase_types'
 
   useHead({
     title: 'Plateau fromages'
   })
 
-  type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
   const supabase = useSupabaseClient<Database>();
   const typesLait = useMilkTypes();
   const typesFromages = useCheeseTypes();

@@ -1,6 +1,5 @@
 <script setup lang="ts">
-  import { Database } from '~/lib/supabase_types'
-  type ArrayElement<ArrayType extends readonly unknown[]> = ArrayType extends readonly (infer ElementType)[] ? ElementType : never;
+  import { Database, ArrayElement } from '~/lib/supabase_types'
 
   useHead({
     title: 'Mes gares'

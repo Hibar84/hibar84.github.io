@@ -6,6 +6,8 @@ export type Json =
   | { [key: string]: Json }
   | Json[]
 
+export type ArrayElement<Type> = Type extends Array<infer Item> ? Item : Type;
+
 export interface Database {
   public: {
     Tables: {
@@ -139,7 +141,19 @@ export interface Database {
       [_ in never]: never
     }
     Functions: {
-      [_ in never]: never
+      get_random_idea: {
+        Args: {
+          input_key: string
+        }
+        Returns: {
+          desc: string | null
+          done: boolean
+          id: number
+          key_box: string
+          title: string
+          url: string | null
+        }[]
+      }
     }
     Enums: {
       continents:

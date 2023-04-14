@@ -1,21 +1,9 @@
 <script setup lang="ts">
-  import { Database } from '~/lib/supabase_types'
+  import { Database, ArrayElement } from '~/lib/supabase_types'
   
   useHead({
     title: 'Mes gares'
   })
-
-  interface Gare {
-    id: string;
-    nom: string;
-    commune: string;
-    departement: string;
-    X: number;
-    Y: number;
-    coordonnees: string;
-    vu: boolean;
-  }
-
   
   // Initialisation des variables
   
@@ -23,11 +11,12 @@
   const query = ref('');
   const results = ref([]);
 
-
-
   let { data: gares, error } = await supabase
     .from('gares')
     .select('*');
+
+  type Gares = typeof gares;
+  type Gare = ArrayElement<Gares>;
 
   // Fonction de recherche des gares
   const searchGare = _debounce(() => {
