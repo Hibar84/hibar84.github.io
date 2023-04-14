@@ -5,7 +5,12 @@ import { Database } from '~/lib/supabase_types'
     title: 'Boîte à idées'
   });
 
+  // Routing parameters
   const route = useRoute();
+  const fullPath = route.fullPath.split('/');
+  const id = fullPath[fullPath.length-1];
+  
+  // Supabase config
   const supabase = useSupabaseClient<Database>();
 
   const { data: ideasCount, refresh } = await useAsyncData('ideas', async () => {
@@ -24,7 +29,6 @@ import { Database } from '~/lib/supabase_types'
     url?: string;
   };
 
-  const id = route.params.id
   
   const selectedIdea = ref<Idea>({
     title: "",
