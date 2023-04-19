@@ -19,13 +19,17 @@
   
   const results = ref<Recettes>(recettes);
 
+  function filter_title(recette: Recette){
+    if (modele.value.title.length > 0){
+      return recette.title.toLowerCase().includes(modele.value.title.toLowerCase())
+    }
+  }
+  
   const searchRecette = _debounce(() => {
     if (modele.value.title.length > 0) {
-      results.value = recettes.filter((item) => item.title.toLowerCase().includes(modele.value.title.toLowerCase()))
+      results.value = recettes.filter(filter_title)
     } else results.value = recettes
   }, 250);
-
-  
 
 </script>
 

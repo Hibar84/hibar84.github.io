@@ -6,6 +6,12 @@ export type Json =
   | { [key: string]: Json }
   | Json[]
 
+export type Ingredient = {
+  desc?: string;
+  quantite?: string;
+  unit?: string
+}
+
 export type ArrayElement<Type> = Type extends Array<infer Item> ? Item : Type;
 
 export interface Database {
@@ -112,7 +118,7 @@ export interface Database {
           categorie: string | null
           desc: string | null
           id: number
-          ingredients: Json[] | null
+          ingredients: Ingredient[] | null
           instructions: string[] | null
           nb_personnes: number | null
           title: string
@@ -121,7 +127,7 @@ export interface Database {
           categorie?: string | null
           desc?: string | null
           id?: number
-          ingredients?: Json[] | null
+          ingredients?: Ingredient[] | null
           instructions?: string[] | null
           nb_personnes?: number | null
           title: string
@@ -130,7 +136,7 @@ export interface Database {
           categorie?: string | null
           desc?: string | null
           id?: number
-          ingredients?: Json[] | null
+          ingredients?: Ingredient[] | null
           instructions?: string[] | null
           nb_personnes?: number | null
           title?: string
