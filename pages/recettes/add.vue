@@ -73,8 +73,8 @@
         </div>
       </div>
 
-      <ul v-if="nouvelleRecette.ingredients.length > 0" class="p-4 list-disc max-w-md">
-        <li v-for="ingredient in nouvelleRecette.ingredients" :key="ingredient">
+      <ul class="p-4 list-disc max-w-md">
+        <li v-for="ingredient in nouvelleRecette.ingredients" :key="ingredient.desc">
           {{ ingredient.desc }}: {{ ingredient.quantite === "NA" ? "" : ingredient.quantite }}{{ ingredient.unit }}
         </li>
       </ul>

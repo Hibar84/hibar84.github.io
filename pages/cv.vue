@@ -100,7 +100,7 @@
 
     <!-- Technologies -->
     <div class="flex flex-wrap text-center bg-base-200 rounded-box self-center justify-center mb-3">
-      <div class="p-6 transform transition hover:scale-125" v-for="techno in technologies" :key=techno>
+      <div class="p-6 transform transition hover:scale-125" v-for="techno in technologies" :key="techno.name">
         <div class="tooltip" :data-tip="techno.level">
           <Icon :name="techno.icon" size="40"/>
         </div>
