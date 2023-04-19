@@ -48,7 +48,7 @@
     </div>
 
     <div class="p-6 flex flex-wrap gap-4 justify-center text-left">
-      <div v-for="recette in results" :key="recette.title" class="card card-compact w-64 bg-base-200">
+      <div v-for="recette in results" :key="recette.id" class="card card-compact w-64 bg-base-200">
         <div class="card-body">
           <h2 class="card-title">
             {{ recette.title }}
