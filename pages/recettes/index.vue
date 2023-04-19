@@ -1,20 +1,27 @@
-<script setup>
+<script setup lang="ts">
+  import { Database, ArrayElement } from '~/lib/supabase_types'
+  
   useHead({
     title: 'Mes recettes'
   })
 
-  const modele = ref({});
-  const supabase = useSupabaseClient();
+  
+  const supabase = useSupabaseClient<Database>();
 
   let { data : recettes, error } = await supabase
     .from("recettes")
     .select('*');
 
-  const results = ref(recettes);
+  type Recettes = typeof recettes;
+  type Recette = Partial<ArrayElement<Recettes>>;
+
+  const modele = ref<Recette>({title:""});
+  
+  const results = ref<Recettes>(recettes);
 
   const searchRecette = _debounce(() => {
     if (modele.value.title.length > 0) {
-      results.value = recettes.filter(recette => recette.title.toLowerCase().includes(modele.value.title.toLowerCase()))
+      results.value = recettes.filter((item) => item.title.toLowerCase().includes(modele.value.title.toLowerCase()))
     } else results.value = recettes
   }, 250);
 
