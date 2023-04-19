@@ -1,3 +1,60 @@
+<script setup lang="ts">
+  useHead({
+    title: 'Générateur de films de Noël'
+  })
+
+  const scenario = ref({
+    actorA: '',
+    actorB: '',
+    jobA: '',
+    jobB: '',
+    love: false,
+    city:'',
+    meeting: '',
+    event:''
+  });
+
+  const result = ref();
+
+  const options=ref(
+    {
+      names: ['Lucas','Nolwenn','Julien','Victor','Clara','Aude','Maxime','Juliette','Lara','Antoine'],
+
+      jobs: ['Fleuriste','Auteur','Ingénieur.e','Sans emploi','Architecte','Chauffeur','Secrétaire','Coiffeur/euse','Barista'],
+
+      cities:['New-York, USA', 'Helsinki, FIN', 'Strasbourg, FR', 'Edinburgh, GB', 'Québec, CAN'],
+
+      events:['Rencontre avec un.e EX', 'Blessure', "Perte d'emploi", 'Incendie', 'Tempête de neige','Innondation'],
+      
+      meeting:['Au café', "A l'épicerie", "Sur la patinoire", 'Chez le marchand de sapin', 'Chez le fleuriste','Dans la rue'],
+    }
+  )
+
+  function setRandom(liste: string[], property: string){
+    let rank = Math.floor(Math.random()*liste.length);
+    scenario.value[property] = liste[rank];
+  };
+
+  function setPrompt(){
+    const prompt = ref(`Formule un scénario de film de Noël, avec les caractéristiques suivantes: Personnage A = ${scenario.value.actorA}-${scenario.value.jobA}, Personnage B = ${scenario.value.actorB}-${scenario.value.jobB}, Ville = ${scenario.value.city}, Lieu de rencontre des personnages = ${scenario.value.meeting}, Evenement = ${scenario.value.event}.`);
+    if (scenario.value.love === true){
+      prompt.value += " C'est une histoire d'amour.";
+    }
+    return prompt.value;
+  };
+
+  const getScenario = async () => {
+    // const response = await $fetch("/api/completion", {
+    //   method: "post",
+    //   body: { prompt: setPrompt() },
+    // });
+    // const proposition = response.choices[0].text.replace("\n",'');
+    // console.log(response);
+    result.value = "La commande a envoyer est: " + setPrompt();
+  };
+
+</script>
+
 <template>
   <div class="p-6 flex flex-col justify-evenly place-content-evenly">
 
@@ -144,47 +201,3 @@
     
   </div>
 </template>
-
-<script setup>
-const scenario = ref({});
-
-const result = ref();
-
-const options=ref(
-  {
-    names: ['Lucas','Nolwenn','Julien','Victor','Clara','Aude','Maxime','Juliette','Lara','Antoine'],
-
-    jobs: ['Fleuriste','Auteur','Ingénieur.e','Sans emploi','Architecte','Chauffeur','Secrétaire','Coiffeur/euse','Barista'],
-
-    cities:['New-York, USA', 'Helsinki, FIN', 'Strasbourg, FR', 'Edinburgh, GB', 'Québec, CAN'],
-
-    events:['Rencontre avec un.e EX', 'Blessure', "Perte d'emploi", 'Incendie', 'Tempête de neige','Innondation'],
-    
-    meeting:['Au café', "A l'épicerie", "Sur la patinoire", 'Chez le marchand de sapin', 'Chez le fleuriste','Dans la rue'],
-  }
-)
-
-function setRandom(liste, property){
-  let rank = Math.floor(Math.random()*liste.length);
-  scenario.value[property] = liste[rank];
-};
-
-function setPrompt(){
-  const prompt = ref(`Formule un scénario de film de Noël, avec les caractéristiques suivantes: Personnage A = ${scenario.value.actorA}-${scenario.value.jobA}, Personnage B = ${scenario.value.actorB}-${scenario.value.jobB}, Ville = ${scenario.value.city}, Lieu de rencontre des personnages = ${scenario.value.meeting}, Evenement = ${scenario.value.event}.`);
-  if (scenario.value.love === true){
-    prompt.value += " C'est une histoire d'amour.";
-  }
-  return prompt.value;
-};
-
-const getScenario = async () => {
-  // const response = await $fetch("/api/completion", {
-  //   method: "post",
-  //   body: { prompt: setPrompt() },
-  // });
-  // const proposition = response.choices[0].text.replace("\n",'');
-  // console.log(response);
-  result.value = "La commande a envoyer est: " + setPrompt();
-};
-
-</script>

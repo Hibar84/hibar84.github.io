@@ -1,26 +1,20 @@
-<script setup>
-  const supabase = useSupabaseClient();
+<script setup lang="ts">
+  import { Database, ArrayElement, Ingredient } from '~/lib/supabase_types'
+  
+  const supabase = useSupabaseClient<Database>();
+  
+  type Recette = Database['public']['Tables']['recettes']['Insert'];
   
   const loading = ref(false);
-  const instructions_bloc = ref('');
+  const instructions_bloc = ref<string>();
 
-  const nouvelleRecette = ref(
-    {
-      title:"",
-      desc:"",
-      ingredients:[],
-      instructions: [],
-      nb_personnes:2,
-      categorie:"Catégorie"
-    }
-  );
+  const nouvelleRecette = ref<Recette>({
+    title:'',
+    ingredients:[],
+  });
 
   
-  const nouvelIngredient = ref({});
-
-  const print = (item) => {
-    console.log(item);
-  }
+  const nouvelIngredient = ref<Ingredient>({});
 
   const ajouterIngredient = (ingredient) => {
     nouvelleRecette.value.ingredients.push({...ingredient})
@@ -30,7 +24,7 @@
     nouvelleRecette.value.instructions = instructions_bloc.value.split("\n");
     try {
       loading.value = true
-      const { data, error } = await supabase
+      const { error } = await supabase
         .from('recettes')
         .insert([nouvelleRecette.value])
       if (error) throw error
@@ -52,13 +46,13 @@
       <Icon name="material-symbols:arrow-back" size="30"/>
     </NuxtLink>
     
-    <div class="p-4 flex flex-col items-center">
-      <h1 class="text-3xl font-semibold text-center mb-3">Ajouter une recette</h1>
-      <input type="text" placeholder="Nom de la recette" class="input input-bordered w-full max-w-md mb-3" v-model="nouvelleRecette.title"/>
+    <div class="p-4 flex flex-col items-center gap-3">
+      <h1 class="text-3xl font-semibold text-center">Ajouter une recette</h1>
+      <input type="text" placeholder="Nom de la recette" class="input input-bordered w-full max-w-md" v-model="nouvelleRecette.title"/>
 
-      <input type="text" placeholder="Description" class="input input-bordered w-full max-w-md mb-3" v-model="nouvelleRecette.desc"/>
+      <input type="text" placeholder="Description" class="input input-bordered w-full max-w-md" v-model="nouvelleRecette.desc"/>
       
-      <select class="select select-bordered w-full max-w-md mb-3" v-model="nouvelleRecette.categorie">
+      <select class="select select-bordered w-full max-w-md" v-model="nouvelleRecette.categorie">
         <option disabled unselectable>Catégorie</option>
         <option>Plats</option>
         <option>Desserts</option>
@@ -67,7 +61,7 @@
       
       <p class="mb-1">Nombre de personnes (ou portions): {{ nouvelleRecette.nb_personnes }}</p>
       
-      <input type="range" min="0" max="20" class="range range-xs w-full max-w-md mb-3" v-model="nouvelleRecette.nb_personnes" />
+      <input type="range" min="0" max="20" class="range range-xs w-full max-w-md" v-model="nouvelleRecette.nb_personnes" />
 
       <div class="form-control">
         <div class="input-group">
@@ -79,13 +73,13 @@
         </div>
       </div>
 
-      <ul class="p-4 list-disc max-w-md">
+      <ul v-if="nouvelleRecette.ingredients.length > 0" class="p-4 list-disc max-w-md">
         <li v-for="ingredient in nouvelleRecette.ingredients" :key="ingredient">
           {{ ingredient.desc }}: {{ ingredient.quantite === "NA" ? "" : ingredient.quantite }}{{ ingredient.unit }}
         </li>
       </ul>
 
-      <textarea placeholder="Instructions" class="textarea textarea-bordered textarea-lg text-base w-full max-w-md mb-3" v-model="instructions_bloc"/>
+      <textarea placeholder="Instructions" class="textarea textarea-bordered textarea-lg text-base w-full max-w-md" v-model="instructions_bloc"/>
       
       <button class="btn" @click="creerRecette" :disabled="loading">Créer</button>
     </div> 

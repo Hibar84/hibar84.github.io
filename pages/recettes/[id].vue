@@ -1,17 +1,21 @@
-<script setup>
+<script setup lang="ts">
+  import { Database, ArrayElement, Ingredient } from '~/lib/supabase_types'
+  
   useHead({
     title: 'Mes recettes'
   })
 
   const route = useRoute();
-  const supabase = useSupabaseClient();
+  const supabase = useSupabaseClient<Recette>();
 
+  type Recette = Database['public']['Tables']['recettes']['Row'];
+  
   let { data : recette } = await supabase
     .from("recettes")
     .select('*')
     .eq('id', route.params.id);
 
-  const nb_personnes = ref(recette[0].nb_personnes);
+  const nb_personnes = ref<number>(recette[0].nb_personnes);
 
 </script>
 
