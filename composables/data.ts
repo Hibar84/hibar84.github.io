@@ -62,3 +62,18 @@ export const useEventTypes = () => useState < Array < any >> ('eventtypes', () =
     "value": 150,
   }
 ]);
+
+export const useRecipesTypes = () => useState < Array < any >> ('recipestypes', () =>[
+  {
+    "label": "Plats",
+    "value": "Plats",
+  },
+  {
+    "label": "Desserts",
+    "value": "Desserts",
+  },
+  {
+    "label": "Pains",
+    "value": "Pains",
+  }
+]);

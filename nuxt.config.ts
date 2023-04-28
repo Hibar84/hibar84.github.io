@@ -1,6 +1,5 @@
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
-
   runtimeConfig: {
     // The private keys which are only available within server-side
     OPENAI_API_KEY: process.env.OPENAI_API_KEY,
@@ -36,8 +35,11 @@ export default defineNuxtConfig({
     injectPosition: 0,
     viewer: true,
   },
+
   typescript:{
     typeCheck: true,
     strict: false
-  }
+  },
+
+  devtools: true
 })

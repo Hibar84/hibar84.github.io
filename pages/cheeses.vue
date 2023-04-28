@@ -75,7 +75,7 @@
   <div class="p-6 flex flex-col gap-6 md:flex-row">
 
     <div class="flex flex-col-reverse items-stretch md:flex-col md:min-w-fit"> 
-      <button @click="selectionnerFromages(modele, 6)" class="btn btn-primary gap-2">
+      <button @click="selectionnerFromages(modele, 12)" class="btn btn-primary gap-2">
         <Icon name="tabler:refresh"/>
         Rafraîchir 
       </button>

@@ -1,6 +1,6 @@
 <template>
 
-  <div>
+  <div class="w-fit">
     <h2 class="text-xl mb-3">{{ title }}</h2>
     <div v-for="checkbox in checkboxes" :key="checkbox.label">
       <label class="label cursor-pointer">
