@@ -10,7 +10,8 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     'nuxt-icon',
     '@nuxt/image-edge',
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
+    '@nuxt/devtools'
   ],
 
   build: {
@@ -39,7 +40,5 @@ export default defineNuxtConfig({
   typescript:{
     typeCheck: true,
     strict: false
-  },
-
-  devtools: true
+  }
 })
