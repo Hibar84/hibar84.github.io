@@ -42,65 +42,30 @@
   function compteParDepartement() {
     // Fonction de compteur de département
     let departements = {};
-    let departementsVu= {};
 
     for (const gare of gares) {
       if (Object.keys(departements).includes(gare.departement)) {
-        if (gare.vu === true) { departementsVu[gare.departement] += 1; } 
-        departements[gare.departement] += 1;
+        if (gare.vu === true) { departements[gare.departement].vues += 1; } 
+        departements[gare.departement].total += 1;
       } else {
         if (gare.vu === true) {
-          departementsVu[gare.departement] = 1;
-          departements[gare.departement] = 1;
+          departements[gare.departement] = {
+            vues: 1,
+            total: 1
+          }
         } else {
-          departementsVu[gare.departement] = 0;
-          departements[gare.departement] = 1;
+          departements[gare.departement] = {
+            vues: 0,
+            total: 1
+          }
         }
-        
-      }
-    };
-
-    return [departements, departementsVu]
-  }
-
-  let dataDepartements = compteParDepartement();
-  
-  let barChartData = {
-    labels: Object.keys(dataDepartements[0]),
-    datasets: [
-      {
-        label: "Visitées",
-        data: Object.values(dataDepartements[1]),
-        backgroundColor: "#292524",
-        inflateAmount: 'auto'
-      },
-      {
-        label: "Total",
-        data: Object.values(dataDepartements[0]),
-        backgroundColor: "#a8a29e",
-        inflateAmount: 'auto'
-      }
-    ]
-  }
-  let barChartOptions = {
-    responsive: true,
-    aspectRatio: 2,
-    borderRadius: 2,
-    interaction: {
-        mode: 'index'
-    },
-    scales: {
-      x: {
-        display: false,
-        stacked: 'single'
-      }
-    },
-    plugins: {
-      legend: {
-        display: false,
       }
     }
+    return departements
   };
+
+  let dataDepartements = compteParDepartement();
+
 </script>
 
 <template>
@@ -118,7 +83,7 @@
       <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
       <div class="p-3 flex flex-wrap justify-evenly items-center gap-4">
         <Stats class="mb-3" title="Gares visitées" :numerator="visitedGares" :denominator="gares.length" />
-        <!-- <BarChart class="mb-3" :data="barChartData" :options="barChartOptions" title="Départements les plus visités" /> -->
+        <FranceMap :data="dataDepartements"/>
       </div>
     </div>
 

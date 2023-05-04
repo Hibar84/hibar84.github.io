@@ -60,7 +60,7 @@
         <input type="checkbox" data-toggle-theme="mylight,mydark" data-act-class="ACTIVECLASS"/>
         
         <!-- sun icon -->
-        <Icon class="swap-off" name="material-symbols:sunny-outline-rounded" size="30"/>
+        <Icon class="swap-off outline-black" name="material-symbols:sunny-outline-rounded" size="30"/>
         
         <!-- moon icon -->
         <Icon class="swap-on" name="material-symbols:dark-mode-outline-rounded" size="30"/>
