@@ -36,7 +36,7 @@
         Légende : {{ legende }}
       </h1>
       <div>
-        <p v-for="key in Object.keys(stats)" :key="key">{{ capitalizeFirstLetter(key) }}: {{ stats[key] }}</p>
+        <p v-for="key in Object.keys(stats)" :key="key">{{ capitalizeFirstLetter(key) }}: {{ stats[key] }} </p>
       </div>
     </div>
     <div class="stat">
