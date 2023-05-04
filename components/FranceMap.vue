@@ -30,8 +30,8 @@
 </script>
 
 <template>
-  <div class="carte stats shadow min-h-fit">
-    <div class="p-4 absolute">
+  <div class="stats flex flex-col shadow min-h-fit w-screen md:w-1/2">
+    <div class="p-4">
       <h1 class="stat-title opacity-90">
         Légende : {{ legende }}
       </h1>
@@ -50,10 +50,6 @@
 </template>
 
 <style type="text/css">
-  .carte {
-    width: 75%;
-    margin: 10 auto;
-  }
   path {
     stroke: #000000;
     stroke-width: 1px;
