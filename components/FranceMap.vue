@@ -33,7 +33,7 @@
   <div class="stats flex flex-col shadow min-h-fit w-screen md:w-1/2">
     <div class="p-4">
       <h1 class="stat-title opacity-90">
-        Légende : {{ legende }}
+        {{ legende }}
       </h1>
       <div>
         <p v-for="key in Object.keys(stats)" :key="key">{{ capitalizeFirstLetter(key) }}: {{ stats[key] }} </p>
@@ -49,7 +49,7 @@
 	</div>
 </template>
 
-<style type="text/css">
+<style type="text/css" scoped>
   path {
     stroke: #000000;
     stroke-width: 1px;
