@@ -70,9 +70,9 @@
     
       <div class="form-control w-full max-w-md">
         <label class="label">
-          <span class="label-text">Nombre de personnes (ou portions): {{ nouvelleRecette.nb_personnes }}</span>
+          <p class="mb-1">Personnes / portions</p>
         </label>
-        <input type="range" min="0" max="20" class="range range-xs w-full max-w-md" v-model="nouvelleRecette.nb_personnes" />
+        <input type="number" min="0" max="100" class="p-2 rounded-lg self-center text-inherit bg-base-200 mb-3" v-model="nouvelleRecette.nb_personnes" />
       </div>
 
       <div class="form-control w-full max-w-md">

@@ -29,9 +29,13 @@
     <div class="p-4 flex flex-col items-center">
       <h1 class="text-3xl font-semibold mb-3">{{ recette[0].title }}</h1>
       
-      <p>Pour {{ nb_personnes }} personnes/portions </p><br>
-      <input type="range" min="0" max="20" class="range range-xs w-full max-w-md mb-3" v-model="nb_personnes" />
+      <p class="mb-1">Personnes / portions</p>
+      <input type="number" min="0" max="100" class="p-2 rounded-lg self-center text-inherit bg-base-200 mb-3" v-model="nb_personnes" />
+      
       <br>
+
+
+
       <h2 class="text-xl">Ingrédients</h2>
       <ul class="p-4 list-disc max-w-md">
         <li v-for="ingredient in recette[0].ingredients" :key="ingredient">
@@ -39,6 +43,8 @@
         </li>
       </ul>
       <br>
+
+
       <h2 class="text-xl">Instructions</h2>
       <ol class="p-4 max-w-md">
         <li class="mb-2" v-for="instruction in recette[0].instructions" :key="instruction">

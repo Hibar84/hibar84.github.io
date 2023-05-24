@@ -1,3 +1,5 @@
+/** @type {import('tailwindcss').Config} */
+
 module.exports = {
   // add daisyUI plugin
   plugins: [require("@tailwindcss/typography"), require("daisyui")],
