@@ -69,17 +69,17 @@
 </script>
 
 <template>
-  <div class="flex flex-col p-6 items-center">
+  <div class="flex flex-col p-2 gap-3 items-center">
 
     <!-- Header -->
-    <div class="flex flex-row p-4 bg-base-300 rounded mb-3 gap-4 justify-center w-full">
+    <div class="flex flex-row p-4 bg-base-200 rounded gap-4 justify-center w-full">
       <img class="block h-8"
         src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Logo_SNCF_2011.svg/1920px-Logo_SNCF_2011.svg.png">
       <h1 class="text-3xl font-semibold">Mes gares SNCF</h1>
     </div>
 
     <!-- Statistiques -->
-    <div class="p-4 bg-base-300 rounded mb-3 w-full">
+    <div class="p-4 bg-base-200 rounded w-full max-w-screen-2xl">
       <h1 class="font-semibold text-2xl mb-1">Statistiques</h1>
       <div class="p-3 flex flex-wrap justify-evenly items-center gap-4">
         <Stats class="mb-3" title="Gares visitées" :numerator="visitedGares" :denominator="gares.length" />
@@ -88,7 +88,7 @@
     </div>
 
     <!-- Tableau de détail -->
-    <div class="p-4 bg-base-300 rounded mb-3 w-full">
+    <div class="p-4 bg-base-200 rounded w-full">
       <h1 class="font-semibold text-2xl mb-2">Détail</h1>
       <input 
         class="input w-full max-w-xs mb-3" 
@@ -105,7 +105,7 @@
             <tr v-for="gare in results" v-bind:key="gare.id">
               <td class="px-2">{{ gare.nom }}</td>
               <td class="px-2">
-                <Checkbox :checked="gare.vu" :id="gare.id" :disabled="true" />
+                <Checkbox :checked="gare.vu" :id="gare.id.toString()" :disabled="true" />
               </td>
             </tr>
           </tbody>

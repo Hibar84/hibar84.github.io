@@ -1,14 +1,12 @@
 <script setup lang="ts">
-  import { Database, ArrayElement, Ingredient } from '~/lib/supabase_types'
+  import { Database } from '~/lib/supabase_types'
   
   useHead({
     title: 'Mes recettes'
   })
 
   const route = useRoute();
-  const supabase = useSupabaseClient<Recette>();
-
-  type Recette = Database['public']['Tables']['recettes']['Row'];
+  const supabase = useSupabaseClient<Database>();
   
   let { data : recette } = await supabase
     .from("recettes")
@@ -38,8 +36,8 @@
 
       <h2 class="text-xl">Ingrédients</h2>
       <ul class="p-4 list-disc max-w-md">
-        <li v-for="ingredient in recette[0].ingredients" :key="ingredient">
-          {{ ingredient.desc }}: {{ ingredient.quantite === "NA" ? "" : Math.floor(ingredient.quantite*nb_personnes/recette[0].nb_personnes) }}{{ ingredient.unit }}
+        <li v-for="ingredient in recette[0].ingredients" :key="ingredient.desc">
+          {{ ingredient.desc }}: {{ ingredient.quantite === "NA" ? "" : Math.floor(parseFloat(ingredient.quantite)*nb_personnes/recette[0].nb_personnes) }}{{ ingredient.unit }}
         </li>
       </ul>
       <br>

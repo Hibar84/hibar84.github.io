@@ -19,39 +19,60 @@ export interface Database {
     Tables: {
       fromages: {
         Row: {
+          affinage: string | null
           aoc: boolean | null
           aoc_year: string | null
           curd: string | null
+          description: string | null
           id: number
           img: string | null
+          mg: string | null
           milk: string | null
+          milk_treatment: string | null
           name: string | null
+          particularity: string | null
           regions: string | null
+          shape: string | null
           status: string | null
+          weight: string | null
           wiki: string | null
         }
         Insert: {
+          affinage?: string | null
           aoc?: boolean | null
           aoc_year?: string | null
           curd?: string | null
+          description?: string | null
           id: number
           img?: string | null
+          mg?: string | null
           milk?: string | null
+          milk_treatment?: string | null
           name?: string | null
+          particularity?: string | null
           regions?: string | null
+          shape?: string | null
           status?: string | null
+          weight?: string | null
           wiki?: string | null
         }
         Update: {
+          affinage?: string | null
           aoc?: boolean | null
           aoc_year?: string | null
           curd?: string | null
+          description?: string | null
           id?: number
           img?: string | null
+          mg?: string | null
           milk?: string | null
+          milk_treatment?: string | null
           name?: string | null
+          particularity?: string | null
           regions?: string | null
+          shape?: string | null
           status?: string | null
+          weight?: string | null
           wiki?: string | null
         }
       }

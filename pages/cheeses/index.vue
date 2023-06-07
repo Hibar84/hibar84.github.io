@@ -72,10 +72,16 @@
 
 
 <template>
-  <div class="p-6 flex flex-col gap-6 md:flex-row">
+  <div class="p-6 flex flex-col gap-6">
+    <div class="alert">
+      <div>⛏️ Données fièrement minées, grâce à <a class="link link-hover" target="_blank" href="https://scrapy.org">Scrapy</a>.</div>
+      <div>Source: <a class="link link-hover" target="_blank" href="https://www.leguidedufromage.com">Le Guide du Fromage</a> et <a class="link link-hover" target="_blank" href="https://fr.wikipedia.org/wiki/Wikip%C3%A9dia:Accueil_principal">Wikipédia</a>.</div>
+    </div>
+  
+  <div class="flex flex-col gap-6 md:flex-row">
 
     <div class="flex flex-col-reverse items-stretch md:flex-col md:min-w-fit"> 
-      <button @click="selectionnerFromages(modele, 12)" class="btn btn-primary gap-2">
+      <button @click="selectionnerFromages(modele, 6)" class="btn btn-primary gap-2">
         <Icon name="tabler:refresh"/>
         Rafraîchir 
       </button>
@@ -89,6 +95,7 @@
     </div>
 
     <div class="flex flex-col">
+      
       <!-- Quantité -->
       <div class="stats bg-base-300 mb-3">
 
@@ -101,11 +108,12 @@
       </div>
 
       <!-- Sélection de fromages -->
-      <div class="flex flex-wrap justify-center gap-4">
+      <div class="flex flex-wrap justify-center gap-6">
         <CheeseCard v-for="fromage in selectionFromages" :key="fromage.id" :cheese="fromage"/>
       </div>
     </div>
   
   </div>
+</div>
 
 </template>

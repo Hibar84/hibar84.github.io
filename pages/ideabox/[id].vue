@@ -55,13 +55,16 @@ import { Database } from '~/lib/supabase_types'
     refresh();
   }
 
+
   let url: string = "https://app.tolula.fr" + route.fullPath
 
   async function pickRandomIdea(){
     selectedIdea.value = {title:"", desc:"", url:"", done: false, key_box: id}
     
     const { data, error } = await supabase.rpc('get_random_idea', { input_key : id });
-    
+
+    console.log(data);
+
     if (error) console.error(error)
     else {
       if (data.length === 0) selectedIdea.value = {title:"", desc:"Boîte vide", url:"", done: false, key_box: id}
@@ -88,16 +91,15 @@ import { Database } from '~/lib/supabase_types'
     </div>
     
     <!-- Boutons -->
-    <div class="btn-group">
-      <label for="randomIdea" class="btn" @click="pickRandomIdea()">Choix aléatoire</label>
-      <label for="addIdea" class="btn">Ajouter une idée</label>
+    <div class="join">
+      <button class="btn join-item" @click="pickRandomIdea()" onclick="randomIdea.showModal()">Choix aléatoire</button>
+      <button class="btn join-item" onclick="addIdea.showModal()">Ajouter une idée</button>
     </div>
 
     <!-- Modal : ajouter une idée -->
-    <input type="checkbox" id="addIdea" class="modal-toggle" />
-    <div class="modal modal-bottom sm:modal-middle">
-      <div class="modal-box">
-        <label for="addIdea" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <dialog id="addIdea" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box">
+        <button class="btn btn-sm btn-circle absolute right-2 top-2">✕</button>
         
         <label for="title" hidden>Titre</label>
         <input name="title" type="text" placeholder="Nom" v-model="newIdea.title" class="mb-3 input w-full max-w-xs bg-base-300">
@@ -109,21 +111,26 @@ import { Database } from '~/lib/supabase_types'
         <input name="tags" type="url" placeholder="Lien" v-model="newIdea.url" class="mb-3 input w-full max-w-xs bg-base-300">
         
         <div class="modal-action">
-          <label for="addIdea" class="btn" @click="addIdea(newIdea)">Ajouter</label>
+          <button class="btn" @click="addIdea(newIdea)">Ajouter</button>
         </div>
-      </div>
-    </div>
+      </form>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
 
     <!-- Modal : Choix aléatoire -->
-    <input type="checkbox" id="randomIdea" class="modal-toggle" />
-    <div class="modal modal-bottom sm:modal-middle">
-      <div class="modal-box">
-        <label for="randomIdea" class="btn btn-sm btn-circle absolute right-2 top-2">✕</label>
+    <dialog id="randomIdea" class="modal modal-bottom sm:modal-middle">
+      <form method="dialog" class="modal-box" @loadstart="pickRandomIdea()">
+        <button class="btn btn-sm btn-circle absolute right-2 top-2">✕</button>
         <h3 class="font-bold text-lg">{{ selectedIdea.title }}</h3>
         <p class="py-4">{{ selectedIdea.desc }}</p>
         <p class="py-4"><a class="link" :href="selectedIdea.url" target="_blank">{{ selectedIdea.url }}</a></p>
-      </div>
-    </div>
+      </form>
+      <form method="dialog" class="modal-backdrop">
+        <button>close</button>
+      </form>
+    </dialog>
     
   </div>
 </template>

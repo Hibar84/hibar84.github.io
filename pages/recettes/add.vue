@@ -79,12 +79,16 @@
         <label class="label">
           <span class="label-text">Ingrédients</span>
         </label>
-        <div class="input-group">
-          <input type="text" placeholder="Ingrédient" class="input input-bordered w-44" v-model="nouvelIngredient.desc">
-          <input type="text" placeholder="Quantité" class="input input-bordered w-24" v-model="nouvelIngredient.quantite">
-          <input type="text" placeholder="Unité" class="input input-bordered w-20" v-model="nouvelIngredient.unit">
-          <button class="btn btn-square" @click="ajouterIngredient(nouvelIngredient)"><Icon name="material-symbols:add" size="25"/></button>
-          <button class="btn btn-square" @click="nouvelleRecette.ingredients = []"><Icon name="ion:trash-outline" size="25"/></button>
+        <div class="flex flex-col items-center gap-2">
+          <div class="join">
+            <input type="text" placeholder="Ingrédient" class="input input-bordered w-3/6 join-item" v-model="nouvelIngredient.desc">
+            <input type="text" placeholder="Quantité" class="input input-bordered w-2/5 join-item" v-model="nouvelIngredient.quantite">
+            <input type="text" placeholder="Unité" class="input input-bordered w-1/5 join-item" v-model="nouvelIngredient.unit">
+          </div>
+          <div class="join">
+            <button class="btn btn-square join-item" @click="ajouterIngredient(nouvelIngredient)"><Icon name="material-symbols:add" size="25"/></button>
+            <button class="btn btn-square join-item" @click="nouvelleRecette.ingredients = []"><Icon name="ion:trash-outline" size="25"/></button>
+          </div>
         </div>
       </div>
 

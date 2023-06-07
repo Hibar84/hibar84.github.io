@@ -17,9 +17,8 @@ export const useMilkTypes = () => useState < Array < any >> ('milktypes', () => 
 ]);
 
 export const useCheeseTypes = () => useState < Array < any >> ('cheesetypes', () => [{
-    'label': 'Pâte molle croûte naturelle',
-    'value': 'Pâte molle croûte naturelle',
-    'disabled': true
+    'label': 'Fromage de lactosérum',
+    'value': 'Fromage de lactosérum'
   },
   {
     'label': 'Pâte molle croûte lavée',
@@ -38,6 +37,10 @@ export const useCheeseTypes = () => useState < Array < any >> ('cheesetypes', ()
     'value': 'Pâte pressée non cuite'
   },
   {
+    'label': 'Pâte non pressée non cuite',
+    'value': 'Pâte non pressée non cuite'
+  },
+  {
     'label': 'Pâte pressée cuite',
     'value': 'Pâte pressée cuite',
   },
@@ -47,8 +50,7 @@ export const useCheeseTypes = () => useState < Array < any >> ('cheesetypes', ()
   },
   {
     'label': 'Fromage fondu',
-    'value': 'Fromage fondu',
-    'disabled': true
+    'value': 'Fromage fondu'
   }
 ]);
 
