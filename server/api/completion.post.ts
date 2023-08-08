@@ -1,4 +1,5 @@
 import { Configuration, OpenAIApi } from "openai";
+import { defineEventHandler, readBody } from 'h3';
 
 // it's an async function now!
 export default defineEventHandler(async (event) => {

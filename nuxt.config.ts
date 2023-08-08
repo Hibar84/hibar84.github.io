@@ -1,4 +1,3 @@
-// https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
   runtimeConfig: {
     // The private keys which are only available within server-side
@@ -10,8 +9,7 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     'nuxt-icon',
     '@nuxt/image-edge',
-    '@nuxtjs/supabase',
-    '@nuxt/devtools'
+    '@nuxtjs/supabase'
   ],
 
   build: {
