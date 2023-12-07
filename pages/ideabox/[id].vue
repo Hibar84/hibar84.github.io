@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Database } from '~/lib/supabase_types'
+import type { Database } from '~/lib/supabase_types'
   
   useHead({
     title: 'Boîte à idées'

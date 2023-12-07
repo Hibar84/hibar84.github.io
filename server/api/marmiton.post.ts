@@ -1,4 +1,5 @@
-import { searchRecipes, MarmitonQueryBuilder, Recipe } from 'marmiton-api';
+import { searchRecipes, MarmitonQueryBuilder } from 'marmiton-api';
+import type { Recipe } from 'marmiton-api';
 import { defineEventHandler, readBody } from 'h3';
 
 export default defineEventHandler(async (event) => {

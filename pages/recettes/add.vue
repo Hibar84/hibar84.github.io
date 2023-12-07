@@ -1,27 +1,71 @@
 <script setup lang="ts">
-  import { Database, ArrayElement, Ingredient } from '~/lib/supabase_types'
-  
+  /**
+   * This file represents the "add" page for creating new recipes.
+   * It imports necessary types from the "supabase_types" module and initializes the Supabase client.
+   * It defines the necessary variables and references for creating a new recipe.
+   */
+
+  import type { Database, ArrayElement, Ingredient } from '~/lib/supabase_types'
+
   const supabase = useSupabaseClient<Database>();
-  
+
   type Recette = Database['public']['Tables']['recettes']['Insert'];
-  
+
   const loading = ref(false);
-  const instructions_bloc = ref<string>();
+  const instructions = ref([]);
+  const newInstruction = ref("");
 
   const nouvelleRecette = ref<Recette>({
     title:'',
     ingredients:[],
   });
 
-  
-  const nouvelIngredient = ref<Ingredient>({});
+  const newIngredient = ref<Ingredient>({});
+  const ingredients = ref([]);
 
-  const ajouterIngredient = (ingredient) => {
-    nouvelleRecette.value.ingredients.push({...ingredient})
+
+  /**
+   * Adds an ingredient to the list of ingredients.
+   * @param {Object} ingredient - The ingredient to be added.
+   */
+  const addIngredient = (ingredient) => {
+    ingredients.value.push({...ingredient});
+    newIngredient.value = {};
   }
 
+  /**
+   * Deletes an ingredient from the list of ingredients.
+   * @param {number} index - The index of the ingredient to be deleted.
+   */
+  const deleteIngredient = (index) => {
+    ingredients.value.splice(index, 1);
+  }
+
+  /**
+   * Adds an instruction to the list of instructions.
+   */
+  const addInstruction = () => {
+    instructions.value.push(newInstruction.value);
+    newInstruction.value = "";
+  };
+
+  /**
+   * Discards an instruction from the list of instructions.
+   * @param {number} index - The index of the instruction to be discarded.
+   */
+  const discardInstruction = (index) => {
+    instructions.value.splice(index, 1);
+  };
+
+
+  /**
+   * Creates a new recipe by inserting the recipe data into the 'recettes' table.
+   * @async
+   * @function creerRecette
+   */
   const creerRecette = async () => {
-    nouvelleRecette.value.instructions = instructions_bloc.value.split("\n");
+    nouvelleRecette.value.instructions = instructions.value;
+    nouvelleRecette.value.ingredients = ingredients.value;
     try {
       loading.value = true
       const { error } = await supabase
@@ -57,6 +101,8 @@
         <input type="text" placeholder="Description" class="input input-bordered w-full max-w-md" v-model="nouvelleRecette.desc"/>
       </div>
 
+      <!-- Descriptions -->
+
       <div class="form-control w-full max-w-md">
         <label class="label">
           <span class="label-text">Catégorie</span>
@@ -68,6 +114,8 @@
         </select>
       </div>
     
+      <!-- Portions -->
+
       <div class="form-control w-full max-w-md">
         <label class="label">
           <p class="mb-1">Personnes / portions</p>
@@ -75,35 +123,43 @@
         <input type="number" min="0" max="100" class="p-2 rounded-lg self-center text-inherit bg-base-200 mb-3" v-model="nouvelleRecette.nb_personnes" />
       </div>
 
+      <!-- Ingredients bloc -->
+
       <div class="form-control w-full max-w-md">
         <label class="label">
-          <span class="label-text">Ingrédients</span>
+          <span class="label-text">Ingredients</span>
         </label>
-        <div class="flex flex-col items-center gap-2">
-          <div class="join">
-            <input type="text" placeholder="Ingrédient" class="input input-bordered w-3/6 join-item" v-model="nouvelIngredient.desc">
-            <input type="text" placeholder="Quantité" class="input input-bordered w-2/5 join-item" v-model="nouvelIngredient.quantite">
-            <input type="text" placeholder="Unité" class="input input-bordered w-1/5 join-item" v-model="nouvelIngredient.unit">
-          </div>
-          <div class="join">
-            <button class="btn btn-square join-item" @click="ajouterIngredient(nouvelIngredient)"><Icon name="material-symbols:add" size="25"/></button>
-            <button class="btn btn-square join-item" @click="nouvelleRecette.ingredients = []"><Icon name="ion:trash-outline" size="25"/></button>
-          </div>
+        <div class="join mb-3">
+          <input type="text" placeholder="Ingredient" class="input input-bordered w-3/6 join-item" v-model="newIngredient.desc">
+          <input type="text" placeholder="Quantity" class="input input-bordered w-2/5 join-item" v-model="newIngredient.quantite">
+          <input type="text" placeholder="Unit" class="input input-bordered w-1/5 join-item" v-model="newIngredient.unit">
         </div>
+        <button class="btn" @click="addIngredient(newIngredient)" :disabled="loading">Ajouter</button>
       </div>
 
       <ul class="list-disc max-w-md">
-        <li v-for="ingredient in nouvelleRecette.ingredients" :key="ingredient.desc">
-          {{ ingredient.desc }}: {{ ingredient.quantite === "NA" ? "" : ingredient.quantite }}{{ ingredient.unit }}
+        <li v-for="(ingredient, index) in ingredients" :key="index">
+          {{ ingredient.desc }}: {{ ingredient.quantite }} {{ ingredient.unit }}
+          <button class="btn btn-danger" @click="deleteIngredient(index)"><Icon name="ion:trash-outline" size="25"/></button>
         </li>
       </ul>
       
+      <!-- Instruction bloc -->
+
       <div class="form-control w-full max-w-md">
         <label class="label">
           <span class="label-text">Instructions</span>
         </label>
-        <textarea placeholder="Instructions" class="textarea textarea-bordered textarea-lg text-base w-full max-w-md" v-model="instructions_bloc"/>
-      </div> 
+        <textarea placeholder="New Instruction" class="textarea textarea-bordered textarea-lg text-base w-full max-w-md mb-3" v-model="newInstruction"/>
+        <button class="btn" @click="addInstruction" :disabled="loading">Ajouter l'instruction</button>
+      </div>
+
+      <ul class="list-disc max-w-md">
+        <li v-for="(instruction, index) in instructions" :key="index">
+          {{ instruction }}
+          <button class="btn btn-danger" @click="discardInstruction(index)"><Icon name="ion:trash-outline" size="25"/></button>
+        </li>
+      </ul>
 
       <button class="btn" @click="creerRecette" :disabled="loading">Créer</button>
     </div> 

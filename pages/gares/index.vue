@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { Database, ArrayElement } from '~/lib/supabase_types'
+  import type { Database, ArrayElement } from '~/lib/supabase_types'
 
   useHead({
     title: 'Mes gares'

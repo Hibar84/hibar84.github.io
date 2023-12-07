@@ -9,7 +9,8 @@ export default defineNuxtConfig({
     'nuxt-lodash',
     'nuxt-icon',
     '@nuxt/image-edge',
-    '@nuxtjs/supabase'
+    '@nuxtjs/supabase',
+    "@nuxt/image"
   ],
 
   build: {

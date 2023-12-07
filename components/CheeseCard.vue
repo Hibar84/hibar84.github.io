@@ -20,7 +20,7 @@
 
 
 <script setup lang="ts">
-  import { Database } from '~/lib/supabase_types'
+  import type { Database } from '~/lib/supabase_types'
 
   type Cheese = Database['public']['Tables']['fromages']['Insert']
 

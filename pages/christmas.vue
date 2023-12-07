@@ -56,7 +56,7 @@
 </script>
 
 <template>
-  <div class="p-6 flex flex-col justify-evenly place-content-evenly">
+  <div class="p-6 flex flex-col">
 
     <div class="alert alert-warning shadow-lg">
       <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" /></svg>
@@ -66,7 +66,7 @@
     <div class="p-4 flex flex-wrap justify-evenly">
       
       <!-- 1er personnage -->
-      <div class="p-2 mb-3 bg-base-300 rounded flex flex-col">
+      <div class="p-2 mb-3 bg-base-200 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Personnage A</h1>
         <!-- Nom -->
         <div class="p-2 flex gap-2 items-end">
@@ -99,7 +99,7 @@
       </div>
 
       <!-- 2e personnage -->
-      <div class="p-2 mb-3 bg-base-300 rounded flex flex-col">
+      <div class="p-2 mb-3 bg-base-200 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Personnage B</h1>
         <!-- Nom -->
         <div class="p-2 flex gap-2 items-end">
@@ -132,7 +132,7 @@
       </div>
       
       <!-- Histoire -->
-      <div class="p-2 mb-3 bg-base-300 rounded flex flex-col">
+      <div class="p-2 mb-3 bg-base-200 rounded flex flex-col">
         <h1 class="text-xl font-semibold text-center">Histoire</h1>
         <!-- Ville -->
         <div class="p-2 flex gap-2 items-end">
@@ -190,7 +190,7 @@
       </div>
     </div>
 
-    <div class="p-4 flex flex-col bg-base-300 rounded items-center self-center">
+    <div class="p-4 flex flex-col rounded items-center self-center">
       <button class="btn max-w-fit mb-3" @click="getScenario()">Générer</button>
       <article class="prose">
         <p class="text-justify">{{ result }}</p>
